@@ -21,6 +21,8 @@ Feel free to contribute (also to the planned features list).
 
 
 ##How to run this extension
+Note: This is only needed if you want to run the extension directly from your local filesystem. The extension will be published to the chrome extension store as soon as there are _enough_ features implemented.
+
 1. Before you run the extension, fill in your Google API key in file source/js/script.js
 2. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
 3. Click the "Load unpacked extension..." button
