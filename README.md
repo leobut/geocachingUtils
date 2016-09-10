@@ -2,8 +2,10 @@
 Geocaching Utils is an extension for google chrome and chromium that allows you to add features to the geocaching.com website.
 Feel free to contribute (also to the planned features list).
 
+##Implemented Features
+- Show evelvation next to the cache coordinates: ![image of elevation feature](readmeRcs/ElevationFeature.png
+ "Elevation Feature")
 ##Planned features so far
-- Show evelvation next to the cache coordinates
 - Enrich log editor with smilies window and inline smilies
 - Show / Highlight friend logs
 - Show a better travel map for trackables
