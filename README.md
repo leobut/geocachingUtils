@@ -10,7 +10,8 @@ Feel free to contribute (also to the planned features list).
 - Show traveled distance of a trackable next to the name on a geocache detail page
 
 ##How to run this extension
-1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
-2. Click the "Load unpacked extension..." button
-3. Select the source folder of this project
-4. Navigate to geocaching.com and enjoy
+1. Before you run the extension, fill in your Google API key in file source/js/script.js
+2. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
+3. Click the "Load unpacked extension..." button
+4. Select the source folder of this project
+5. Navigate to geocaching.com and enjoy
