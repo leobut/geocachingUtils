@@ -7,17 +7,21 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://www.geocaching.com/*"],
-      "css": ["style.css"],
-      "js": ["jquery-3.1.0.min.js", "script.js"],
+      "matches": ["https://*.geocaching.com/*"],
+      "css": ["css/style.css"],
+      "js": ["js/lib/jquery-3.1.0.min.js", "js/script.js"],
       "run_at": "document_end"
     }
   ],
   "externally_connectable": {
-  "matches": ["https://maps.googleapis.com/maps/api/elevation/*"]
+  "matches": ["http://www.datasciencetoolkit.org/coordinates2statistics/*"]
   },
   "browser_action": {
-    "default_title": "Make this page red"
+    "default_title": "Geocaching Utils",
+    "default_icon": {
+            "19": "img/tradi19.png",
+            "38": "img/tradi38.png"
+    }
   },
   "manifest_version": 2
 }
