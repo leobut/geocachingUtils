@@ -3,7 +3,7 @@ Geocaching Utils is an extension for google chrome and chromium that allows you 
 Feel free to contribute (also to the planned features list).
 
 ##Implemented Features
-- Show evelvation next to the cache coordinates: ![image of elevation feature](readmeRcs/ElevationFeature.png
+- Show elevation next to the cache coordinates: ![image of elevation feature](readmeRcs/ElevationFeature.png
  "Elevation Feature")
  
  
