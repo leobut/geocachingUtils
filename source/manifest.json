@@ -10,7 +10,7 @@
     {
       "matches": ["https://www.geocaching.com/*"],
       "css": ["css/style.css"],
-      "js": ["js/lib/jquery-3.1.0.min.js", "js/script.js"],
+      "js": ["js/lib/jquery-3.1.0.min.js", "js/coordinateHelper.js", "js/script.js"],
       "run_at": "document_end"
     }
   ],
