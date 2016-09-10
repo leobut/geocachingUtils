@@ -1,11 +1,28 @@
-var coordinateElement = $("a.edit-cache-coordinates > strong > span");
-var currentText = coordinateElement.text();
-// TODO: Find a service suitable for open source that supports https
-var elevationServiceUrl = "http://www.datasciencetoolkit.org/coordinates2statistics/37.769456%2c-122.429128?statistics=elevation";
+// IMPORTANT: You need to enter your own Google API key here for now:
+var apiKey = "";
+var coordinateElement = findCoordinatesInPage();
 
-//jQuery.getJSON(elevationServiceUrl, function(data){
-	//coordinateElement.text(currentText + " (" + data.statistics.elevation.value + " " + data.statistics.elevation.units + ")")
-//});
 
-coordinateElement.text(currentText + " (elevation would be seen here)")
+if(coordinateElement !== undefined){
+	var currentText = coordinateElement.text();
+	var elevationServiceUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations=39.7391536,-104.9847034&key=" + apiKey;
+
+	jQuery.getJSON(elevationServiceUrl, function(data){
+		var elevationInMeters = Math.round(data.results[0].elevation * 100) / 100;
+		coordinateElement.text(currentText + " (" + elevationInMeters + "m)")
+	});
+}
+
+function findCoordinatesInPage(){
+	var selectorForEditedCoordinates = "a.edit-cache-coordinates > strong > span";
+	var selectorForUntouchedCoordinates = "#uxLatLon";
+
+	var coordinateElement = $(selectorForUntouchedCoordinates);
+	if(coordinateElement===undefined){
+		coordinateElement = $(selectorForEditedCoordinates);
+	}
+
+	return coordinateElement;
+}
+
 
