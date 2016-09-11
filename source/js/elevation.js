@@ -19,8 +19,11 @@ function findCoordinatesInPage(){
 	var selectorForUntouchedCoordinates = "#uxLatLon";
 
 	var coordinateElement = $(selectorForUntouchedCoordinates);
-	if(coordinateElement===undefined){
+	if(coordinateElement.length === 0){
 		coordinateElement = $(selectorForEditedCoordinates);
+		if(coordinateElement.length === 0){
+			coordinateElement = undefined;
+		}
 	}
 
 	return coordinateElement;
@@ -46,7 +49,7 @@ function getDdFromDms(input){
 	var parts = input.split(/[.\s°]+/);
     var lat = convert(parts[0], parts[1], parts[2], "0."+parts[3]);
     var long = convert(parts[4], parts[5], parts[6], "0."+parts[7]);
-    
+
     var result = lat + "," + long;
 	return result;
 }
