@@ -1,7 +1,7 @@
 {
   "name": "Geocaching Utils",
   "description": "A useful collection of features for geocaching.com",
-  "version": "0.2",
+  "version": "0.3",
   "permissions": [
     "activeTab",
     "https://maps.googleapis.com/maps/api/elevation/*"
@@ -10,7 +10,7 @@
     {
       "matches": ["https://www.geocaching.com/*"],
       "css": ["css/style.css"],
-      "js": ["js/lib/jquery-3.1.0.min.js", "js/elevation.js", "js/friendFeatures.js"],
+      "js": ["js/lib/jquery-3.1.0.min.js", "js/common.js", "js/elevation.js", "js/friendFeatures.js"],
       "run_at": "document_end"
     }
   ],
