@@ -1,0 +1,13 @@
+#friendLogList td{
+	padding: 0;
+}
+
+#friendLogList table{
+	padding-left: 5px;
+	padding-top: 5px;
+	margin-bottom: 1em;
+}
+
+#friendLogList img.friendAvatar{
+	float: left;
+}
