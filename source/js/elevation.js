@@ -46,10 +46,7 @@ function getDdFromDms(input){
 	var parts = input.split(/[.\s°]+/);
     var lat = convert(parts[0], parts[1], parts[2], "0."+parts[3]);
     var long = convert(parts[4], parts[5], parts[6], "0."+parts[7]);
+    
     var result = lat + "," + long;
-    var expected = "47.502650,8.719783";
-    console.log(result);
-    console.log(expected);
-
 	return result;
 }
