@@ -25,6 +25,7 @@ Feel free to contribute (also to the planned features list).
 	- Show traveled distance of a trackable next to the name on a geocache detail page
 	- Show last log date next to the trackable on on a geocache detail page to see if the trackable is still alive
 - Translate geocache detail content using google translator
+- Show something like "no friend have found this cache", if no friends have found a certain cache
 
 
 ##How to run this extension
