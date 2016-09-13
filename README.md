@@ -1,6 +1,8 @@
 # Geocaching Utils
-Geocaching Utils is an extension for google chrome and chromium that allows you to add features to the geocaching.com website.
-Feel free to contribute (also to the planned features list).
+Geocaching Utils is an extension for google chrome and chromium that allows you to add features to the geocaching.com website. You can download it here from the chrome web store: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
+
+
+Feel free to contribute (also to the planned features list) and report bugs.
 
 ##Features
 - Show elevation next to the cache coordinates:
@@ -26,10 +28,10 @@ Feel free to contribute (also to the planned features list).
 	- Show last log date next to the trackable on on a geocache detail page to see if the trackable is still alive
 - Translate geocache detail content using google translator
 - Show something like "no friend have found this cache", if no friends have found a certain cache
+- Improve icon set
 
-
-##How to run this extension
-Note: This is only needed if you want to run the extension directly from your local filesystem. The extension will be published to the chrome extension store as soon as there are _enough_ features implemented.
+##How to run this extension (DEVELOPMENT ONLY)
+Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it here: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 1. Before you run the extension, fill in your Google API key in file source/js/script.js
 2. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
