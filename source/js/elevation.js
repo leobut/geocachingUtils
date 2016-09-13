@@ -7,8 +7,20 @@ if(currentPageIsGeocacheDetailPage){
 	var elevationServiceUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations="+latLon+"&key=" + apiKey;
 
 	jQuery.getJSON(elevationServiceUrl, function(data){
-		var elevationInMeters = Math.round(data.results[0].elevation * 100) / 100;
-		coordinateElement.text(currentText + " (" + elevationInMeters + "m)")
+		chrome.storage.sync.get({
+    		elevation_measurement: 'meters' // in case nothing was defined yet, use meters
+  		},function(items) {
+  			if(items.elevation_measurement === 'meters'){
+	    		var elevationInMeters = Math.round(data.results[0].elevation * 100) / 100;
+				coordinateElement.text(currentText + " (" + elevationInMeters + "m)");
+			} else if (items.elevation_measurement === 'feet'){
+				var elevationInFeet = Math.round(data.results[0].elevation * 3.2808399 * 100) / 100; // 1m = 3.2808399 ft
+				coordinateElement.text(currentText + " (" + elevationInFeet + "ft)");
+			} else {
+				// unknown unit
+				coordinateElement.text(currentText + " (Error while converting elevation. Unknown unit: "+items.elevation_measurement+")");
+			}
+  		});
 	});
 
 	function getDdFromDms(input){
