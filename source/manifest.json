@@ -1,6 +1,6 @@
 {
   "name": "Geocaching Utils",
-  "description": "A useful collection of features for geocaching.com",
+  "description": "A collection of useful features for geocaching.com",
   "version": "0.3",
   "permissions": [
     "activeTab",
