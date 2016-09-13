@@ -1,7 +1,7 @@
 {
   "name": "Geocaching Utils",
   "description": "A collection of useful features for geocaching.com",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "permissions": [
     "activeTab",
     "https://maps.googleapis.com/maps/api/elevation/*"
@@ -17,10 +17,14 @@
   "browser_action": {
     "default_title": "Geocaching Utils",
     "default_icon": {
-            "16": "img/appIcon16.png",
-            "48": "img/appIcon48.png",
-            "128": "img/appIcon128.png"
+      "16": "img/appIcon16.png",
+      "48": "img/appIcon48.png"
     }
+  },
+  "icons": {
+    "16": "img/appIcon16.png",
+    "48": "img/appIcon48.png",
+    "128": "img/appIcon128.png"
   },
   "web_accessible_resources": [
     "img/spinner.gif"
