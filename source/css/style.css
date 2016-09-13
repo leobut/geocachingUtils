@@ -11,3 +11,7 @@
 #friendLogList img.friendAvatar{
 	float: left;
 }
+
+#friendLogListSpinner {
+	width: 22px;
+}

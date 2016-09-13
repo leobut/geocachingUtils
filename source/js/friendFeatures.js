@@ -2,7 +2,7 @@ if(currentPageIsGeocacheDetailPage){
 
 	var resultDisplay = $("div.CacheDetailNavigation");
 	var friendLogList = $("<ul id='friendLogList'>");
-	friendLogList.append("<span id='friendLogListLoadingText'>Loading friend list...</span>");
+	friendLogList.append("<img id='friendLogListSpinner' src='"+chrome.extension.getURL("img/spinner.gif")+"'>");
 	resultDisplay.append(friendLogList);
 
 	injectCodeToReadUserToken();
@@ -43,7 +43,7 @@ if(currentPageIsGeocacheDetailPage){
 	}
 
 	function imDoneLoading(){
-		$("#friendLogListLoadingText").remove();
+		$("#friendLogListSpinner").remove();
 	}
 
 	/*

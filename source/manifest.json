@@ -22,5 +22,8 @@
             "128": "img/appIcon128.png"
     }
   },
+  "web_accessible_resources": [
+    "img/spinner.gif"
+  ],
   "manifest_version": 2
 }
