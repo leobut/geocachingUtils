@@ -2,6 +2,7 @@ if(currentPageIsGeocacheDetailPage){
 
 	var resultDisplay = $("div.CacheDetailNavigation");
 	var friendLogList = $("<ul id='friendLogList'>");
+	friendLogList.append("<span id='friendLogListLoadingText'>Loading friend list...</span>");
 	resultDisplay.append(friendLogList);
 
 	injectCodeToReadUserToken();
@@ -19,6 +20,7 @@ if(currentPageIsGeocacheDetailPage){
 	        decrypt: false
 	    }).done(function(response) {
 	    	if (response.status != 'success') {
+	    		imDoneLoading();
 	        	friendLogList.text("There has been an error while loading friend logs.");
 	            return;
 	        } else {
@@ -26,6 +28,7 @@ if(currentPageIsGeocacheDetailPage){
 	        		// load more friends if there are pages left
 	        		fillFriendLogList(++page);
 	        	} else {
+	        		imDoneLoading();
 			        $.each(response.data, function (index, value){
 			        	var newFriendLogEntry = $("<li>");
 			        	var userImage = $("<img class='friendAvatar' src='https://img.geocaching.com/avatar/"+value.AvatarImage+"'>");
@@ -37,6 +40,10 @@ if(currentPageIsGeocacheDetailPage){
 			    }
 		    }
 	    });
+	}
+
+	function imDoneLoading(){
+		$("#friendLogListLoadingText").remove();
 	}
 
 	/*
