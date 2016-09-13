@@ -2,6 +2,10 @@
 	padding: 0;
 }
 
+#friendLogList td img{
+	vertical-align: text-bottom;
+}
+
 #friendLogList li{
 	border-radius: 3px;
 	margin: 0 0 10px 0;
