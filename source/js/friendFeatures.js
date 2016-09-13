@@ -6,10 +6,10 @@ if(currentPageIsGeocacheDetailPage){
 	resultDisplay.append(friendLogList);
 
 	injectCodeToReadUserToken();
-	fillFriendLogList(1);
+	loadFriendLogs(1);
 
 
-	function fillFriendLogList(page){
+	function loadFriendLogs(page){
 		var userToken = friendLogList.attr('data-userToken');
 		$.getJSON('/seek/geocache.logbook', {
 	        tkn: userToken,
@@ -22,38 +22,41 @@ if(currentPageIsGeocacheDetailPage){
 	    	if (response.status != 'success') {
 	    		imDoneLoading();
 	        	friendLogList.text("Error while loading friend logs");
-	            return;
 	        } else {
 	        	if(response.pageInfo.idx < response.pageInfo.totalPages){
 	        		// load more friends if there are pages left
-	        		fillFriendLogList(++page);
+	        		loadFriendLogs(++page);
 	        	} else {
 	        		imDoneLoading();
-	        		if(response.data.length === 0){
-	        			friendLogList.text("No friend logs");
-	        		} else {
-				        $.each(response.data, function (index, value){
-				        	var avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage;
-				        	var newFriendLogEntry = $("<li>");
-				        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'>"+value.LogText+"</div><div class='arrow'/></div>");
-				        	var userImage = $("<img class='friendAvatar' src='"+avatar+"'>");
-				        	var logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td>"+value.UserName+"</td></tr></table>");
-
-				        	logDetailDisplay.hide();
-				        	newFriendLogEntry.append(logDetailDisplay).append(userImage).append(logDetailTable);
-				        	newFriendLogEntry.mouseenter(function (){
-				        		logDetailDisplay.show();
-				        	});
-				        	newFriendLogEntry.mouseleave(function (){
-				        		logDetailDisplay.hide();
-				        	});
-
-				        	friendLogList.append(newFriendLogEntry);
-				        });
-				    }
+	        		addDomElementsBasedOnResponse(response.data);
 			    }
 		    }
 	    });
+	}
+
+	function addDomElementsBasedOnResponse(data){
+		if(data.length === 0){
+			friendLogList.text("No friend logs");
+		} else {
+	        $.each(data, function (index, value){
+	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'>"+value.LogText+"</div><div class='arrow'/></div>");
+	        	logDetailDisplay.hide();
+
+				var avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage;
+	        	var userImage = $("<img class='friendAvatar' src='"+avatar+"'>");
+	        	var logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td>"+value.UserName+"</td></tr></table>");
+
+	        	var newFriendLogEntry = $("<li>").append(logDetailDisplay).append(userImage).append(logDetailTable);
+	        	newFriendLogEntry.mouseenter(function (){
+	        		logDetailDisplay.show();
+	        	});
+	        	newFriendLogEntry.mouseleave(function (){
+	        		logDetailDisplay.hide();
+	        	});
+
+	        	friendLogList.append(newFriendLogEntry);
+	        });
+	    }
 	}
 
 	function imDoneLoading(){
