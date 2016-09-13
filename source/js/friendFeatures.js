@@ -30,11 +30,21 @@ if(currentPageIsGeocacheDetailPage){
 	        	} else {
 	        		imDoneLoading();
 			        $.each(response.data, function (index, value){
+			        	var avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage;
 			        	var newFriendLogEntry = $("<li>");
-			        	var userImage = $("<img class='friendAvatar' src='https://img.geocaching.com/avatar/"+value.AvatarImage+"'>");
+			        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'>"+value.LogText+"</div><div class='arrow'/></div>");
+			        	var userImage = $("<img class='friendAvatar' src='"+avatar+"'>");
 			        	var logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td>"+value.UserName+"</td></tr></table>");
 
-			        	newFriendLogEntry.append(userImage).append(logDetailTable);
+			        	logDetailDisplay.hide();
+			        	newFriendLogEntry.append(logDetailDisplay).append(userImage).append(logDetailTable);
+			        	newFriendLogEntry.mouseenter(function (){
+			        		logDetailDisplay.show();
+			        	});
+			        	newFriendLogEntry.mouseleave(function (){
+			        		logDetailDisplay.hide();
+			        	});
+
 			        	friendLogList.append(newFriendLogEntry);
 			        });
 			    }
