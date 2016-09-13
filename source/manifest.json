@@ -17,8 +17,9 @@
   "browser_action": {
     "default_title": "Geocaching Utils",
     "default_icon": {
-            "19": "img/tradi19.png",
-            "38": "img/tradi38.png"
+            "16": "img/appIcon16.png",
+            "48": "img/appIcon48.png",
+            "128": "img/appIcon128.png"
     }
   },
   "manifest_version": 2
