@@ -42,7 +42,7 @@
     left: -700px;
 }
 
-#friendLogList div.arrow {
+#friendLogList div.line {
 	position: absolute;
 	background-color: #594a42;
     width: 30px;

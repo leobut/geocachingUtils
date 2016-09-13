@@ -39,7 +39,7 @@ if(currentPageIsGeocacheDetailPage){
 			friendLogList.text("No friend logs");
 		} else {
 	        $.each(data, function (index, value){
-	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'>"+value.LogText+"</div><div class='arrow'/></div>");
+	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'>"+value.LogText+"</div><div class='line'/></div>");
 	        	logDetailDisplay.hide();
 
 				var avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage;
