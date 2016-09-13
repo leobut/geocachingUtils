@@ -44,12 +44,11 @@
 
 #friendLogList div.arrow {
 	position: absolute;
-    background-color: #594a42;
-    width: 25px;
-    height: 52px;
+	background-color: #594a42;
+    width: 30px;
+    height: 1px;
     left: -29px;
-    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
-	clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    top: 20px;
 }
 
 #friendLogList div.logDetailPopup p{
