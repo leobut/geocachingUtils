@@ -5,7 +5,7 @@ Geocaching Utils is an extension for google chrome and chromium that allows you 
 Feel free to contribute (also to the planned features list) and report bugs.
 
 ##Features
-- Show elevation next to the cache coordinates:
+- Show elevation next to the cache coordinates (supports meters & feet):
 
 ![image of elevation feature](readmeRcs/ElevationFeature.png
  "Elevation Feature")
@@ -21,13 +21,11 @@ Feel free to contribute (also to the planned features list) and report bugs.
 	- Add smileys
 	- Add FTF, STF and TTF tags
 	- Insert Signature (should be definable in the options pane of the extension)
-- Elevation: Allow to change the measurment unit used for the elevation (should be definable in the options pane of the extension OR can be read from the geocaching page)
 - Trackables:
 	- Show a better travel map for trackables
 	- Show traveled distance of a trackable next to the name on a geocache detail page
 	- Show last log date next to the trackable on on a geocache detail page to see if the trackable is still alive
 - Translate geocache detail content using google translator
-- Show something like "no friend have found this cache", if no friends have found a certain cache
 - Improve icon set
 
 ##How to run this extension (DEVELOPMENT ONLY)
