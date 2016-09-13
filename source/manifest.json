@@ -1,7 +1,7 @@
 {
   "name": "Geocaching Utils",
   "description": "A collection of useful features for geocaching.com",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "permissions": [
     "activeTab",
     "storage",
