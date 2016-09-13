@@ -27,6 +27,7 @@ Feel free to contribute (also to the planned features list) and report bugs.
 	- Show last log date next to the trackable on on a geocache detail page to see if the trackable is still alive
 - Translate geocache detail content using google translator
 - Allow to write the same log for multiple field notes
+- Filter logs of a cache/trackable by type
 - Improve icon set
 - Make the settings page nicer
 
