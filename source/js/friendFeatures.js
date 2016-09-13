@@ -21,7 +21,7 @@ if(currentPageIsGeocacheDetailPage){
 	    }).done(function(response) {
 	    	if (response.status != 'success') {
 	    		imDoneLoading();
-	        	friendLogList.text("There has been an error while loading friend logs.");
+	        	friendLogList.text("Error while loading friend logs");
 	            return;
 	        } else {
 	        	if(response.pageInfo.idx < response.pageInfo.totalPages){
@@ -29,24 +29,28 @@ if(currentPageIsGeocacheDetailPage){
 	        		fillFriendLogList(++page);
 	        	} else {
 	        		imDoneLoading();
-			        $.each(response.data, function (index, value){
-			        	var avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage;
-			        	var newFriendLogEntry = $("<li>");
-			        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'>"+value.LogText+"</div><div class='arrow'/></div>");
-			        	var userImage = $("<img class='friendAvatar' src='"+avatar+"'>");
-			        	var logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td>"+value.UserName+"</td></tr></table>");
+	        		if(response.data.length === 0){
+	        			friendLogList.text("No friend logs");
+	        		} else {
+				        $.each(response.data, function (index, value){
+				        	var avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage;
+				        	var newFriendLogEntry = $("<li>");
+				        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'>"+value.LogText+"</div><div class='arrow'/></div>");
+				        	var userImage = $("<img class='friendAvatar' src='"+avatar+"'>");
+				        	var logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td>"+value.UserName+"</td></tr></table>");
 
-			        	logDetailDisplay.hide();
-			        	newFriendLogEntry.append(logDetailDisplay).append(userImage).append(logDetailTable);
-			        	newFriendLogEntry.mouseenter(function (){
-			        		logDetailDisplay.show();
-			        	});
-			        	newFriendLogEntry.mouseleave(function (){
-			        		logDetailDisplay.hide();
-			        	});
+				        	logDetailDisplay.hide();
+				        	newFriendLogEntry.append(logDetailDisplay).append(userImage).append(logDetailTable);
+				        	newFriendLogEntry.mouseenter(function (){
+				        		logDetailDisplay.show();
+				        	});
+				        	newFriendLogEntry.mouseleave(function (){
+				        		logDetailDisplay.hide();
+				        	});
 
-			        	friendLogList.append(newFriendLogEntry);
-			        });
+				        	friendLogList.append(newFriendLogEntry);
+				        });
+				    }
 			    }
 		    }
 	    });
