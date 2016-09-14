@@ -1,7 +1,6 @@
-// IMPORTANT: You need to enter your own Google API key here for now:
-var apiKey = "";
-
-if(currentPageIsGeocacheDetailPage){
+function runElevationFeature(){	
+	// IMPORTANT: You need to enter your own Google API key here:
+	var apiKey = "";
 	var currentText = coordinateElement.text();
 	var latLon = getDdFromDms(currentText);
 	var elevationServiceUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations="+latLon+"&key=" + apiKey;

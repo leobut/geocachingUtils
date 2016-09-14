@@ -1,5 +1,4 @@
-if(currentPageIsGeocacheDetailPage){
-
+function runFriendFeature(){
 	var resultDisplay = $("div.CacheDetailNavigation");
 	var friendLogList = $("<ul id='friendLogList'>");
 	friendLogList.append("<img id='friendLogListSpinner' src='"+chrome.extension.getURL("img/spinner.gif")+"'>");

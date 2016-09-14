@@ -1,7 +1,7 @@
 var coordinateElement;
 var currentPageIsGeocacheDetailPage = true;
 
-(function findCoordinatesInPage(){
+function findCoordinatesInPage(){
 	var selectorForEditedCoordinates = "a.edit-cache-coordinates > strong > span";
 	var selectorForUntouchedCoordinates = "#uxLatLon";
 
@@ -13,4 +13,4 @@ var currentPageIsGeocacheDetailPage = true;
 			currentPageIsGeocacheDetailPage = false;
 		}
 	}
-})();
+}
