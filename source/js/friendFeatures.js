@@ -1,12 +1,12 @@
 function runFriendFeature(){
-	var resultDisplay = $("div.CacheDetailNavigation");
-	var friendLogList = $("<ul id='friendLogList'>");
+	var resultDisplay = $("div.CacheDetailNavigation"),
+		friendLogList = $("<ul id='friendLogList'>");
+
 	friendLogList.append("<img id='friendLogListSpinner' src='"+chrome.extension.getURL("img/spinner.gif")+"'>");
 	resultDisplay.append(friendLogList);
 
 	injectCodeToReadUserToken();
 	loadFriendLogs(1);
-
 
 	function loadFriendLogs(page){
 		var userToken = friendLogList.attr('data-userToken');
@@ -38,14 +38,14 @@ function runFriendFeature(){
 			friendLogList.text("No friend logs");
 		} else {
 	        $.each(data, function (index, value){
-	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'>"+value.LogText+"</div><div class='line'/></div>");
-	        	logDetailDisplay.hide();
+	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'>"+value.LogText+"</div><div class='line'/></div>"),
+					avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage,
+	        		userImage = $("<img class='friendAvatar' src='"+avatar+"'>"),
+	        		logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td>"+value.UserName+"</td></tr></table>"),
+	        		newFriendLogEntry = $("<li>").append(logDetailDisplay).append(userImage).append(logDetailTable);
 
-				var avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage;
-	        	var userImage = $("<img class='friendAvatar' src='"+avatar+"'>");
-	        	var logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td>"+value.UserName+"</td></tr></table>");
+				logDetailDisplay.hide();
 
-	        	var newFriendLogEntry = $("<li>").append(logDetailDisplay).append(userImage).append(logDetailTable);
 	        	newFriendLogEntry.mouseenter(function (){
 	        		logDetailDisplay.show();
 	        	});
