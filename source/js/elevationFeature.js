@@ -1,9 +1,15 @@
 function runElevationFeature(){	
 	// IMPORTANT: You need to enter your own Google API key here:
 	var apiKey = "",
-		currentText = Common.getInstance().coordinateElement.text(),
-		latLon = getDdFromDms(currentText),
-		elevationServiceUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations="+latLon+"&key=" + apiKey;
+		coordinateElement,
+		currentText,
+		latLon,
+		elevationServiceUrl;
+
+	findCoordinatesInPage();
+	currentText = coordinateElement.text();
+	latLon = getDdFromDms(currentText)
+	elevationServiceUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations="+latLon+"&key=" + apiKey
 
 	jQuery.getJSON(elevationServiceUrl, function(data){
 		chrome.storage.sync.get({
@@ -24,7 +30,7 @@ function runElevationFeature(){
   					textToAppend = " (Error while converting elevation. Unknown unit: " + measurement + ")";
   					break;
   			}
-  			Common.getInstance().coordinateElement.text(currentText + textToAppend);
+  			coordinateElement.text(currentText + textToAppend);
   		});
 	});
 
@@ -51,5 +57,15 @@ function runElevationFeature(){
 
 	    var result = lat + "," + long;
 		return result;
+	}
+
+	function findCoordinatesInPage(){
+		var selectorForEditedCoordinates = "a.edit-cache-coordinates > strong > span",
+			selectorForUntouchedCoordinates = "#uxLatLon";
+
+		coordinateElement = $(selectorForUntouchedCoordinates);
+		if(coordinateElement.length === 0){
+			coordinateElement = $(selectorForEditedCoordinates);
+		}
 	}
 }

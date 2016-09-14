@@ -3,28 +3,20 @@ var Common = (function () {
 	var instance;
 
 	function init(){
-		var coordinateElement,
-			currentPageIsGeocacheDetailPage = true;
+		var currentPageIsGeocacheDetailPage;
 
-		function findCoordinatesInPage(){
-			var selectorForEditedCoordinates = "a.edit-cache-coordinates > strong > span",
-				selectorForUntouchedCoordinates = "#uxLatLon";
-
-			coordinateElement = $(selectorForUntouchedCoordinates);
-			if(coordinateElement.length === 0){
-				coordinateElement = $(selectorForEditedCoordinates);
-				if(coordinateElement.length === 0){
-					coordinateElement = undefined;
-					currentPageIsGeocacheDetailPage = false;
-				}
+		function findOutIfIAmOnAGeocacheDetailPage(){
+			if($(".CacheDetailNavigation").length === 0){
+				currentPageIsGeocacheDetailPage = false;
+			} else {
+				currentPageIsGeocacheDetailPage = true;
 			}
 		}
 
-		findCoordinatesInPage();
+		findOutIfIAmOnAGeocacheDetailPage();
 
 		return {
-			currentPageIsGeocacheDetailPage: currentPageIsGeocacheDetailPage,
-			coordinateElement: coordinateElement
+			currentPageIsGeocacheDetailPage: currentPageIsGeocacheDetailPage
 		};
 	}
 
