@@ -42,6 +42,8 @@ Note: This is only needed if you are working on the extension and want to try so
 5. Navigate to geocaching.com and enjoy
 
 ##Release History
+- 0.5.1
+	- Design improvements
 - 0.5.0
 	- Added settings page to allow the user to set the unit for the elevation feature
 	- Added message if there were no friend logs
