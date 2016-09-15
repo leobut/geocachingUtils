@@ -42,6 +42,9 @@ Note: This is only needed if you are working on the extension and want to try so
 5. Navigate to geocaching.com and enjoy
 
 ##Release History
+- 0.5.2
+	- Show log image links in the friend log popups
+	- Refactorings
 - 0.5.1
 	- Design improvements
 - 0.5.0

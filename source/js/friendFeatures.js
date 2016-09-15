@@ -38,13 +38,19 @@ function runFriendFeature(){
 			friendLogList.text("No friend logs");
 		} else {
 	        $.each(data, function (index, value){
-	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'>"+value.LogText+"</div><div class='line'/></div>"),
+	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'><div class='hoverBridge'/>"+value.LogText+"</div><div class='line'/></div>"),
 					avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage,
 	        		userImage = $("<img class='friendAvatar' src='"+avatar+"'>"),
 	        		logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td>"+value.UserName+"</td></tr></table>"),
-	        		newFriendLogEntry = $("<li>").append(logDetailDisplay).append(userImage).append(logDetailTable);
+	        		newFriendLogEntry;
 
 				logDetailDisplay.hide();
+
+				if(value.Images.length !== 0){
+					appendImagesToLogDetailDisplay(logDetailDisplay, value.Images);
+				}
+
+				newFriendLogEntry = $("<li>").append(logDetailDisplay).append(userImage).append(logDetailTable);
 
 	        	newFriendLogEntry.mouseenter(function (){
 	        		logDetailDisplay.show();
@@ -56,6 +62,26 @@ function runFriendFeature(){
 	        	friendLogList.append(newFriendLogEntry);
 	        });
 	    }
+	}
+
+	function appendImagesToLogDetailDisplay(logDetailDisplay, images){
+		// this is basically the same html like it is on geocaching.com
+		$.each(images, function (index, image){
+			var imageLink = "<table cellspacing='0' cellpadding='3' class='LogImagesTable'>"+
+								"<tbody>"+
+									"<tr>"+
+										"<td>"+
+											"<a class='tb_images lnk' target='_blank' href='https://img.geocaching.com/cache/log/large/" + image.FileName + "'>"+
+												"<img title='Photo' alt='Photo' src='/images/icons/16/photo.png'>"+
+												"<span>" + image.Name + "</span>"+
+											"</a>"+
+										"</td>"+
+									"</tr>"+
+								"</tbody>"+
+							"</table>";
+
+			logDetailDisplay.find(".logDetailPopup").append(imageLink);
+		});
 	}
 
 	function imDoneLoading(){
