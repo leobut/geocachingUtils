@@ -1,8 +1,8 @@
-#friendLogList td{
+#friendLogList > li > table td{
 	padding: 0;
 }
 
-#friendLogList td img{
+#friendLogList > li > table td img{
 	vertical-align: text-bottom;
 }
 
@@ -42,6 +42,14 @@
     left: -700px;
 }
 
+#friendLogList div.hoverBridge {
+	position: absolute;
+	background-color: transparent;
+    width: 32px;
+    height: 100%;
+    left: 670px;
+}
+
 #friendLogList div.line {
 	position: absolute;
 	background-color: #594a42;
@@ -49,6 +57,10 @@
     height: 1px;
     left: -29px;
     top: 20px;
+}
+
+#friendLogList div.logDetailPopup a.tb_images.lnk{
+	padding-left: 0;
 }
 
 #friendLogList div.logDetailPopup p{
