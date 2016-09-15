@@ -12,7 +12,7 @@ Feel free to contribute (also to the planned features list) and report bugs.
  
 - Show friend logs in the sidebar on the right: 
 
-![image of friend list feature](readmeRcs/FriendListFeature.png
+![image of friend list feature](readmeRcs/FriendListFeature.gif
  "Friend List Feature")
  
  
