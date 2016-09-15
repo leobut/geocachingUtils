@@ -1,6 +1,6 @@
 
 if(Common.getInstance().currentPageIsGeocacheDetailPage === true){
 	// run the extension scripts
-	runElevationFeature();
-	runFriendFeature();
+	setTimeout(runElevationFeature, 0);
+	setTimeout(runFriendFeature, 0);
 }
