@@ -18,6 +18,7 @@ function runFriendFeature(){
 	        sf: true,
 	        decrypt: false
 	    }).done(function(response) {
+	    	console.log(response);
 	    	if (response.status != 'success') {
 	    		imDoneLoading();
 	        	friendLogList.text("Error while loading friend logs");
@@ -41,7 +42,7 @@ function runFriendFeature(){
 	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'><div class='hoverBridge'/>"+value.LogText+"</div><div class='line'/></div>"),
 					avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage,
 	        		userImage = $("<img class='friendAvatar' src='"+avatar+"'>"),
-	        		logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td>"+value.UserName+"</td></tr></table>"),
+	        		logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td><a href='https://www.geocaching.com/profile/?guid=" + value.AccountGuid + "'>"+value.UserName+"</a></td></tr></table>"),
 	        		newFriendLogEntry;
 
 				logDetailDisplay.hide();

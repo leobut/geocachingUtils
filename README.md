@@ -42,6 +42,8 @@ Note: This is only needed if you are working on the extension and want to try so
 5. Navigate to geocaching.com and enjoy
 
 ##Release History
+- 0.6.0
+	- Friend names are now links to their profile in the friend logs list 
 - 0.5.2
 	- Show log image links in the friend log popups
 	- Refactorings
