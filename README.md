@@ -29,7 +29,6 @@ Feel free to contribute (also to the planned features list) and report bugs.
 - Allow to write the same log for multiple field notes
 - Convert a word or sentence into numbers (German: "Buchstabenwortwert")
 - Filter logs of a cache/trackable by type
-- Improve icon set
 - Make the settings page nicer
 
 ##How to run this extension (DEVELOPMENT ONLY)
@@ -44,6 +43,7 @@ Note: This is only needed if you are working on the extension and want to try so
 ##Release History
 - 0.6.0
 	- Friend names in the friend log list are now links to the friends profile
+	- New extension icon
 - 0.5.2
 	- Show log image links in the friend log popups
 	- Refactorings
