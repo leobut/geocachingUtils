@@ -18,7 +18,6 @@ function runFriendFeature(){
 	        sf: true,
 	        decrypt: false
 	    }).done(function(response) {
-	    	console.log(response);
 	    	if (response.status != 'success') {
 	    		imDoneLoading();
 	        	friendLogList.text("Error while loading friend logs");
