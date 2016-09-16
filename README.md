@@ -17,8 +17,6 @@ Feel free to contribute (also to the planned features list) and report bugs.
  
  
 ##Planned features so far
-- Friend Logs List
-	- Clicking on the name of a friend should open its profile
 - Enrich log editor
 	- Add smileys
 	- Add FTF, STF and TTF tags
