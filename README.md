@@ -43,7 +43,7 @@ Note: This is only needed if you are working on the extension and want to try so
 
 ##Release History
 - 0.6.0
-	- Friend names are now links to their profile in the friend logs list 
+	- Friend names in the friend log list are now links to the friends profile
 - 0.5.2
 	- Show log image links in the friend log popups
 	- Refactorings

@@ -29,6 +29,10 @@
 	margin-bottom: 1em;
 }
 
+#friendLogList .friendName{
+	padding-left: 0;
+}
+
 #friendLogListSpinner {
 	width: 22px;
 }
