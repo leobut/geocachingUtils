@@ -11,7 +11,7 @@
     {
       "matches": ["https://www.geocaching.com/*"],
       "css": ["css/style.css"],
-      "js": ["js/lib/jquery-3.1.0.min.js", "js/common.js", "js/elevationFeature.js", "js/friendFeatures.js", "js/start.js"],
+      "js": ["js/lib/jquery-3.1.0.min.js", "js/common.js", "js/elevationFeature.js", "js/friendLogListFeatures.js", "js/autoDecryptHintFeature.js", "js/start.js"],
       "run_at": "document_end"
     }
   ],
