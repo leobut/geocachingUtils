@@ -17,22 +17,24 @@ Feel free to contribute (also to the planned features list) and report bugs.
  
  
 ##Planned features so far
+- Cache detail page:
+	- Allow to open a cache position on google maps
+	- *Allow to convert a word or sentence into numbers (German: "Buchstabenwortwert")*
+	- Translate geocache detail content using google translator
+	- Automatically decrypt hints (should be a setting)
+	- Bring back the little map that Groundspeak killed a couple of months ago, that's more zoomed out and gives a region
+	- Filter logs of a cache by type
+	- Show last log date next to the trackable on to see if the trackable is still alive
+- Trackable detail page:
+	- Show a better travel map for trackables
+	- Show traveled distance of a trackable next to the name on a geocache detail page
+	- Filter logs of a cache by type
 - Enrich log editor
 	- Add smileys
 	- Add FTF, STF and TTF tags
 	- Insert Signature (should be definable in the options pane of the extension)
-- Trackables:
-	- Show a better travel map for trackables
-	- Show traveled distance of a trackable next to the name on a geocache detail page
-	- Show last log date next to the trackable on on a geocache detail page to see if the trackable is still alive
-- Translate geocache detail content using google translator
-- *Convert a word or sentence into numbers (German: "Buchstabenwortwert")*
-- Automatically decrypt hints (should be a setting)
-- Bring back the little map that Groundspeak killed a couple of months ago, that's more zoomed out and gives a region
 - Show archived caches somewhere (or add a link to project gc)
 - Show/Hide header in geoache map view
-- Allow to open a cache position on google maps
-- Filter logs of a cache/trackable by type
 - Make the settings page of this extension nicer
 
 ##How to run this extension (DEVELOPMENT ONLY)
