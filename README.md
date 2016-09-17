@@ -21,7 +21,6 @@ Feel free to contribute (also to the planned features list) and report bugs.
 	- Allow to open a cache position on google maps
 	- *Allow to convert a word or sentence into numbers (German: "Buchstabenwortwert")*
 	- Translate geocache detail content using google translator
-	- Automatically decrypt hints (should be a setting)
 	- Bring back the little map that Groundspeak killed a couple of months ago, that's more zoomed out and gives a region
 	- Filter logs of a cache by type
 	- Show last log date next to the trackable on to see if the trackable is still alive
@@ -50,8 +49,8 @@ Note: This is only needed if you are working on the extension and want to try so
 5. Navigate to geocaching.com and enjoy
 
 ##Release History
-- Next Version
-	- 
+- 0.7.0 (currently in development)
+	- Automatically decrypt hints (can be disabled in the settings page)
 - 0.6.0
 	- Friend names in the friend log list are now links to the friends profile
 	- New extension icon: ![image of elevation feature](source/img/appIcon16.png "Elevation Feature") 
