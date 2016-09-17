@@ -1,3 +1,41 @@
+/* General */
+.geocachingUtilsPopup{
+	position: absolute;
+    background-color: #fbfaf3;
+    border: solid #594a42 1px;
+    border-radius: 3px;
+}
+
+/* LogEditorEnhancement */
+
+#geoachingUtilsFunctionsPopup {
+    width: 200px;
+    height: 110px;
+}
+
+#geoachingUtilsFunctionsPopup .popupText {
+    padding-left: 5px;
+}
+
+#geoachingUtilsFunctionsPopup > ul.smileyList > li {
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 26px;
+}
+
+#geoachingUtilsFunctionsPopup > ul.smileyList > li:hover {
+    background-color: #e3ddc2;
+}
+
+/* FiendLogList */
+
+#friendLogListSpinner {
+	width: 22px;
+}
+
 #friendLogList > li > table td{
 	padding: 0;
 }
@@ -33,15 +71,8 @@
 	padding-left: 0;
 }
 
-#friendLogListSpinner {
-	width: 22px;
-}
 
 #friendLogList div.logDetailPopup {
-	position: absolute;
-    background-color: #fbfaf3;
-    border: solid #594a42 1px;
-    border-radius: 3px;
     width: 670px;
     left: -700px;
 }

@@ -39,7 +39,7 @@ function runFriendLogListFeature(){
 			friendLogList.text("No friend logs");
 		} else {
 	        $.each(data, function (index, value){
-	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup span-17'><div class='hoverBridge'/>"+value.LogText+"</div><div class='line'/></div>"),
+	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup geocachingUtilsPopup span-17'><div class='hoverBridge'/>"+value.LogText+"</div><div class='line'/></div>"),
 					avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage,
 	        		userImage = $("<img class='friendAvatar' src='"+avatar+"'>"),
 	        		logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td><a class='friendName' href='https://www.geocaching.com/profile/?guid=" + value.AccountGuid + "'>"+value.UserName+"</a></td></tr></table>"),
