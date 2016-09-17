@@ -1,4 +1,4 @@
-function runFriendFeature(){
+function runFriendLogListFeature(){
 	var resultDisplay = $("div.CacheDetailNavigation"),
 		friendLogList = $("<ul id='friendLogList'>");
 
@@ -7,6 +7,7 @@ function runFriendFeature(){
 
 	injectCodeToReadUserToken();
 	loadFriendLogs(1);
+	removeInjectedScriptFromDom();
 
 	function loadFriendLogs(page){
 		var userToken = friendLogList.attr('data-userToken');
@@ -94,7 +95,11 @@ function runFriendFeature(){
 	* userToken is needed to load the friend logs and is not accessible otherwise within this script.
 	*/
 	function injectCodeToReadUserToken(){
-		var scriptElement = $("<script>$('#friendLogList').attr('data-userToken', userToken);</script>");
+		var scriptElement = $("<script id='friendLogListFeatureScript'>$('#friendLogList').attr('data-userToken', userToken);</script>");
 		$("html").append(scriptElement);
+	}
+
+	function removeInjectedScriptFromDom(){
+		$("#friendLogListFeatureScript").remove();
 	}
 }
