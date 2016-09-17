@@ -1,8 +1,10 @@
 
 function save_options() {
   var elevationMeasurement = document.getElementById('elevation_measurement').value;
+  var automaticallyDecryptHints = document.getElementById('automatically_decrypt_hints').value;
   chrome.storage.sync.set({
-    elevation_measurement: elevationMeasurement
+    elevation_measurement: elevationMeasurement,
+    automaticallyDecryptHints: automaticallyDecryptHints
   }, function() {
     var status = document.getElementById('status');
     status.textContent = 'Options saved';
@@ -14,9 +16,12 @@ function save_options() {
 
 function restore_options() {
   chrome.storage.sync.get({
-    elevation_measurement: 'meters' // in case nothing was defined yet, use meters
+    // concrete values in here define the default if nothing was set yet by the user
+    elevation_measurement: 'meters',
+    automaticallyDecryptHints: 'true'
   }, function(items) {
     document.getElementById('elevation_measurement').value = items.elevation_measurement;
+    document.getElementById('automatically_decrypt_hints').value = items.automaticallyDecryptHints;
   });
 }
 
