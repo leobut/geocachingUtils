@@ -4,6 +4,7 @@ var Common = (function () {
 
 	function init(){
 		var currentPageIsGeocacheDetailPage;
+		var currentPageContainsAnEditor;
 
 		function findOutIfIAmOnAGeocacheDetailPage(){
 			if($(".CacheDetailNavigation").length === 0){
@@ -13,10 +14,20 @@ var Common = (function () {
 			}
 		}
 
+		function findEditorOnPage(){
+			if($(".mdd_toolbar").length === 0){
+				currentPageContainsAnEditor = false;
+			} else {
+				currentPageContainsAnEditor = true;
+			}
+		}
+
 		findOutIfIAmOnAGeocacheDetailPage();
+		findEditorOnPage();
 
 		return {
-			currentPageIsGeocacheDetailPage: currentPageIsGeocacheDetailPage
+			currentPageIsGeocacheDetailPage: currentPageIsGeocacheDetailPage,
+			currentPageContainsAnEditor: currentPageContainsAnEditor
 		};
 	}
 
