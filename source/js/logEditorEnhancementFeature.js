@@ -28,13 +28,39 @@ function runlogEditorEnhancement(){
 		popupElement = $("#geoachingUtilsFunctionsPopup");
 		popupElement.hide();
 		$.each(supportedSmileys, function(index, value){
-			popupElement.find("ul.smileyList").append("<li><img src='" + value.image + "' alt='" + value.name + "' data-snippet='" + value.snippet + "'></li>");
+			var smileyImage = $("<img src='" + value.image + "' alt='" + value.name + "'>"),
+				newListElement = $("<li data-snippet='" + value.snippet + "'>");
+
+			newListElement.append(smileyImage);
+			popupElement.find("ul.smileyList").append(newListElement);
+
+			newListElement.on("click", smileyClickHandler);
 		});
+	}
+
+	function smileyClickHandler(event){
+		var snippetToInsert = $(event.currentTarget).attr("data-snippet"),
+			textArea = $(".mdd_editor_wrap > textarea")[0];
+
+		insertAtCursor(textArea, snippetToInsert);
 	}
 
 	function addSeperatorToToolbar(){
 		toolbar.append("<li><span class='mdd_sep'></span></li>");
 	}
+
+	// A bit modified function from http://stackoverflow.com/questions/11076975/insert-text-into-textarea-at-cursor-position-javascript
+	function insertAtCursor(myField, myValue) {
+    if (myField.selectionStart || myField.selectionStart == '0') {
+        var startPos = myField.selectionStart;
+        var endPos = myField.selectionEnd;
+        myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
+        myField.selectionStart = startPos + myValue.length;
+        myField.selectionEnd = startPos + myValue.length;
+    } else {
+        myField.value += myValue;
+    }
+}
 
 	function loadSupportedSmileys() {
 		supportedSmileys = [
