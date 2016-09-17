@@ -51,7 +51,7 @@ Note: This is only needed if you are working on the extension and want to try so
 - 0.7.0 (currently in development)
 	- Automatically decrypt hints (can be disabled in the settings page)
 	- Enrich log editor:
-		- Add smiley-chooser function in editor toolbar
+		- Added an icon to the editor which allows one to choose a smiley to be inserted into the log text
 - 0.6.0
 	- Friend names in the friend log list are now links to the friends profile
 	- New extension icon: ![image of elevation feature](source/img/appIcon16.png "Elevation Feature") 
