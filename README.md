@@ -26,10 +26,14 @@ Feel free to contribute (also to the planned features list) and report bugs.
 	- Show traveled distance of a trackable next to the name on a geocache detail page
 	- Show last log date next to the trackable on on a geocache detail page to see if the trackable is still alive
 - Translate geocache detail content using google translator
-- Allow to write the same log for multiple field notes
-- Convert a word or sentence into numbers (German: "Buchstabenwortwert")
+- *Convert a word or sentence into numbers (German: "Buchstabenwortwert")*
+- Automatically decrypt hints (should be a setting)
+- Bring back the little map that Groundspeak killed a couple of months ago, that's more zoomed out and gives a region
+- Show archived caches somewhere (or add a link to project gc)
+- Show/Hide header in geoache map view
+- Allow to open a cache position on google maps
 - Filter logs of a cache/trackable by type
-- Make the settings page nicer
+- Make the settings page of this extension nicer
 
 ##How to run this extension (DEVELOPMENT ONLY)
 Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
