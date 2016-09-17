@@ -33,6 +33,9 @@ Feel free to contribute (also to the planned features list) and report bugs.
 	- Add smileys
 	- Add FTF, STF and TTF tags
 	- Insert Signature (should be definable in the options pane of the extension)
+- Pocket Queries:
+	- Select all days in a column
+	- Select all days for a certain query
 - Show archived caches somewhere (or add a link to project gc)
 - Show/Hide header in geoache map view
 - Make the settings page of this extension nicer
@@ -47,6 +50,8 @@ Note: This is only needed if you are working on the extension and want to try so
 5. Navigate to geocaching.com and enjoy
 
 ##Release History
+- Next Version
+	- 
 - 0.6.0
 	- Friend names in the friend log list are now links to the friends profile
 	- New extension icon: ![image of elevation feature](source/img/appIcon16.png "Elevation Feature") 
