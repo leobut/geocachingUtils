@@ -9,25 +9,34 @@
 /* LogEditorEnhancement */
 
 #geoachingUtilsFunctionsPopup {
-    width: 200px;
-    height: 110px;
+    width: 196px;
 }
 
 #geoachingUtilsFunctionsPopup .popupText {
     padding-left: 5px;
 }
 
+#geoachingUtilsFunctionsPopup > ul > li {
+    border-radius: 3px;
+}
+
+#geoachingUtilsFunctionsPopup > ul > li:hover {
+    background-color: #e3ddc2;
+}
+
 #geoachingUtilsFunctionsPopup > ul.smileyList > li {
     width: 20px;
     height: 20px;
     padding: 4px;
-    border-radius: 3px;
     text-align: center;
     line-height: 26px;
 }
 
-#geoachingUtilsFunctionsPopup > ul.smileyList > li:hover {
-    background-color: #e3ddc2;
+#geoachingUtilsFunctionsPopup > ul.tagList > li {
+    width: 30px;
+    height: 20px;
+    padding: 4px;
+    text-align: center;
 }
 
 /* FiendLogList */
