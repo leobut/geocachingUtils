@@ -65,7 +65,7 @@ function runlogEditorEnhancement(){
 			textArea = $(".mdd_editor_wrap > textarea")[0];
 
 		insertAtCursor(textArea, snippetToInsert);
-		//dispatchKeyupEventOnTextArea($(textArea));
+		dispatchKeyupEventOnTextArea($(textArea));
 	}
 
 	// A bit modified function from http://stackoverflow.com/questions/11076975/insert-text-into-textarea-at-cursor-position-javascript
@@ -81,10 +81,10 @@ function runlogEditorEnhancement(){
 	    }
 	}
 
-	// Inject a script into the text area to dispatch the keyup event in the context of the page.
-	// Otherwise the event could not be caught by the event handler the page provides.
+	// Inject a script into the text area that clicks the ullist button of the editor twice.
+	// This is a workaround for the fact that you can't easily trigger the markdown editor to refresh.
 	function dispatchKeyupEventOnTextArea(textArea){
-		var eventDispatcherScript = $("<script id='eventDispatcherScript'>$('.mdd_editor_wrap > textarea').trigger('paste');//$('#eventDispatcherScript').remove();</script>");
+		var eventDispatcherScript = $("<script id='eventDispatcherScript'>$('#mdd_ullist').click().click();$('#eventDispatcherScript').remove();</script>");
 		textArea.append(eventDispatcherScript);
 	}
 
