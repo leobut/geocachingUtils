@@ -47,7 +47,7 @@ Note: This is only needed if you are working on the extension and want to try so
 5. Navigate to geocaching.com and enjoy
 
 ##Release History
-- 0.7.0 (currently in development)
+- 0.7.1 (currently in development)
 	- Automatically decrypt hints (can be disabled in the settings page)
 	- Added an icon to the log editor which allows one to choose smileys and tags (FTF, STF, TTF [project-gc.com style]) to be inserted into the log text
 - 0.6.0
