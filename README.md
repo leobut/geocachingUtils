@@ -47,11 +47,10 @@ Feel free to contribute (also to the planned features list) and report bugs.
 ##How to run this extension (DEVELOPMENT ONLY)
 Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
-1. Before you run the extension, fill in your Google API key in file source/js/script.js
-2. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
-3. Click the "Load unpacked extension..." button
-4. Select the "source" folder of this project
-5. Navigate to geocaching.com and enjoy
+1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
+2. Click the "Load unpacked extension..." button
+3. Select the "source" folder of this project
+4. Navigate to geocaching.com and enjoy
 
 ##Release History
 - 0.7.1
