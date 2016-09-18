@@ -9,6 +9,11 @@ function runlogEditorEnhancement(){
 	addSeperatorToToolbar();
 	addGUIconToToolbar();
 
+
+	function addSeperatorToToolbar(){
+		toolbar.append("<li><span class='mdd_sep'></span></li>");
+	}
+
 	function addGUIconToToolbar(){
 		toolbar.append("<li id='geoachingUtilsFunctions'><img src='" + chrome.extension.getURL("img/appIcon26.png") + "'><li/>");
 		guToolbarElement = $("#geoachingUtilsFunctions");
@@ -43,24 +48,28 @@ function runlogEditorEnhancement(){
 			textArea = $(".mdd_editor_wrap > textarea")[0];
 
 		insertAtCursor(textArea, snippetToInsert);
-	}
-
-	function addSeperatorToToolbar(){
-		toolbar.append("<li><span class='mdd_sep'></span></li>");
+		//dispatchKeyupEventOnTextArea($(textArea));
 	}
 
 	// A bit modified function from http://stackoverflow.com/questions/11076975/insert-text-into-textarea-at-cursor-position-javascript
 	function insertAtCursor(myField, myValue) {
-    if (myField.selectionStart || myField.selectionStart == '0') {
-        var startPos = myField.selectionStart;
-        var endPos = myField.selectionEnd;
-        myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
-        myField.selectionStart = startPos + myValue.length;
-        myField.selectionEnd = startPos + myValue.length;
-    } else {
-        myField.value += myValue;
-    }
-}
+	    if (myField.selectionStart || myField.selectionStart == '0') {
+	        var startPos = myField.selectionStart;
+	        var endPos = myField.selectionEnd;
+	        myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
+	        myField.selectionStart = startPos + myValue.length;
+	        myField.selectionEnd = startPos + myValue.length;
+	    } else {
+	        myField.value += myValue;
+	    }
+	}
+
+	// Inject a script into the text area to dispatch the keyup event in the context of the page.
+	// Otherwise the event could not be caught by the event handler the page provides.
+	function dispatchKeyupEventOnTextArea(textArea){
+		var eventDispatcherScript = $("<script id='eventDispatcherScript'>$('.mdd_editor_wrap > textarea').trigger('paste');//$('#eventDispatcherScript').remove();</script>");
+		textArea.append(eventDispatcherScript);
+	}
 
 	function loadSupportedSmileys() {
 		supportedSmileys = [
