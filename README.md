@@ -21,36 +21,6 @@ Feel free to contribute (also to the planned features list) and report bugs.
  "Editor Enhancement Feature")
 
 - Hints can be decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
- 
-##Planned features so far
-- Geocache map:
-	- Allow to set a default map so you don't need to click it again every time you want to see the geocaching map
-- Cache detail page:
-	- Allow to open a cache position on google maps
-	- Translate geocache detail content using google translator
-	- Bring back the little map that Groundspeak killed a couple of months ago, that's more zoomed out and gives a region
-	- Filter logs of a cache by type
-	- Show last log date next to the trackable on to see if the trackable is still alive
-- Trackable detail page:
-	- Show a better travel map for trackables
-	- Show traveled distance of a trackable next to the name on a geocache detail page
-	- Filter logs of a cache by type
-- Enrich log editor
-	- Insert Signature (should be definable in the options pane of the extension)
-- Pocket Queries:
-	- Select all days in a column
-	- Select all days for a certain query
-- Show archived caches somewhere (or add a link to project gc)
-- Show/Hide header in geoache map view
-- Make the settings page of this extension nicer
-
-##How to run this extension (DEVELOPMENT ONLY)
-Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
-
-1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
-2. Click the "Load unpacked extension..." button
-3. Select the "source" folder of this project
-4. Navigate to geocaching.com and enjoy
 
 ##Release History
 - 0.7.1
@@ -69,3 +39,11 @@ Note: This is only needed if you are working on the extension and want to try so
 	- Added message if there were no friend logs
 - 0.4.2
 	- Initial Release
+
+##How to run this extension (DEVELOPMENT ONLY)
+Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
+
+1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
+2. Click the "Load unpacked extension..." button
+3. Select the "source" folder of this project
+4. Navigate to geocaching.com and enjoy
