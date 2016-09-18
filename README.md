@@ -23,9 +23,10 @@ Feel free to contribute (also to the planned features list) and report bugs.
 - Hints can be decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
  
 ##Planned features so far
+- Geocache map:
+	- Allow to set a default map so you don't need to click it again every time you want to see the geocaching map
 - Cache detail page:
 	- Allow to open a cache position on google maps
-	- *Allow to convert a word or sentence into numbers (German: "Buchstabenwortwert")*
 	- Translate geocache detail content using google translator
 	- Bring back the little map that Groundspeak killed a couple of months ago, that's more zoomed out and gives a region
 	- Filter logs of a cache by type
