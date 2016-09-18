@@ -14,7 +14,13 @@ Feel free to contribute (also to the planned features list) and report bugs.
 
 ![image of friend list feature](readmeRcs/FriendListFeature.gif
  "Friend List Feature")
- 
+
+- Log editor is improved to make using smileys and tags easier:
+
+![image of friend list feature](readmeRcs/EditorEnhancementFeature.gif
+ "Editor Enhancement Feature")
+
+- Hints can be decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
  
 ##Planned features so far
 - Cache detail page:
@@ -47,7 +53,7 @@ Note: This is only needed if you are working on the extension and want to try so
 5. Navigate to geocaching.com and enjoy
 
 ##Release History
-- 0.7.1 (currently in development)
+- 0.7.1
 	- Automatically decrypt hints (can be disabled in the settings page)
 	- Added an icon to the log editor which allows one to choose smileys and tags (FTF, STF, TTF [project-gc.com style]) to be inserted into the log text
 - 0.6.0
