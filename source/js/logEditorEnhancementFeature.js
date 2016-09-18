@@ -3,9 +3,11 @@ function runlogEditorEnhancement(){
 		toolbar = editor.find("ul"),
 		guToolbarElement,
 		popupElement, 
-		supportedSmileys;
+		supportedSmileys,
+		supportedTags;
 
 	loadSupportedSmileys();
+	loadSupportedTags();
 	addSeperatorToToolbar();
 	addGUIconToToolbar();
 
@@ -24,26 +26,41 @@ function runlogEditorEnhancement(){
     		popupElement.show();
     	});
     	guToolbarElement.mouseleave(function (){
-    		popupElement.hide();
+    		//popupElement.hide();
     	});
 	}
 
 	function hookInGUWindow(){
-		guToolbarElement.append("<div style='position: relative; width: 0; height: 0'><div id='geoachingUtilsFunctionsPopup' class='geocachingUtilsPopup'><span class='popupText'>Insert Smiley:</span><ul class='smileyList'></ul></div></div>")
+		guToolbarElement.append("<div style='position: relative; width: 0; height: 0'><div id='geoachingUtilsFunctionsPopup' class='geocachingUtilsPopup'><span class='popupText'>Smileys:</span><ul class='smileyList'></ul><span class='popupText'>Tags:</span><ul class='tagList'></ul></div></div>")
 		popupElement = $("#geoachingUtilsFunctionsPopup");
-		popupElement.hide();
+		//popupElement.hide();
+
+		addSmileysToPopup(popupElement);
+		addTagsToPopup(popupElement);
+	}
+
+	function addSmileysToPopup(popupElement){
 		$.each(supportedSmileys, function(index, value){
-			var smileyImage = $("<img src='" + value.image + "' alt='" + value.name + "'>"),
-				newListElement = $("<li data-snippet='" + value.snippet + "'>");
+			var smileyImage = $("<img src='" + value.image + "'>"),
+				newListElement = $("<li data-snippet='" + value.snippet + "' title='" + value.name + "'>");
 
 			newListElement.append(smileyImage);
 			popupElement.find("ul.smileyList").append(newListElement);
 
-			newListElement.on("click", smileyClickHandler);
+			newListElement.on("click", functionsPopupClickHandler);
 		});
 	}
 
-	function smileyClickHandler(event){
+	function addTagsToPopup(popupElement){
+		$.each(supportedTags, function(index, value){
+			var newListElement = $("<li data-snippet='" + value.snippet + "' title='" + value.description + "'><i>" + value.name + "</i></li>");
+
+			popupElement.find("ul.tagList").append(newListElement);
+			newListElement.on("click", functionsPopupClickHandler);
+		});
+	}
+
+	function functionsPopupClickHandler(event){
 		var snippetToInsert = $(event.currentTarget).attr("data-snippet"),
 			textArea = $(".mdd_editor_wrap > textarea")[0];
 
@@ -69,6 +86,26 @@ function runlogEditorEnhancement(){
 	function dispatchKeyupEventOnTextArea(textArea){
 		var eventDispatcherScript = $("<script id='eventDispatcherScript'>$('.mdd_editor_wrap > textarea').trigger('paste');//$('#eventDispatcherScript').remove();</script>");
 		textArea.append(eventDispatcherScript);
+	}
+
+	function loadSupportedTags(){
+		supportedTags = [
+			{
+				name: "FTF",
+				description: "First to find",
+				snippet: "{FTF}",
+			},
+			{
+				name: "STF",
+				description: "Second to find",
+				snippet: "{STF}"
+			},
+			{
+				name: "TTF",
+				description: "Third to find",
+				snippet: "{TTF}"
+			},
+		];
 	}
 
 	function loadSupportedSmileys() {
