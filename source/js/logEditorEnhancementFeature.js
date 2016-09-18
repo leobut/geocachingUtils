@@ -26,14 +26,14 @@ function runlogEditorEnhancement(){
     		popupElement.show();
     	});
     	guToolbarElement.mouseleave(function (){
-    		//popupElement.hide();
+    		popupElement.hide();
     	});
 	}
 
 	function hookInGUWindow(){
 		guToolbarElement.append("<div style='position: relative; width: 0; height: 0'><div id='geoachingUtilsFunctionsPopup' class='geocachingUtilsPopup'><span class='popupText'>Smileys:</span><ul class='smileyList'></ul><span class='popupText'>Tags:</span><ul class='tagList'></ul></div></div>")
 		popupElement = $("#geoachingUtilsFunctionsPopup");
-		//popupElement.hide();
+		popupElement.hide();
 
 		addSmileysToPopup(popupElement);
 		addTagsToPopup(popupElement);
