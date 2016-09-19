@@ -26,5 +26,4 @@ function restore_options() {
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('saveButton').addEventListener('click',
-    save_options);
+document.getElementById('saveButton').addEventListener('click', save_options);
