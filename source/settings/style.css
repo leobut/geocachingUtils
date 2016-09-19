@@ -62,3 +62,11 @@ h1, h2{
 	position:relative;
 	top:1px;
 }
+
+#githubHint {
+	font-size: 70%;
+}
+
+#githubHint img {
+	vertical-align: text-bottom;
+}
