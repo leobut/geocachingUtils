@@ -23,6 +23,9 @@ Feel free to contribute (also to the planned features list) and report bugs.
 - Hints are decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
 
 ##Release History
+- 0.8.0 (currently in development)
+	- Click the extension icon to open the settings
+	- Redesigned the settings page
 - 0.7.1
 	- Automatically decrypt hints (can be disabled in the settings page)
 	- Added an icon to the log editor which allows one to choose smileys and tags (FTF, STF, TTF [project-gc.com style]) to be inserted into the log text
@@ -31,7 +34,6 @@ Feel free to contribute (also to the planned features list) and report bugs.
 	- New extension icon: ![image of elevation feature](source/img/appIcon16.png "Elevation Feature") 
 - 0.5.2
 	- Show log image links in the friend log popups
-	- Refactorings
 - 0.5.1
 	- Design improvements
 - 0.5.0
