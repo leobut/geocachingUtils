@@ -95,11 +95,11 @@ function runFriendLogListFeature(){
 	* userToken is needed to load the friend logs and is not accessible otherwise within this script.
 	*/
 	function injectCodeToReadUserToken(){
-		var scriptElement = $("<script id='friendLogListFeatureScript'>$('#friendLogList').attr('data-userToken', userToken);</script>");
+		var scriptElement = $("<script id='friendLogListScript'>$('#friendLogList').attr('data-userToken', userToken);</script>");
 		$("html").append(scriptElement);
 	}
 
 	function removeInjectedScriptFromDom(){
-		$("#friendLogListFeatureScript").remove();
+		$("#friendLogListScript").remove();
 	}
 }

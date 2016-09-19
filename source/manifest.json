@@ -1,12 +1,12 @@
 {
   "name": "Geocaching Utils",
   "description": "A collection of useful features to enhance geocaching.com",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "permissions": [
     "storage",
     "https://maps.googleapis.com/maps/api/elevation/*"
   ],
-  "options_page": "html/options.html",
+  "options_page": "settings/settings.html",
   "content_scripts": [
     {
       "matches": ["https://www.geocaching.com/*"],
@@ -14,10 +14,10 @@
       "js": [
         "js/lib/jquery-3.1.0.min.js",
         "js/common.js", 
-        "js/elevationFeature.js",
-        "js/friendLogListFeatures.js",
-        "js/autoDecryptHintFeature.js",
-        "js/logEditorEnhancementFeature.js",
+        "js/feature/elevation.js",
+        "js/feature/friendLogList.js",
+        "js/feature/autoDecryptHint.js",
+        "js/feature/logEditorEnhancement.js",
         "js/start.js"
         ],
       "run_at": "document_end"
