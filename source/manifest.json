@@ -32,7 +32,8 @@
     "default_icon": {
       "16": "img/appIcon16.png",
       "48": "img/appIcon48.png"
-    }
+    },
+    "default_popup": "popup/popup.html"
   },
   "icons": {
     "16": "img/appIcon16.png",
