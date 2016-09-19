@@ -6,11 +6,11 @@ function save_options() {
     elevation_measurement: elevationMeasurement,
     automaticallyDecryptHints: automaticallyDecryptHints
   }, function() {
-    var status = document.getElementById('status');
-    status.textContent = 'Options saved';
+    var status = document.getElementById('statusDisplay');
+    status.textContent = 'Settings saved!';
     setTimeout(function() {
       status.textContent = '';
-    }, 2000);
+    }, 3000);
   });
 }
 
@@ -26,5 +26,5 @@ function restore_options() {
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click',
+document.getElementById('saveButton').addEventListener('click',
     save_options);
