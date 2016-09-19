@@ -20,7 +20,7 @@ Feel free to contribute (also to the planned features list) and report bugs.
 ![image of friend list feature](readmeRcs/EditorEnhancementFeature.gif
  "Editor Enhancement Feature")
 
-- Hints can be decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
+- Hints are decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
 
 ##Release History
 - 0.7.1
