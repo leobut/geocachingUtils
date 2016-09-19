@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head><title>Geocaching Utils Options</title></head>
+<head>
+	<title>Geocaching Utils Extension Settings</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
-	<div style="width: 500px; margin: auto;">
-		<h1>Geocaching Utils Settings</h1>
-		Elevation measurement:
-		<select id="elevation_measurement">
-			<option value="meters">Meters</option>
-			<option value="feet">Feet</option>
-		</select>
-		<br/>
-		Automatically decrypt hints on geocache detail pages:
-		<select id="automatically_decrypt_hints">
-			<option value="true">Yes please!</option>
-			<option value="false">Nah, I'm fine...</option>
-		</select>
-		<br/>
-		<div id="status"></div>
-		<button id="save">Save</button>
+	<div id="centeredContainer" class="round">
+		<h1><img src="../img/appIcon26.png">Geocaching Utils Extension Settings<img src="../img/appIcon26.png"></h1>
+		<div class="round">
+			<h2>Geocache detail page settings:</h2>
+			<div>
+				Automatically decrypt hints on geocache detail pages:
+				<select id="automatically_decrypt_hints">
+					<option value="true">Yes please!</option>
+					<option value="false">Nah, I'm fine...</option>
+				</select>
+			</div>
+			<div>
+				Elevation measurement unit:
+				<select id="elevation_measurement">
+					<option value="meters">Meters (m)</option>
+					<option value="feet">Feet (ft)</option>
+				</select>
+			</div>
+		</div>
+		<div id="controlsContainer" class="round">
+			<span id="statusDisplay"></span>
+			<button id="saveButton">Save</button>
+		</div>
 	</div>
 
 	<script src="./settings.js"></script>
