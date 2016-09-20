@@ -2,7 +2,7 @@
 Geocaching Utils is an extension for google chrome that adds features to the geocaching.com website. You can download it for free from the chrome web store: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 
-Feel free to contribute (also to the planned features list) and report bugs.
+Feel free to contribute to the code or report bugs and feature requests.
 
 ##Features
 - Show elevation next to the cache coordinates (supports meters & feet):
@@ -38,7 +38,7 @@ Feel free to contribute (also to the planned features list) and report bugs.
 	- Design improvements
 - 0.5.0
 	- Added settings page to allow the user to set the unit for the elevation feature
-	- Added message if there were no friend logs
+	- Added message if there are no friend logs for the current cache
 - 0.4.2
 	- Initial Release
 
