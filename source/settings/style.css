@@ -5,15 +5,15 @@ body {
     font-size: 90%;
 }
 
-h1{
+h1 {
 	text-align: center;
 }
 
-h1, h2{
+h1, h2 {
 	margin: 0.2em 0;
 }
 
-.round{
+.round {
 	border-radius: 3px;
 }
 
@@ -37,6 +37,7 @@ h1, h2{
 #controlsContainer > span {
 	margin-right: 10px;
 }
+
 /* fancy save button styling */
 #saveButton {
 	box-shadow: 0px 10px 14px -7px #3e7327;
