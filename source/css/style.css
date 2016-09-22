@@ -53,6 +53,10 @@
 	vertical-align: text-bottom;
 }
 
+#friendLogList > li table.LogImagesTable td a.tb_images span{
+    padding-left: 3px;
+}
+
 #friendLogList li{
 	border-radius: 3px;
 	margin: 0 0 10px 0;
