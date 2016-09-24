@@ -23,7 +23,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 - Hints are decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
 
 ##Release History
-- 0.8.0 (currently in development)
+- 0.8.0
 	- Click the extension icon to open the settings
 	- Redesigned the settings page
 - 0.7.1
