@@ -6,5 +6,5 @@ if(Common.getInstance().currentPageIsGeocacheDetailPage === true){
 }
 
 if(Common.getInstance().currentPageContainsAnEditor === true){
-	setTimeout(runlogEditorEnhancement, 0);
+	setTimeout(runLogEditorInsertionPopup, 0);
 }
