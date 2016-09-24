@@ -1,4 +1,4 @@
-function runlogEditorEnhancement(){
+function runLogEditorInsertionPopup(){
 	var editor = $(".mdd_toolbar"),
 		toolbar = editor.find("ul"),
 		guToolbarElement,
