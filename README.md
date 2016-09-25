@@ -24,7 +24,9 @@ Feel free to contribute to the code or report bugs and feature requests.
 
 ##Release History
 - 0.9.0 (currently in development)
-	- 
+	- Log Editor:
+		- Count the words in your log and predict the "The Author" badge you will earn. Badge provided by [BadgeGen](http://www.badgegen.com/).
+		- Allow to enable and disable the word counting and the smiley insertion popup features in the settings of the extension
 - 0.8.0
 	- Click the extension icon to open the settings
 	- Redesigned the settings page
