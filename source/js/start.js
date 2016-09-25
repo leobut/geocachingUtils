@@ -13,6 +13,15 @@ if(Common.getInstance().currentPageIsGeocacheDetailPage === true){
 }
 
 if(Common.getInstance().currentPageContainsAnEditor === true){
-	setTimeout(runLogEditorInsertionPopup, 0);
-	setTimeout(runLogEditorWordCount, 0);
+	chrome.storage.sync.get({
+		logEditorCountWords: 'true',
+    	logEditorShowInsertionPopup: 'true'
+	},function(items) {
+		if(items.logEditorShowInsertionPopup === 'true'){
+			setTimeout(runLogEditorInsertionPopup, 0);
+		}
+		if(items.logEditorCountWords === 'true'){
+			setTimeout(runLogEditorWordCount, 0);
+		}
+	});
 }

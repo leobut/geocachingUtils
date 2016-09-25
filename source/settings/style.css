@@ -17,6 +17,14 @@ h1, h2 {
 	border-radius: 3px;
 }
 
+.round > div{
+	padding-bottom: 10px;
+}
+
+.note {
+	font-size: 70%;
+}
+
 #centeredContainer {
 	width: 600px;
 	margin: auto;
