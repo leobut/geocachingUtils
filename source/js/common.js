@@ -22,12 +22,22 @@ var Common = (function () {
 			}
 		}
 
+		function createGeocachingUtilsPopup(additionalClasses = ""){
+			var popup = $("<div style='position: relative; width: 0; height: 0'><div class='geocachingUtilsPopup " + additionalClasses + "'/></div>");
+			popup.getPopupContentContainer = function(){
+				return this.find("div.geocachingUtilsPopup");
+			};
+			popup.hide();
+			return popup;
+		}
+
 		findOutIfIAmOnAGeocacheDetailPage();
 		findEditorOnPage();
 
 		return {
 			currentPageIsGeocacheDetailPage: currentPageIsGeocacheDetailPage,
-			currentPageContainsAnEditor: currentPageContainsAnEditor
+			currentPageContainsAnEditor: currentPageContainsAnEditor,
+			createGeocachingUtilsPopup: createGeocachingUtilsPopup
 		};
 	}
 

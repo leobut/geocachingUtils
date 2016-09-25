@@ -39,25 +39,26 @@ function runFriendLogListFeature(){
 			friendLogList.text("No friend logs");
 		} else {
 	        $.each(data, function (index, value){
-	        	var logDetailDisplay = $("<div style='position: relative; width: 0; height: 0'><div class='logDetailPopup geocachingUtilsPopup span-17'><div class='hoverBridge'/>"+value.LogText+"</div><div class='line'/></div>"),
-					avatar = value.AvatarImage === ""?"/images/default_avatar.png":"https://img.geocaching.com/user/avatar/"+value.AvatarImage,
-	        		userImage = $("<img class='friendAvatar' src='"+avatar+"'>"),
-	        		logDetailTable = $("<table><tr><td><img src='/images/logtypes/"+value.LogTypeImage+"'> "+value.Visited+"</td></tr><tr><td><a class='friendName' href='https://www.geocaching.com/profile/?guid=" + value.AccountGuid + "'>"+value.UserName+"</a></td></tr></table>"),
+	        	
+	        	var popup = Common.getInstance().createGeocachingUtilsPopup("logDetailPopup"),
+					avatar = (value.AvatarImage === "") ? "/images/default_avatar.png" : "https://img.geocaching.com/user/avatar/" + value.AvatarImage,
+	        		userImage = $("<img class='friendAvatar' src='" + avatar + "'>"),
+	        		logDetailTable = $("<table><tr><td><img src='/images/logtypes/" + value.LogTypeImage + "'> " + value.Visited + "</td></tr><tr><td><a class='friendName' href='https://www.geocaching.com/profile/?guid=" + value.AccountGuid + "'>" + value.UserName + "</a></td></tr></table>"),
 	        		newFriendLogEntry;
 
-				logDetailDisplay.hide();
+	        	popup.getPopupContentContainer().append("<div class='hoverBridge'/>" + value.LogText);
+	        	popup.append("<div class='line'/>");
 
 				if(value.Images.length !== 0){
-					appendImagesToLogDetailDisplay(logDetailDisplay, value.Images);
+					appendImagesToPopup(popup, value.Images);
 				}
 
-				newFriendLogEntry = $("<li>").append(logDetailDisplay).append(userImage).append(logDetailTable);
-
+				newFriendLogEntry = $("<li>").append(popup).append(userImage).append(logDetailTable);
 	        	newFriendLogEntry.mouseenter(function (){
-	        		logDetailDisplay.show();
+	        		popup.show();
 	        	});
 	        	newFriendLogEntry.mouseleave(function (){
-	        		logDetailDisplay.hide();
+	        		popup.hide();
 	        	});
 
 	        	friendLogList.append(newFriendLogEntry);
@@ -65,7 +66,7 @@ function runFriendLogListFeature(){
 	    }
 	}
 
-	function appendImagesToLogDetailDisplay(logDetailDisplay, images){
+	function appendImagesToPopup(popup, images){
 		// this is basically the same html like it is on geocaching.com
 		$.each(images, function (index, image){
 			var imageLink = "<table cellspacing='0' cellpadding='3' class='LogImagesTable'>"+
@@ -81,7 +82,7 @@ function runFriendLogListFeature(){
 								"</tbody>"+
 							"</table>";
 
-			logDetailDisplay.find(".logDetailPopup").append(imageLink);
+			popup.getPopupContentContainer().append(imageLink);
 		});
 	}
 

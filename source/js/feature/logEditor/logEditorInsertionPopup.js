@@ -1,65 +1,65 @@
 function runLogEditorInsertionPopup(){
 	var guToolbarElement,
-		popupElement, 
+		popup,
 		supportedSmileys,
-		supportedTags,
-		common = LogEditorCommon.getInstance();
+		supportedTags;
 
 	loadSupportedSmileys();
 	loadSupportedTags();
-	common.addSeperatorToToolbar();
+	LogEditorCommon.getInstance().addSeperatorToToolbar();
 	addGUIconToToolbar();
 
 	function addGUIconToToolbar(){
-		common.toolbar.append("<li id='geoachingUtilsFunctions'><img src='" + chrome.extension.getURL("img/appIcon/appIcon26.png") + "'><li/>");
+		LogEditorCommon.getInstance().toolbar.append("<li id='geoachingUtilsFunctions'><img src='" + chrome.extension.getURL("img/appIcon/appIcon26.png") + "'><li/>");
 		guToolbarElement = $("#geoachingUtilsFunctions");
 
 		hookInGUWindow();
 
 		guToolbarElement.mouseenter(function (){
-    		popupElement.show();
+    		popup.show();
     	});
     	guToolbarElement.mouseleave(function (){
-    		popupElement.hide();
+    		popup.hide();
     	});
 	}
 
 	function hookInGUWindow(){
-		guToolbarElement.append("<div style='position: relative; width: 0; height: 0'><div id='geoachingUtilsFunctionsPopup' class='geocachingUtilsPopup'><span class='popupText'>Smileys:</span><ul class='smileyList'></ul><span class='popupText'>Tags:</span><ul class='tagList'></ul></div></div>")
-		popupElement = $("#geoachingUtilsFunctionsPopup");
-		popupElement.hide();
+		popup = Common.getInstance().createGeocachingUtilsPopup("logEditorPopup");
+		popup.getPopupContentContainer().append("<span class='popupText'>Smileys:</span><ul class='smileyList'></ul><span class='popupText'>Tags:</span><ul class='tagList'></ul>");
 
-		addSmileysToPopup(popupElement);
-		addTagsToPopup(popupElement);
+		guToolbarElement.append(popup);
+
+		addSmileysToPopup();
+		addTagsToPopup();
 	}
 
-	function addSmileysToPopup(popupElement){
+	function addSmileysToPopup(){
 		$.each(supportedSmileys, function(index, value){
 			var smileyImage = $("<img src='" + value.image + "'>"),
 				newListElement = $("<li data-snippet='" + value.snippet + "' title='" + value.name + "'>");
 
 			newListElement.append(smileyImage);
-			popupElement.find("ul.smileyList").append(newListElement);
+			popup.find("ul.smileyList").append(newListElement);
 
 			newListElement.on("click", functionsPopupClickHandler);
 		});
 	}
 
-	function addTagsToPopup(popupElement){
+	function addTagsToPopup(){
 		$.each(supportedTags, function(index, value){
 			var newListElement = $("<li data-snippet='" + value.snippet + "' title='" + value.description + "'><i>" + value.name + "</i></li>");
 
-			popupElement.find("ul.tagList").append(newListElement);
+			popup.find("ul.tagList").append(newListElement);
 			newListElement.on("click", functionsPopupClickHandler);
 		});
 	}
 
 	function functionsPopupClickHandler(event){
 		var snippetToInsert = $(event.currentTarget).attr("data-snippet"),
-			textArea = $(".mdd_editor_wrap > textarea")[0];
+			textArea = $(".mdd_editor_wrap > textarea");
 
-		insertAtCursor(textArea, snippetToInsert);
-		dispatchKeyupEventOnTextArea($(textArea));
+		insertAtCursor(textArea[0], snippetToInsert);
+		dispatchKeyupEventOnTextArea(textArea);
 	}
 
 	// A bit modified function from http://stackoverflow.com/questions/11076975/insert-text-into-textarea-at-cursor-position-javascript
