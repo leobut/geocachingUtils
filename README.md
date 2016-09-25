@@ -1,4 +1,4 @@
-# ![image of elevation feature](source/img/appIcon48.png "Elevation Feature") Geocaching Utils ![image of elevation feature](source/img/appIcon48.png "Elevation Feature") 
+# ![image of elevation feature](source/img/appIcon/appIcon48.png "Elevation Feature") Geocaching Utils ![image of elevation feature](source/img/appIcon/appIcon48.png "Elevation Feature") 
 Geocaching Utils is an extension for google chrome that adds features to the geocaching.com website. You can download it for free from the chrome web store: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 
@@ -35,7 +35,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 	- Added an icon to the log editor which allows one to choose smileys and tags (FTF, STF, TTF [project-gc.com style]) to be inserted into the log text
 - 0.6.0
 	- Friend names in the friend log list are now links to the friends profile
-	- New extension icon: ![image of elevation feature](source/img/appIcon16.png "Elevation Feature") 
+	- New extension icon: ![image of elevation feature](source/img/appIcon/appIcon16.png "Elevation Feature") 
 - 0.5.2
 	- Show log image links in the friend log popups
 - 0.5.1
