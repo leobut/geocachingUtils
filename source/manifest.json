@@ -17,7 +17,8 @@
         "js/feature/elevation.js",
         "js/feature/friendLogList.js",
         "js/feature/autoDecryptHint.js",
-        "js/feature/logEditorInsertionPopup.js",
+        "js/feature/logEditor/logEditorCommon.js",
+        "js/feature/logEditor/logEditorInsertionPopup.js",
         "js/start.js"
         ],
       "run_at": "document_end"

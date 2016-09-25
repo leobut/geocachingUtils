@@ -1,23 +1,17 @@
 function runLogEditorInsertionPopup(){
-	var editor = $(".mdd_toolbar"),
-		toolbar = editor.find("ul"),
-		guToolbarElement,
+	var guToolbarElement,
 		popupElement, 
 		supportedSmileys,
-		supportedTags;
+		supportedTags,
+		common = LogEditorCommon.getInstance();
 
 	loadSupportedSmileys();
 	loadSupportedTags();
-	addSeperatorToToolbar();
+	common.addSeperatorToToolbar();
 	addGUIconToToolbar();
 
-
-	function addSeperatorToToolbar(){
-		toolbar.append("<li><span class='mdd_sep'></span></li>");
-	}
-
 	function addGUIconToToolbar(){
-		toolbar.append("<li id='geoachingUtilsFunctions'><img src='" + chrome.extension.getURL("img/appIcon26.png") + "'><li/>");
+		common.toolbar.append("<li id='geoachingUtilsFunctions'><img src='" + chrome.extension.getURL("img/appIcon26.png") + "'><li/>");
 		guToolbarElement = $("#geoachingUtilsFunctions");
 
 		hookInGUWindow();
