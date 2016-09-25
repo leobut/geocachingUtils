@@ -2,7 +2,7 @@ function runLogEditorWordCount(){
 	var common = LogEditorCommon.getInstance(),
 		previewDiv = $("div.mdd_editor_wrap textarea");
 
-	common.toolbar.append("<li id='geoachingUtilsWordCount'>Hallo<li/>");
+	common.toolbar.append("<li id='geoachingUtilsWordCount'>0<li/>");
 
 	previewDiv.on("input", function(e){
 		var currentText = $(e.currentTarget).val(),
