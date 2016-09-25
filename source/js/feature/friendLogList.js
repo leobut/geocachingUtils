@@ -2,7 +2,7 @@ function runFriendLogListFeature(){
 	var resultDisplay = $("div.CacheDetailNavigation"),
 		friendLogList = $("<ul id='friendLogList'>");
 
-	friendLogList.append("<img id='friendLogListSpinner' src='"+chrome.extension.getURL("img/spinner.gif")+"'>");
+	friendLogList.append("<img id='friendLogListSpinner' src='"+chrome.extension.getURL("img/friendLogList/spinner.gif")+"'>");
 	resultDisplay.append(friendLogList);
 
 	injectCodeToReadUserToken();
