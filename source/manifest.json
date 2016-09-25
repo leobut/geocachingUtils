@@ -19,6 +19,7 @@
         "js/feature/autoDecryptHint.js",
         "js/feature/logEditor/logEditorCommon.js",
         "js/feature/logEditor/logEditorInsertionPopup.js",
+        "js/feature/logEditor/logEditorWordCount.js",
         "js/start.js"
         ],
       "run_at": "document_end"
