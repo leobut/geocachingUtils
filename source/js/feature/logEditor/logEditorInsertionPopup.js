@@ -11,7 +11,7 @@ function runLogEditorInsertionPopup(){
 	addGUIconToToolbar();
 
 	function addGUIconToToolbar(){
-		common.toolbar.append("<li id='geoachingUtilsFunctions'><img src='" + chrome.extension.getURL("img/appIcon26.png") + "'><li/>");
+		common.toolbar.append("<li id='geoachingUtilsFunctions'><img src='" + chrome.extension.getURL("img/appIcon/appIcon26.png") + "'><li/>");
 		guToolbarElement = $("#geoachingUtilsFunctions");
 
 		hookInGUWindow();
