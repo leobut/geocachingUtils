@@ -26,7 +26,11 @@ Feel free to contribute to the code or report bugs and feature requests.
 - 0.9.0 (currently in development)
 	- Log Editor:
 		- Count the words in your log and predict the "The Author" badge you will earn. Badge provided by [BadgeGen](http://www.badgegen.com/).
-		- Allow to enable and disable the word counting and the smiley insertion popup features in the settings of the extension
+		- Enable / disable smiley and tag insertion tool in the settings
+		- Enable / disable word counting feature in the settings
+	- Geocache detail page:
+		- Enable / disable elevation feature in the settings
+		- Enable / disable friend log list feture in the settings
 - 0.8.0
 	- Click the extension icon to open the settings
 	- Redesigned the settings page
