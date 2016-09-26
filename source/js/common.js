@@ -23,7 +23,8 @@ var Common = (function () {
 		}
 
 		function createGeocachingUtilsPopup(additionalClasses = ""){
-			var popup = $("<div style='position: relative; width: 0; height: 0'><div class='geocachingUtilsPopup " + additionalClasses + "'/></div>");
+			var popup = $("<div style='position: relative; width: 0; height: 0'><div class='geocachingUtilsPopup " 
+				+ additionalClasses + "'/></div>");
 			popup.getPopupContentContainer = function(){
 				return this.find("div.geocachingUtilsPopup");
 			};
