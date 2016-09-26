@@ -1,9 +1,22 @@
 function runLogEditorWordCount(){
 	var common = LogEditorCommon.getInstance(),
-		textArea = $("div.mdd_editor_wrap textarea");
+		textArea = $("div.mdd_editor_wrap textarea"),
+		popup = Common.getInstance().createGeocachingUtilsPopup("logEditorWordCountPopup"),
+		toolbarElement = $("<li id='geoachingUtilsWordCount'><img></li>")
 
 	common.addSeperatorToToolbar();
-	common.toolbar.append("<li id='geoachingUtilsWordCount'><img><li/>");
+	
+	toolbarElement.append(popup);
+	popup.getPopupContentContainer().append("<img>").append("<span>");
+	
+	toolbarElement.mouseenter(function (){
+		popup.show();
+	});
+	toolbarElement.mouseleave(function (){
+		popup.hide();
+	});
+
+	common.toolbar.append(toolbarElement);
 	defineAndDisplayImage(0);
 
 	textArea.on("input", function(e){
@@ -60,6 +73,9 @@ function runLogEditorWordCount(){
 
 		$("#geoachingUtilsWordCount img").attr("src", imagePath).attr("title", "Current Word Count: "
 			+ wordCount + "\n" + badgeText);
+
+		popup.find("img").attr("src", imagePath);
+		popup.find("span").text(wordCount);
 	}
 
 	// from http://stackoverflow.com/a/18679657/527718, but slightly improved
