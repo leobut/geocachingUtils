@@ -2,7 +2,8 @@ function runFriendLogListFeature(){
 	var resultDisplay = $("div.CacheDetailNavigation"),
 		friendLogList = $("<ul id='friendLogList'>");
 
-	friendLogList.append("<img id='friendLogListSpinner' src='"+chrome.extension.getURL("img/friendLogList/spinner.gif")+"'>");
+	friendLogList.append("<img id='friendLogListSpinner' src='" 
+		+ chrome.extension.getURL("img/friendLogList/spinner.gif") + "'>");
 	resultDisplay.append(friendLogList);
 
 	injectCodeToReadUserToken();
@@ -43,7 +44,10 @@ function runFriendLogListFeature(){
 	        	var popup = Common.getInstance().createGeocachingUtilsPopup("logDetailPopup"),
 					avatar = (value.AvatarImage === "") ? "/images/default_avatar.png" : "https://img.geocaching.com/user/avatar/" + value.AvatarImage,
 	        		userImage = $("<img class='friendAvatar' src='" + avatar + "'>"),
-	        		logDetailTable = $("<table><tr><td><img src='/images/logtypes/" + value.LogTypeImage + "'> " + value.Visited + "</td></tr><tr><td><a class='friendName' href='https://www.geocaching.com/profile/?guid=" + value.AccountGuid + "'>" + value.UserName + "</a></td></tr></table>"),
+	        		logDetailTable = $("<table><tr><td><img src='/images/logtypes/" + value.LogTypeImage 
+	        			+ "'> " + value.Visited
+	        			+ "</td></tr><tr><td><a class='friendName' href='https://www.geocaching.com/profile/?guid="
+	        			+ value.AccountGuid + "'>" + value.UserName + "</a></td></tr></table>"),
 	        		newFriendLogEntry;
 
 	        	popup.getPopupContentContainer().append("<div class='hoverBridge'/>" + value.LogText);
