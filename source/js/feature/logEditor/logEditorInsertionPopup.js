@@ -1,5 +1,5 @@
 function runLogEditorInsertionPopup(){
-	var guToolbarElement,
+	var toolbarElement,
 		popup,
 		supportedSmileys,
 		supportedTags;
@@ -11,23 +11,23 @@ function runLogEditorInsertionPopup(){
 
 	function addGUIconToToolbar(){
 		LogEditorCommon.getInstance().toolbar.append("<li id='geoachingUtilsFunctions'><img src='" + chrome.extension.getURL("img/appIcon/appIcon26.png") + "'><li/>");
-		guToolbarElement = $("#geoachingUtilsFunctions");
+		toolbarElement = $("#geoachingUtilsFunctions");
 
 		hookInGUWindow();
 
-		guToolbarElement.mouseenter(function (){
+		toolbarElement.mouseenter(function (){
     		popup.show();
     	});
-    	guToolbarElement.mouseleave(function (){
+    	toolbarElement.mouseleave(function (){
     		popup.hide();
     	});
 	}
 
 	function hookInGUWindow(){
-		popup = Common.getInstance().createGeocachingUtilsPopup("logEditorPopup");
+		popup = Common.getInstance().createGeocachingUtilsPopup("logEditorInsertionPopup");
 		popup.getPopupContentContainer().append("<span class='popupText'>Smileys:</span><ul class='smileyList'></ul><span class='popupText'>Tags:</span><ul class='tagList'></ul>");
 
-		guToolbarElement.append(popup);
+		toolbarElement.append(popup);
 
 		addSmileysToPopup();
 		addTagsToPopup();
