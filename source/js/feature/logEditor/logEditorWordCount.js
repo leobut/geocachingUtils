@@ -58,7 +58,8 @@ function runLogEditorWordCount(){
 			badgeText = "''" + badgeName + "'' badge";
 		}
 
-		$("#geoachingUtilsWordCount img").attr("src", imagePath).attr("title", "Current Word Count: " + wordCount + "\n" + badgeText);
+		$("#geoachingUtilsWordCount img").attr("src", imagePath).attr("title", "Current Word Count: "
+			+ wordCount + "\n" + badgeText);
 	}
 
 	// from http://stackoverflow.com/a/18679657/527718, but slightly improved
