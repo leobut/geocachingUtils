@@ -1,5 +1,5 @@
 # ![image of elevation feature](source/img/appIcon/appIcon48.png "Elevation Feature") Geocaching Utils ![image of elevation feature](source/img/appIcon/appIcon48.png "Elevation Feature") 
-Geocaching Utils is an extension for google chrome that adds features to the geocaching.com website. You can download it for free from the chrome web store: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
+Geocaching Utils is an extension for google chrome that adds features to the  [geocaching.com](http://www.geocaching.com) website. You can download it for free from the chrome web store: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 
 Feel free to contribute to the code or report bugs and feature requests.
