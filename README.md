@@ -25,7 +25,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 ##Release History
 - 0.9.0 (currently in development)
 	- Log Editor:
-		- Count the words in your log and predict the "The Author" badge you will earn. Badge provided by [BadgeGen](http://www.badgegen.com/).
+		- Count the words in your log and predict the "The Author" badge you will earn. (Badge provided by [BadgeGen](http://www.badgegen.com/))
 		- Enable / disable smiley and tag insertion tool in the settings
 		- Enable / disable word counting feature in the settings
 	- Geocache detail page:
