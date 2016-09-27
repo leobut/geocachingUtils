@@ -25,7 +25,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 ##Release History
 - 0.9.0 (currently in development)
 	- Log Editor:
-		- Count the words in your log and predict the "The Author" badge you will earn. (Badge provided by [BadgeGen](http://www.badgegen.com/))
+		- Count the words in your log text and predict the "The Author" badge you will earn. (Badge provided by [BadgeGen](http://www.badgegen.com/), Badges can e.g. be seen on [Project-GC](http://www.project-gc.com/))
 		- Enable / disable smiley and tag insertion tool in the settings
 		- Enable / disable word counting feature in the settings
 	- Geocache detail page:
@@ -50,7 +50,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 - 0.4.2
 	- Initial Release
 
-##How to run this extension (DEVELOPMENT ONLY)
+##How to run this extension (FOR DEVELOPMENT ONLY)
 Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
