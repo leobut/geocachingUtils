@@ -30,31 +30,31 @@ function runLogEditorWordCount(){
 			badgeName;
 
 		if(wordCount < 30){ // lower than 30
-			imagePath = "img/logEditor/WritBg.png";
+			imagePath = "img/logEditor/WritBg_small.png";
 			badgeName = "None";
 		} else if(wordCount >= 30 && wordCount < 40) { // 30-39
-			imagePath = "img/logEditor/WritB.png";
+			imagePath = "img/logEditor/WritB_small.png";
 			badgeName = "Bronze";
 		} else if(wordCount >= 40 && wordCount < 50) { // 40-49
-			imagePath = "img/logEditor/WritS.png";
+			imagePath = "img/logEditor/WritS_small.png";
 			badgeName = "Silver";
 		} else if(wordCount >= 50 && wordCount < 60) { // 50-59
-			imagePath = "img/logEditor/WritG.png";
+			imagePath = "img/logEditor/WritG_small.png";
 			badgeName = "Gold";
 		} else if(wordCount >= 60 && wordCount < 70) { // 60-69
-			imagePath = "img/logEditor/WritP.png";
+			imagePath = "img/logEditor/WritP_small.png";
 			badgeName = "Platinum";
 		} else if(wordCount >= 70 && wordCount < 80) { // 70-79
-			imagePath = "img/logEditor/WritR.png";
+			imagePath = "img/logEditor/WritR_small.png";
 			badgeName = "Ruby";
 		} else if(wordCount >= 80 && wordCount < 90) { // 80-89
-			imagePath = "img/logEditor/WritSa.png";
+			imagePath = "img/logEditor/WritSa_small.png";
 			badgeName = "Sapphire";
 		} else if(wordCount >= 90 && wordCount < 100) { // 90-99
-			imagePath = "img/logEditor/WritE.png";
+			imagePath = "img/logEditor/WritE_small.png";
 			badgeName = "Emerald";
 		} else if(wordCount >= 100) { // higher than or equal to 100
-			imagePath = "img/logEditor/WritD.png";
+			imagePath = "img/logEditor/WritD_small.png";
 			badgeName = "Diamond";
 		}
 
