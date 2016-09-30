@@ -28,7 +28,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 - Hints are decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
 
 ##Release History
-- 0.9.0 (currently in development)
+- 0.9.0
 	- Log Editor:
 		- Count the words in your log text and predict the "The Author" badge you will earn. (Badge provided by [BadgeGen](http://www.badgegen.com/), Badges can e.g. be seen on [Project-GC](http://www.project-gc.com/))
 		- Enable / disable smiley and tag insertion tool in the settings
