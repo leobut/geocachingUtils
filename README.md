@@ -20,6 +20,11 @@ Feel free to contribute to the code or report bugs and feature requests.
 ![image of friend list feature](readmeRcs/EditorEnhancementFeature.gif
  "Editor Enhancement Feature")
 
+- You can predict the "The Author" badge that you will earn when writing a new log:
+
+![image of word counting feature](readmeRcs/EditorEnhancementWordCountFeature.gif
+ "Editor Enhancement Word Count Feature")
+
 - Hints are decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
 
 ##Release History
