@@ -9,7 +9,20 @@
 /* LogEditorEnhancement */
 
 .logEditorWordCountPopup {
-    width: 196px;
+    width: 130px;
+}
+
+.logEditorWordCountPopup img {
+    display: block;
+    margin: auto;
+    padding: 5px 0;
+    width: 100px;
+}
+
+.logEditorWordCountPopup span {
+    text-align: center;
+    display: block;
+    padding: 5px 0;
 }
 
 .logEditorInsertionPopup .popupText {

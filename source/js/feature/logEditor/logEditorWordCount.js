@@ -2,7 +2,10 @@ function runLogEditorWordCount(){
 	var common = LogEditorCommon.getInstance(),
 		textArea = $("div.mdd_editor_wrap textarea"),
 		popup = Common.getInstance().createGeocachingUtilsPopup("logEditorWordCountPopup"),
-		toolbarElement = $("<li id='geoachingUtilsWordCount'><img></li>")
+		toolbarElement = $("<li id='geoachingUtilsWordCount'><img></li>"),
+		availableTheAuthorBadges;
+
+	loadAvailableTheAuthorBadges();
 
 	common.addSeperatorToToolbar();
 	
@@ -26,56 +29,28 @@ function runLogEditorWordCount(){
 	});
 
 	function defineAndDisplayImage(wordCount){
-		var imagePath,
-			badgeName;
+		var badge;
 
-		if(wordCount < 30){ // lower than 30
-			imagePath = "img/logEditor/WritBg_small.png";
-			badgeName = "None";
-		} else if(wordCount >= 30 && wordCount < 40) { // 30-39
-			imagePath = "img/logEditor/WritB_small.png";
-			badgeName = "Bronze";
-		} else if(wordCount >= 40 && wordCount < 50) { // 40-49
-			imagePath = "img/logEditor/WritS_small.png";
-			badgeName = "Silver";
-		} else if(wordCount >= 50 && wordCount < 60) { // 50-59
-			imagePath = "img/logEditor/WritG_small.png";
-			badgeName = "Gold";
-		} else if(wordCount >= 60 && wordCount < 70) { // 60-69
-			imagePath = "img/logEditor/WritP_small.png";
-			badgeName = "Platinum";
-		} else if(wordCount >= 70 && wordCount < 80) { // 70-79
-			imagePath = "img/logEditor/WritR_small.png";
-			badgeName = "Ruby";
-		} else if(wordCount >= 80 && wordCount < 90) { // 80-89
-			imagePath = "img/logEditor/WritSa_small.png";
-			badgeName = "Sapphire";
-		} else if(wordCount >= 90 && wordCount < 100) { // 90-99
-			imagePath = "img/logEditor/WritE_small.png";
-			badgeName = "Emerald";
-		} else if(wordCount >= 100) { // higher than or equal to 100
-			imagePath = "img/logEditor/WritD_small.png";
-			badgeName = "Diamond";
-		}
+		$.each(availableTheAuthorBadges, function(index, value){
+			if(wordCount >= value.requiredWordCount){
+				badge = value;
+			}
+		});
 
-		updateWordCountImage(imagePath, wordCount, badgeName);
+		updateWordCountImage(badge, wordCount);
 	}
 
-	function updateWordCountImage(localImagePath, wordCount, badgeName){
-		var imagePath = chrome.extension.getURL(localImagePath),
-			badgeText;
+	function updateWordCountImage(badge, wordCount){
+		var imagePathPrefix = "img/logEditor/",
+			imagePath = chrome.extension.getURL(imagePathPrefix + badge.image),
+			smallImagePath = chrome.extension.getURL(imagePathPrefix + badge.smallImage)
+			badgeTitle = (badge.isHighestBadge === true)?"This is the highest badge you can earn!":"Keep going, there are higher badges!"; 
 
-		if(badgeName === "None"){
-			badgeText = "You need at least 30 words to earn a badge";
-		} else {
-			badgeText = "''" + badgeName + "'' badge";
-		}
+		$("#geoachingUtilsWordCount img").attr("src", smallImagePath);
 
-		$("#geoachingUtilsWordCount img").attr("src", imagePath).attr("title", "Current Word Count: "
-			+ wordCount + "\n" + badgeText);
 
-		popup.find("img").attr("src", imagePath);
-		popup.find("span").text(wordCount);
+		popup.find("img").attr("src", imagePath).attr("title", badgeTitle);
+		popup.find("span").text("Words: " + wordCount);
 	}
 
 	// from http://stackoverflow.com/a/18679657/527718, but slightly improved
@@ -90,5 +65,64 @@ function runLogEditorWordCount(){
 	    } else {
 		    return s.split(" ").length; 
 		}
+	}
+
+	function loadAvailableTheAuthorBadges(){
+		availableTheAuthorBadges = [
+			{
+				image: "WritBg.png",
+				smallImage: "WritBg_small.png",
+				requiredWordCount: 0,
+				isHighestBadge: false
+			},
+			{
+				image: "WritB.png",
+				smallImage: "WritB_small.png",
+				requiredWordCount: 30,
+				isHighestBadge: false
+			},
+			{
+				image: "WritS.png",
+				smallImage: "WritS_small.png",
+				requiredWordCount: 40,
+				isHighestBadge: false
+			},
+			{
+				image: "WritG.png",
+				smallImage: "WritG_small.png",
+				requiredWordCount: 50,
+				isHighestBadge: false
+			},
+			{
+				image: "WritP.png",
+				smallImage: "WritP_small.png",
+				requiredWordCount: 60,
+				isHighestBadge: false
+			},
+			{
+				image: "WritR.png",
+				smallImage: "WritR_small.png",
+				requiredWordCount: 70,
+				isHighestBadge: false
+			},
+			{
+				image: "WritSa.png",
+				smallImage: "WritSa_small.png",
+				requiredWordCount: 80,
+				isHighestBadge: false
+			},
+			{
+				image: "WritE.png",
+				smallImage: "WritE_small.png",
+				requiredWordCount: 90,
+				isHighestBadge: false
+			},
+			{
+				image: "WritD.png",
+				smallImage: "WritD_small.png",
+				requiredWordCount: 100,
+				isHighestBadge: true
+			}
+		];
 	}
 }
