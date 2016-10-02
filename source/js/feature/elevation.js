@@ -9,7 +9,7 @@ function runElevationFeature(){
 	findCoordinatesInPage();
 	currentText = coordinateElement.text();
 	latLon = getDdFromDms(currentText)
-	elevationServiceUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations="+latLon+"&key=" + apiKey
+	elevationServiceUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations=" + latLon + "&key=" + apiKey
 
 	jQuery.getJSON(elevationServiceUrl, function(data){
 		chrome.storage.sync.get({
@@ -52,8 +52,8 @@ function runElevationFeature(){
 		};
 
 		var parts = input.split(/[.\s°]+/);
-	    var lat = convert(parts[0], parts[1], parts[2], "0."+parts[3]);
-	    var long = convert(parts[4], parts[5], parts[6], "0."+parts[7]);
+	    var lat = convert(parts[0], parts[1], parts[2], "0." + parts[3]);
+	    var long = convert(parts[4], parts[5], parts[6], "0." + parts[7]);
 
 	    var result = lat + "," + long;
 		return result;
