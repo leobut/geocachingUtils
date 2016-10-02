@@ -1,4 +1,4 @@
-function runElevationFeature(){	
+function runElevationFeature() {	
 	// IMPORTANT: You need to enter your own Google API key here:
 	var apiKey = "",
 		coordinateElement,
@@ -43,7 +43,7 @@ function runElevationFeature(){
 			seconds = parseFloat(seconds); // seconds are already in decimal
 
 
-			var dd = degrees + minutes/60 + seconds/60;
+			var dd = degrees + (minutes / 60) + (seconds / 60);
 
 		    if (direction == "S" || direction == "W") {
 		        dd = dd * -1;
