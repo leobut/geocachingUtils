@@ -8,16 +8,16 @@ function runElevationFeature() {
 
 	findCoordinatesInPage();
 	currentText = coordinateElement.text();
-	latLon = getDdFromDms(currentText)
-	elevationServiceUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations=" + latLon + "&key=" + apiKey
+	latLon = getDdFromDms(currentText);
+	elevationServiceUrl = "https://maps.googleapis.com/maps/api/elevation/json?locations=" + latLon + "&key=" + apiKey;
 
-	jQuery.getJSON(elevationServiceUrl, function(data){
+	jQuery.getJSON(elevationServiceUrl, function(data) {
 		chrome.storage.sync.get({
     		elevation_measurement: 'meters' // in case nothing was defined yet, use meters
   		},function(items) {
   			var measurement = items.elevation_measurement,
   				textToAppend;
-  			switch(measurement){
+  			switch(measurement) {
   				case 'meters':
   					var elevationInMeters = Math.round(data.results[0].elevation * 100) / 100;
   					textToAppend = " (" + elevationInMeters + "m)";
@@ -37,7 +37,7 @@ function runElevationFeature() {
 	function getDdFromDms(input){
 		// input must be the same as on geocaching.com
 		// example: N 47° 30.159 E 008° 43.187
-		var convert = function(direction, degrees, minutes, seconds){
+		var convert = function(direction, degrees, minutes, seconds) {
 			degrees = parseFloat(degrees);
 			minutes = parseFloat(minutes);
 			seconds = parseFloat(seconds); // seconds are already in decimal
@@ -45,7 +45,7 @@ function runElevationFeature() {
 
 			var dd = degrees + (minutes / 60) + (seconds / 60);
 
-		    if (direction == "S" || direction == "W") {
+		    if (direction === "S" || direction === "W") {
 		        dd = dd * -1;
 		    } // Don't do anything for N or E
 		    return dd;

@@ -3,7 +3,7 @@ function save_options() {
   var elevationMeasurement = document.getElementById('elevation_measurement').value,
       automaticallyDecryptHints = document.getElementById('automatically_decrypt_hints').value,
       logEditorCountWords = document.getElementById('log_editor_count_words').value,
-      logEditorShowInsertionPopup = document.getElementById('log_editor_show_insertion_popup').value
+      logEditorShowInsertionPopup = document.getElementById('log_editor_show_insertion_popup').value,
       showElevation = document.getElementById('show_elevation').value,
       showFriendLogs = document.getElementById('show_friend_logs').value;
 
