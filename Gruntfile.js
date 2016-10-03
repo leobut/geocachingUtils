@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     compress: {
       main: {
         options: {
-          archive: 'Geocaching_Utils.zip'
+          archive: 'GeocachingUtils_<%= pkg.version %>.zip'
         },
         files: [
           {
