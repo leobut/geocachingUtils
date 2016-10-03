@@ -46,7 +46,7 @@ Note: This is only needed if you are working on the extension and want to try so
 - `grunt build` to run jsHint and unit tests
 - `grunt` to run everything
 
-##Release History
+#Release History
 - 1.0.0
 	- Currently in development 
 - 0.9.0
