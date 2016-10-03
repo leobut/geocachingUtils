@@ -7,22 +7,22 @@ Feel free to contribute to the code or report bugs and feature requests.
 ##Features
 - Show elevation next to the cache coordinates (supports meters & feet):
 
-![image of elevation feature](readmeRcs/ElevationFeature.png
+![image of elevation feature](readMeResources/ElevationFeature.png
  "Elevation Feature")
  
 - Show friend logs in the sidebar on the right: 
 
-![image of friend list feature](readmeRcs/FriendListFeature.gif
+![image of friend list feature](readMeResources/FriendListFeature.gif
  "Friend List Feature")
 
 - Log editor is improved to make using smileys and tags easier:
 
-![image of friend list feature](readmeRcs/EditorEnhancementFeature.gif
+![image of friend list feature](readMeResources/EditorEnhancementFeature.gif
  "Editor Enhancement Feature")
 
 - You can predict the "The Author" badge that you will earn when writing a new log:
 
-![image of word counting feature](readmeRcs/EditorEnhancementWordCountFeature.gif
+![image of word counting feature](readMeResources/EditorEnhancementWordCountFeature.gif
  "Editor Enhancement Word Count Feature")
 
 - Hints are decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
