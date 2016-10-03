@@ -9,8 +9,7 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            src: ['source/**'],
-            dest: ''
+            src: ['source/**']
           }
         ]
       }
