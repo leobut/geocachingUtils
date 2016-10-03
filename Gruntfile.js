@@ -22,6 +22,7 @@ module.exports = function(grunt) {
         eqnull: true,
         browser: true,
         esnext: true,
+        bitwise: true,
         globals: {
           jQuery: true
         },
