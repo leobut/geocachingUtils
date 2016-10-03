@@ -28,6 +28,8 @@ Feel free to contribute to the code or report bugs and feature requests.
 - Hints are decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
 
 ##Release History
+- 1.0.0
+	- Currently in development 
 - 0.9.0
 	- Log Editor:
 		- Count the words in your log text and predict the "The Author" badge you will earn. (Badge provided by [BadgeGen](http://www.badgegen.com/), Badges can e.g. be seen on [Project-GC](http://www.project-gc.com/))
@@ -55,10 +57,21 @@ Feel free to contribute to the code or report bugs and feature requests.
 - 0.4.2
 	- Initial Release
 
-##How to run this extension (FOR DEVELOPMENT ONLY)
+#Development
+##How to run this extension
 Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
 2. Click the "Load unpacked extension..." button
 3. Select the "source" folder of this project
 4. Navigate to geocaching.com and enjoy
+
+##How to setup the project locally
+1. Checkout this project
+2. Have Node.js and NPM installed
+3. Open command line in the root folder of the project
+4. Run `npm install --save-dev` to install all dependecies (has to be done once)
+5. Run the commands you want:
+- `grunt package` to build the extension for chrome webstore
+- `grunt build` to run jsHint and unit tests
+- `grunt` to run everything
