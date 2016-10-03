@@ -43,7 +43,7 @@ function runLogEditorWordCount(){
 	function updateWordCountImage(badge, wordCount){
 		var imagePathPrefix = "img/logEditor/",
 			imagePath = chrome.extension.getURL(imagePathPrefix + badge.image),
-			smallImagePath = chrome.extension.getURL(imagePathPrefix + badge.smallImage)
+			smallImagePath = chrome.extension.getURL(imagePathPrefix + badge.smallImage),
 			badgeTitle = (badge.isHighestBadge === true)?"This is the highest badge you can earn!":"Keep going, there are higher badges!"; 
 
 		$("#geoachingUtilsWordCount img").attr("src", smallImagePath);
@@ -56,7 +56,7 @@ function runLogEditorWordCount(){
 	// from http://stackoverflow.com/a/18679657/527718, but slightly improved
 	function countWords(s){
 		s = s.replace(/\n /, "\n"); // exclude newline with a start spacing
-		s = s.replace(/\n/g, " ") // replace newline with space
+		s = s.replace(/\n/g, " "); // replace newline with space
 	    s = s.replace(/(^\s*)|(\s*$)/gi, ""); // exclude  start and end white-space
 	    s = s.replace(/[ ]{2,}/gi, " "); // 2 or more space to 1
 

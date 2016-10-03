@@ -2,9 +2,9 @@
 var Common = (function () {
 	var instance;
 
-	function init(){
-		var currentPageIsGeocacheDetailPage;
-		var currentPageContainsAnEditor;
+	function init() {
+		var currentPageIsGeocacheDetailPage,
+			currentPageContainsAnEditor;
 
 		function findOutIfIAmOnAGeocacheDetailPage(){
 			if($(".CacheDetailNavigation").length === 0){
@@ -23,8 +23,8 @@ var Common = (function () {
 		}
 
 		function createGeocachingUtilsPopup(additionalClasses = ""){
-			var popup = $("<div style='position: relative; width: 0; height: 0'><div class='geocachingUtilsPopup " 
-				+ additionalClasses + "'/></div>");
+			var popup = $("<div style='position: relative; width: 0; height: 0'><div class='geocachingUtilsPopup " +
+			additionalClasses + "'/></div>");
 			popup.getPopupContentContainer = function(){
 				return this.find("div.geocachingUtilsPopup");
 			};
