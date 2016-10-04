@@ -1,26 +1,12 @@
 # ![image of elevation feature](source/img/appIcon/appIcon48.png "Elevation Feature") Geocaching Utils ![image of elevation feature](source/img/appIcon/appIcon48.png "Elevation Feature") 
 Geocaching Utils is an extension for google chrome that adds features to the  [geocaching.com](http://www.geocaching.com) website. You can download it for free from the chrome web store: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
-
 Feel free to contribute to the code or report bugs and feature requests.
 
 ##Features
-- [Show elevation](readMeResources/ElevationFeature.png)  next to the cache coordinates (supports meters & feet): 
-- Show friend logs in the sidebar on the right: 
-
-![image of friend list feature](readMeResources/FriendListFeature.gif
- "Friend List Feature")
-
-- Log editor is improved to make using smileys and tags easier:
-
-![image of friend list feature](readMeResources/EditorEnhancementFeature.gif
- "Editor Enhancement Feature")
-
-- You can predict the "The Author" badge that you will earn when writing a new log:
-
-![image of word counting feature](readMeResources/EditorEnhancementWordCountFeature.gif
- "Editor Enhancement Word Count Feature")
-
+- [Show elevation](readMeResources/ElevationFeature.png)  next to the cache coordinates (supports meters & feet)
+- [Show friend logs](readMeResources/FriendListFeature.gif) in the sidebar on the right
+- Log editor is improved to [make using smileys and tags easier](readMeResources/EditorEnhancementFeature.gif) and [predict the "The Author" badge](readMeResources/EditorEnhancementWordCountFeature.gif) that you will earn when writing a new log
 - Hints are decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
 
 #Development
