@@ -5,11 +5,7 @@ Geocaching Utils is an extension for google chrome that adds features to the  [g
 Feel free to contribute to the code or report bugs and feature requests.
 
 ##Features
-- Show elevation next to the cache coordinates (supports meters & feet):
-
-![image of elevation feature](readMeResources/ElevationFeature.png
- "Elevation Feature")
- 
+- [Show elevation](readMeResources/ElevationFeature.png)  next to the cache coordinates (supports meters & feet): 
 - Show friend logs in the sidebar on the right: 
 
 ![image of friend list feature](readMeResources/FriendListFeature.gif
