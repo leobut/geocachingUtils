@@ -28,6 +28,9 @@ Feel free to contribute to the code or report bugs and feature requests.
 - Hints are decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
 
 #Development
+
+[![Build Status](https://travis-ci.org/ControlTheBit/geocachingUtils.svg?branch=master)](https://travis-ci.org/ControlTheBit/geocachingUtils)
+
 ##How to run this extension
 Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
