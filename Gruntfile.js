@@ -2,10 +2,11 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    manifest: grunt.file.readJSON('source/manifest.json'),
     compress: {
       main: {
         options: {
-          archive: 'GeocachingUtils_<%= pkg.version %>.zip'
+          archive: 'GeocachingUtils_<%= manifest.version %>.zip'
         },
         files: [
           {
