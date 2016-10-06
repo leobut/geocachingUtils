@@ -10,10 +10,18 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            src: ['source/**']
+            src: ['build/**']
           }
         ]
       }
+    },
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'source',
+        src: '**',
+        dest: 'build',
+      },
     },
     jshint: {
       options: {
@@ -27,18 +35,18 @@ module.exports = function(grunt) {
           jQuery: true
         },
         ignores: [
-          'node_modules/**/*.js', 
-          'source/js/lib/**/*.js'
+          'build/js/lib/**/*.js'
         ]
       },
-      all: ['**/*.js']
+      all: ['build/**/*.js']
      }
   });
 
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('build', ['jshint']);
-  grunt.registerTask('package', ['compress']);
-  grunt.registerTask('default', ['build', 'package']);
+  grunt.registerTask('build', ['copy', 'jshint']);
+  grunt.registerTask('default', ['build', 'compress']);
 };

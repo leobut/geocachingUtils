@@ -25,9 +25,8 @@ Note: This is only needed if you are working on the extension and want to try so
 3. Open command line in the root folder of the project
 4. Run `npm install --save-dev` to install all dependecies (has to be done once)
 5. Run the commands you want:
-- `grunt package` to build the extension for chrome webstore
-- `grunt build` to run jsHint and unit tests
-- `grunt` to run everything
+- `grunt build` to run jsHint, uglification and unit tests
+- `grunt` to run `build` and create a package ready for chrome web store
 
 #Release History
 - 1.0.0
