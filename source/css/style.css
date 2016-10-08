@@ -1,9 +1,9 @@
 /* General */
-.geocachingUtilsPopup{
-	position: absolute;
+.geocachingUtilsPopup {
     background-color: #fbfaf3;
     border: solid #594a42 1px;
     border-radius: 3px;
+	position: absolute;
 }
 
 /* LogEditorEnhancement */
@@ -20,9 +20,9 @@
 }
 
 .logEditorWordCountPopup span {
-    text-align: center;
     display: block;
     padding: 5px 0;
+    text-align: center;
 }
 
 .logEditorInsertionPopup .popupText {
@@ -37,19 +37,19 @@
     background-color: #e3ddc2;
 }
 
-.logEditorInsertionPopup > ul.smileyList > li {
-    width: 20px;
-    line-height: 26px;
+.logEditorInsertionPopup > .smileyList > li {
     height: 20px;
+    line-height: 26px;
     padding: 4px;
     text-align: center;
+    width: 20px;
 }
 
-.logEditorInsertionPopup > ul.tagList > li {
-    width: 30px;
+.logEditorInsertionPopup > .tagList > li {
     height: 20px;
     padding: 4px;
     text-align: center;
+    width: 30px;
 }
 
 .logEditorInsertionPopup {
@@ -62,72 +62,72 @@
 	width: 22px;
 }
 
-#friendLogList > li > table td{
+#friendLogList > li > table td {
 	padding: 0;
 }
 
-#friendLogList > li > table td img{
+#friendLogList > li > table td img {
 	vertical-align: text-bottom;
 }
 
-#friendLogList > li table.LogImagesTable td a.tb_images span{
+#friendLogList > li .LogImagesTable td .tb_images span {
     padding-left: 3px;
 }
 
-#friendLogList li{
+#friendLogList li {
 	border-radius: 3px;
+    height: 52px;
 	margin: 0 0 10px 0;
-	height: 52px;
 }
 
-#friendLogList li:hover{
+#friendLogList li:hover {
 	background-color: #e3ddc2;
 }
 
-#friendLogList li img.friendAvatar{
-	float: left;
+#friendLogList li .friendAvatar {
 	border-radius: 3px;
+    float: left;
 	margin: 2px;
 	width: 48px;
 }
 
-#friendLogList table{
+#friendLogList table {
+    margin-bottom: 1em;
 	padding-left: 5px;
 	padding-top: 5px;
-	margin-bottom: 1em;
 }
 
-#friendLogList .friendName{
+#friendLogList .friendName {
 	padding-left: 0;
 }
 
 
-#friendLogList div.logDetailPopup {
-    width: 670px;
+#friendLogList .logDetailPopup {
     left: -700px;
+    width: 670px;
 }
 
-#friendLogList div.hoverBridge {
-	position: absolute;
+#friendLogList .hoverBridge {
 	background-color: transparent;
-    width: 32px;
     height: 100%;
     left: 670px;
+    position: absolute;
+    width: 32px;
 }
 
-#friendLogList div.line {
-	position: absolute;
+#friendLogList .line {
 	background-color: #594a42;
-    width: 30px;
     height: 1px;
     left: -29px;
+    position: absolute;
     top: 20px;
+    width: 30px;
 }
 
-#friendLogList div.logDetailPopup a.tb_images.lnk{
+#friendLogList .logDetailPopup .tb_images.lnk {
 	padding-left: 0;
 }
 
-#friendLogList div.logDetailPopup p{
+#friendLogList .logDetailPopup p {
 	margin: 1.5em;
 }
