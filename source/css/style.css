@@ -60,22 +60,17 @@
     width: 22px;
 }
 
-#friendLogList > li > table td {
-    padding: 0;
-}
-
-#friendLogList > li > table td img {
-    vertical-align: text-bottom;
-}
-
-#friendLogList > li .LogImagesTable td .tb_images span {
-    padding-left: 3px;
+#friendLogList {
+    max-height: 320px;
+    overflow-x: hidden;
+    overflow-y: auto; 
 }
 
 #friendLogList li {
     border-radius: 3px;
     height: 52px;
     margin: 0 0 10px 0;
+    position: static;
 }
 
 #friendLogList li:hover {
@@ -88,6 +83,19 @@
     margin: 2px;
     width: 48px;
 }
+
+#friendLogList > li > table td {
+    padding: 0;
+}
+
+#friendLogList > li > table td img {
+    vertical-align: text-bottom;
+}
+
+#friendLogList > li .LogImagesTable td .tb_images span {
+    padding-left: 3px;
+}
+
 
 #friendLogList table {
     margin-bottom: 1em;

@@ -27,7 +27,7 @@ var Common = (function () {
 				additionalClasses = "";
 			}
 			
-			var popup = $("<div style='position: relative; width: 0; height: 0'><div class='geocachingUtilsPopup " +
+			var popup = $("<div style='position: absolute; width: 0; height: 0;'><div class='geocachingUtilsPopup " +
 			additionalClasses + "'/></div>");
 			popup.getPopupContentContainer = function(){
 				return this.find("div.geocachingUtilsPopup");
