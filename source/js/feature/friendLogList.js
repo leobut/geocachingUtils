@@ -25,7 +25,7 @@ function runFriendLogListFeature(){
 	        	friendLogList.text("Error while loading friend logs");
 	        } else {
 	        	if(response.pageInfo.idx < response.pageInfo.totalPages){
-	        		// load more friends if there are pages left
+	        		// load more friend logs if there are pages left
 	        		loadFriendLogs(++page);
 	        	} else {
 	        		imDoneLoading();
