@@ -3,6 +3,9 @@ node_js:
   - "6.1"
 script:
   - grunt
-addons:
-  code_climate:
-      repo_token: 37306cfba0916493377b7cde10ee7694aa2428040cfb0132aac9a06bf00a5a7b
+# Uncomment the following lines as soon as there are tests and coverage reports
+# after_script:
+#  - codeclimate-test-reporter < lcov.info
+# addons:
+#  code_climate:
+#      repo_token: 37306cfba0916493377b7cde10ee7694aa2428040cfb0132aac9a06bf00a5a7b
