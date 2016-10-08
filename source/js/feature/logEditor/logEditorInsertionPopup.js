@@ -87,7 +87,7 @@ function runLogEditorInsertionPopup(){
 			{
 				name: "FTF",
 				description: "First to find",
-				snippet: "{FTF}",
+				snippet: "{FTF}"
 			},
 			{
 				name: "STF",
@@ -98,7 +98,7 @@ function runLogEditorInsertionPopup(){
 				name: "TTF",
 				description: "Third to find",
 				snippet: "{TTF}"
-			},
+			}
 		];
 	}
 
