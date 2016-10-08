@@ -9,3 +9,6 @@ script:
 # addons:
 #  code_climate:
 #      repo_token: 37306cfba0916493377b7cde10ee7694aa2428040cfb0132aac9a06bf00a5a7b
+cache:
+  directories:
+    - node_modules
