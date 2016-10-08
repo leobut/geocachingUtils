@@ -43,11 +43,12 @@ module.exports = function(grunt) {
     csslint: {
       strict: {
         options: {
-          "important": 2,
           "adjoining-classes": false,
+          "ids": false,
+          "box-model": false,
+          "important": 2,
           "known-properties": 2,
           "box-sizing": 2,
-          "box-model": false,
           "overqualified-elements": 2,
           "display-property-grouping": 2,
           "bulletproof-font-face": 2,
@@ -66,7 +67,7 @@ module.exports = function(grunt) {
           "star-property-hack": 2,
           "outline-none": 2,
           "import": 2,
-          "ids": false,
+          "order-alphabetical": 2,
           "underscore-property-hack": 2,
           "rules-count": 2,
           "qualified-headings": 2,
