@@ -22,7 +22,11 @@ var Common = (function () {
 			}
 		}
 
-		function createGeocachingUtilsPopup(additionalClasses = ""){
+		function createGeocachingUtilsPopup(additionalClasses){
+			if(additionalClasses === undefined){
+				additionalClasses = "";
+			}
+			
 			var popup = $("<div style='position: relative; width: 0; height: 0'><div class='geocachingUtilsPopup " +
 			additionalClasses + "'/></div>");
 			popup.getPopupContentContainer = function(){
