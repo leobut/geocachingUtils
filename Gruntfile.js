@@ -51,6 +51,17 @@ module.exports = function(grunt) {
         }]
       }
     },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'build/',
+          src: ['**/*.css', '!**/*.min.css'],
+          dest: 'build/',
+          ext: '.css'
+        }]
+      }
+    },
     clean: {
       build: ['build/'],
       release: ['GeocachingUtils_*.zip']
@@ -62,8 +73,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('cleanUp', ['clean'])
   grunt.registerTask('build', ['cleanUp', 'copy', 'jshint']);
-  grunt.registerTask('default', ['build', 'uglify', 'compress']);
+  grunt.registerTask('default', ['build', 'uglify', 'cssmin', 'compress']);
 };
