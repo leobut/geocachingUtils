@@ -22,7 +22,7 @@ function runLogEditorWordCount(){
 	common.toolbar.append(toolbarElement);
 	defineAndDisplayImage(0);
 
-	textArea.on("input", function(e){
+	textArea.on("input", function(){
 		var currentText = textArea.val(),
 			currentWordCount = countWords(currentText);
 		defineAndDisplayImage(currentWordCount);
