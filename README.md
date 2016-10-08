@@ -26,7 +26,7 @@ Note: This is only needed if you are working on the extension and want to try so
 4. Run `npm install --save-dev` to install all dependecies (has to be done once)
 5. Run the commands you want:
 - `grunt cleanUp` to clean up your local development environment
-- `grunt build` to run `cleanUp` and jsHint
+- `grunt build` to run `cleanUp`, jsHint and cssLint
 - `grunt` to run `build`, js uglification, css minification and create a package ready for chrome web store
 
 #Release History

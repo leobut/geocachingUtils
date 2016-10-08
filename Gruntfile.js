@@ -40,6 +40,17 @@ module.exports = function(grunt) {
       },
       all: ['build/**/*.js']
     },
+    csslint: {
+      strict: {
+        options: {
+          'ids': false,
+          'box-sizing': false,
+          'box-model': false,
+          'adjoining-classes': false
+        },
+        src: ['build/**/*.css']
+      }
+    },
     uglify: {
       all: {
         files: [{
@@ -74,8 +85,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
 
   grunt.registerTask('cleanUp', ['clean'])
-  grunt.registerTask('build', ['cleanUp', 'copy', 'jshint']);
+  grunt.registerTask('build', ['cleanUp', 'copy', 'jshint', 'csslint']);
   grunt.registerTask('default', ['build', 'uglify', 'cssmin', 'compress']);
 };
