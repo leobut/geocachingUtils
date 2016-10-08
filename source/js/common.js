@@ -7,19 +7,11 @@ var Common = (function () {
 			currentPageContainsAnEditor;
 
 		function findOutIfIAmOnAGeocacheDetailPage(){
-			if($(".CacheDetailNavigation").length === 0){
-				currentPageIsGeocacheDetailPage = false;
-			} else {
-				currentPageIsGeocacheDetailPage = true;
-			}
+			currentPageIsGeocacheDetailPage = ($(".CacheDetailNavigation").length > 0);
 		}
 
 		function findEditorOnPage(){
-			if($(".mdd_toolbar").length === 0){
-				currentPageContainsAnEditor = false;
-			} else {
-				currentPageContainsAnEditor = true;
-			}
+			currentPageContainsAnEditor = ($(".mdd_toolbar").length > 0);
 		}
 
 		function createGeocachingUtilsPopup(additionalClasses){
