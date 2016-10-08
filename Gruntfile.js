@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         options: {
             configFile: '.eslintrc'
         },
-        target: ['build/**/*.js']
+        target: ['build/**/*.js', '!**/*.min.js']
     },
     csslint: {
       strict: {
