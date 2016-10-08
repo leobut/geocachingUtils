@@ -1,7 +1,7 @@
 {
   "name": "Geocaching Utils",
   "description": "A collection of useful features that enhances geocaching.com",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "permissions": [
     "storage",
     "https://maps.googleapis.com/maps/api/elevation/*"
