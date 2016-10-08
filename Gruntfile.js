@@ -16,12 +16,12 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      main: {
+      build: {
         expand: true,
         cwd: 'source',
         src: '**',
         dest: 'build',
-      },
+      }
     },
     jshint: {
       options: {
