@@ -39,7 +39,18 @@ module.exports = function(grunt) {
         ]
       },
       all: ['build/**/*.js']
-     }
+    },
+    uglify: {
+      all: {
+        files: [{
+            expand: true,
+            cwd: 'build/',
+            src: ['**/*.js', '!**/*.min.js'],
+            dest: 'build/',
+            ext: '.js'
+        }]
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-compress');
@@ -48,5 +59,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('build', ['copy', 'jshint']);
-  grunt.registerTask('default', ['build', 'compress']);
+  grunt.registerTask('default', ['build', 'uglify', 'compress']);
 };
