@@ -11,8 +11,8 @@ function runFriendLogListFeature(){
 	removeInjectedScriptFromDom();
 
 	function loadFriendLogs(page){
-		var userToken = friendLogList.attr('data-userToken');
-		$.getJSON('/seek/geocache.logbook', {
+		var userToken = friendLogList.attr("data-userToken");
+		$.getJSON("/seek/geocache.logbook", {
 	        tkn: userToken,
 	        idx: page,
 	        num: 100,
@@ -20,7 +20,7 @@ function runFriendLogListFeature(){
 	        sf: true,
 	        decrypt: false
 	    }).done(function(response) {
-	    	if (response.status !== 'success') {
+	    	if (response.status !== "success") {
 	    		imDoneLoading();
 	        	friendLogList.text("Error while loading friend logs");
 	        } else {

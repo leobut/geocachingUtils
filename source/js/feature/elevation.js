@@ -13,16 +13,16 @@ function runElevationFeature() {
 
 	jQuery.getJSON(elevationServiceUrl, function(data) {
 		chrome.storage.sync.get({
-    		elevation_measurement: 'meters' // in case nothing was defined yet, use meters
+    		elevation_measurement: "meters" // in case nothing was defined yet, use meters
   		},function(items) {
   			var measurement = items.elevation_measurement,
   				textToAppend;
   			switch(measurement) {
-  				case 'meters':
+  				case "meters":
   					var elevationInMeters = Math.round(data.results[0].elevation * 100) / 100;
   					textToAppend = " (" + elevationInMeters + "m)";
   					break;
-  				case 'feet':
+  				case "feet":
   					var	elevationInFeet = Math.round(data.results[0].elevation * 3.2808399 * 100) / 100; // 1m = 3.2808399 ft
   					textToAppend = " (" + elevationInFeet + "ft)";
   					break;
