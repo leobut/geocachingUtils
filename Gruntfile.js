@@ -50,6 +50,10 @@ module.exports = function(grunt) {
             ext: '.js'
         }]
       }
+    },
+    clean: {
+      build: ['build/'],
+      release: ['GeocachingUtils_*.zip']
     }
   });
 
@@ -57,7 +61,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask('build', ['copy', 'jshint']);
+  grunt.registerTask('cleanUp', ['clean'])
+  grunt.registerTask('build', ['cleanUp', 'copy', 'jshint']);
   grunt.registerTask('default', ['build', 'uglify', 'compress']);
 };
