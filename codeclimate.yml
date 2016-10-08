@@ -2,3 +2,4 @@ languages:
   JavaScript: true
 exclude_paths:
 - "source/js/lib/jquery-3.1.0.min.js"
+- "Gruntfile.js"
