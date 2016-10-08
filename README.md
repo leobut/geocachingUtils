@@ -9,7 +9,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 - Log editor is improved to [make using smileys and tags easier](readMeResources/EditorEnhancementFeature.gif) and [predict the "The Author" badge](readMeResources/EditorEnhancementWordCountFeature.gif) that you will earn when writing a new log
 - Hints are decrypted automatically without clicking on "Decrypt" (can be changed in the settings) 
 
-#Development [![Build Status](https://travis-ci.org/ControlTheBit/geocachingUtils.svg?branch=master)](https://travis-ci.org/ControlTheBit/geocachingUtils)
+#Development [![Build Status](https://travis-ci.org/ControlTheBit/geocachingUtils.svg?branch=master)](https://travis-ci.org/ControlTheBit/geocachingUtils) [![Build Status](https://david-dm.org/ControlTheBit/geocachingUtils.svg)](https://travis-ci.org/ControlTheBit/geocachingUtils)
 
 ##How to run this extension
 Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
