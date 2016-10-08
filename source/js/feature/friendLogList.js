@@ -58,6 +58,9 @@ function runFriendLogListFeature(){
 
 				newFriendLogEntry = $("<li>").append(popup).append(userImage).append(logDetailTable);
 	        	newFriendLogEntry.mouseenter(function (){
+	        		popup.css({
+	        			top: newFriendLogEntry.position().top
+	        		});
 	        		popup.show();
 	        	});
 	        	newFriendLogEntry.mouseleave(function (){

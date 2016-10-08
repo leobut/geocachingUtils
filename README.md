@@ -31,7 +31,7 @@ Note: This is only needed if you are working on the extension and want to try so
 
 #Release History
 - 1.0.0
-	- Currently in development 
+	- Friend log list now allows scrolling instead of displaying a very long list
 - 0.9.0
 	- Log Editor:
 		- Count the words in your log text and predict the "The Author" badge you will earn. (Badge provided by [BadgeGen](http://www.badgegen.com/), Badges can be seen on e.g. [Project-GC](http://www.project-gc.com/))
