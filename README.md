@@ -30,7 +30,7 @@ Note: This is only needed if you are working on the extension and want to try so
 - `grunt` to run `build`, js uglification, css minification and create a package ready for chrome web store
 
 #Release History
-- 0.9.1
+- 0.9.2
 	- Fixed a bug that messed up the geocaching detail page when there were a lot of friend logs
 - 0.9.0
 	- Log Editor:
