@@ -1,8 +1,7 @@
-
 body {
 	color: #594a42;
-    font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
-    font-size: 90%;
+	font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+	font-size: 90%;
 }
 
 h1 {
@@ -29,14 +28,14 @@ h2 {
 #centeredContainer {
 	background-color: #e3ddc2;
 	margin: auto;
-    padding: 14px;
-    width: 600px;
+	padding: 14px;
+	width: 600px;
 }
 
 #centeredContainer > div {
 	background-color: #fbfaf3;
 	margin-top: 14px;
-    padding: 1em;
+	padding: 1em;
 }
 
 #controlsContainer {
