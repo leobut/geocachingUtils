@@ -25,7 +25,8 @@ Note: This is only needed if you are working on the extension and want to try so
 3. Open command line in the root folder of the project
 4. Run `npm install --save-dev` to install all dependecies (has to be done once)
 5. Run the commands you want:
-- `grunt build` to run jsHint, uglification and unit tests
+- `grunt cleanUp` to clean up your local development environment
+- `grunt build` to run jsHint and uglification
 - `grunt` to run `build` and create a package ready for chrome web store
 
 #Release History
