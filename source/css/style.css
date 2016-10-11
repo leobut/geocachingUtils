@@ -61,7 +61,7 @@
 }
 
 #friendLogList {
-    max-height: 320px;
+    max-height: 300px;
     overflow-x: hidden;
     overflow-y: auto; 
 }
@@ -69,8 +69,16 @@
 #friendLogList li {
     border-radius: 3px;
     height: 52px;
-    margin: 0 0 10px 0;
+    margin: 5px 0;
     position: static;
+}
+
+#friendLogList li:first-child {
+    margin-top: 0;
+}
+
+#friendLogList li:last-child {
+    margin-bottom: 0;
 }
 
 #friendLogList li:hover {
