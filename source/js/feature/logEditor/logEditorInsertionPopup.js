@@ -89,17 +89,17 @@ function runLogEditorInsertionPopup(){
 		supportedTags = [
 			{
 				name: 'FTF',
-				description: 'First to find',
+				description: 'First To Find',
 				snippet: '{FTF}'
 			},
 			{
 				name: 'STF',
-				description: 'Second to find',
+				description: 'Second To Find',
 				snippet: '{STF}'
 			},
 			{
 				name: 'TTF',
-				description: 'Third to find',
+				description: 'Third To Find',
 				snippet: '{TTF}'
 			}
 		];
