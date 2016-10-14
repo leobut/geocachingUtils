@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>GeocachingUtils - Settings</title>
+		<title>
+			GeocachingUtils - Settings
+		</title>
 		<link rel='stylesheet' type='text/css' href='style.css'>
 	</head>
 <body>
@@ -10,50 +12,27 @@
 		<div class='round'>
 			<h2>Geocache detail page settings:</h2>
 			<div>
-				Show friend logs:
-				<select id='show_friend_logs'>
-					<option value='false'>No</option>
-					<option value='true'>Yes</option>
-				</select>
+				 <input id='show_friend_logs' type='checkbox'> Show friend logs
 			</div>
 			<div>
-				Show elevation of a cache next to the coordinates:
-				<select id='show_elevation'>
-					<option value='false'>No</option>
-					<option value='true'>Yes</option>
-				</select>
+				<input id='automatically_decrypt_hints' type='checkbox'> Automatically decrypt hints on geocache pages
 			</div>
 			<div>
-				Elevation measurement unit:
+				 <input id='show_elevation' type='checkbox'> Show elevation next to the coordinates and  displayed it in 
 				<select id='elevation_measurement'>
 					<option value='feet'>Feet (ft)</option>
 					<option value='meters'>Meters (m)</option>
-				</select>
-			</div>
-			<div>
-				Automatically decrypt hints on geocache detail pages:
-				<select id='automatically_decrypt_hints'>
-					<option value='false'>No</option>
-					<option value='true'>Yes</option>
 				</select>
 			</div>
 		</div>
 		<div class='round'>
 			<h2>Log editor settings:</h2>
 			<div>
-				Count the words of my log entry and show the 'The Author' badge:
-				<select id='log_editor_count_words'>
-					<option value='false'>No</option>
-					<option value='true'>Yes</option>
-				</select>
+				<input id='log_editor_count_words' type='checkbox'> Count the words of my log entries and show the 'The Author' badge
 				<div class='note'>Note: 'The Author' badge was provided by <a href='http://www.badgegen.com/' target='_blank'>BadgeGen</a>. BadgeGen does only count 'Found it!' logs on geocaches. Nothing else.</div>
 			</div>
 			<div>
-				Add the smiley and tag insertion tool to the log editor:
-				<select id='log_editor_show_insertion_popup'>
-					<option value='false'>No</option>
-					<option value='true'>Yes</option>
-				</select>
+				<input id='log_editor_show_insertion_popup' type='checkbox'> Add the smiley and tag insertion tool to the log editor
 			</div>
 		</div>
 		<div id='controlsContainer' class='round'>
