@@ -1,6 +1,6 @@
 {
-  "name": "Geocaching Utils",
   "description": "A collection of useful features that enhances geocaching.com",
+  "name": "GeocachingUtils",
   "version": "0.9.3",
   "permissions": [
     "storage",
