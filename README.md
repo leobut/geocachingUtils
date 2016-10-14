@@ -1,4 +1,4 @@
-# ![](source/img/appIcon/appIcon48.png) Geocaching Utils ![](source/img/appIcon/appIcon48.png) 
+	# ![](source/img/appIcon/appIcon48.png) Geocaching Utils ![](source/img/appIcon/appIcon48.png) 
 Geocaching Utils is an extension for google chrome that adds features to the  [geocaching.com](http://www.geocaching.com) website. You can download it for free from the chrome web store: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 Feel free to contribute to the code or report bugs and feature requests.
@@ -30,6 +30,9 @@ Note: This is only needed if you are working on the extension and want to try so
 - `grunt` to run `build`, js uglification, css minification and create a package ready for chrome web store
 
 #Release History
+- 1.0.0 (in development)
+	- Added German translation
+	- Various bugfixes
 - 0.9.2
 	- Fixed a bug that messed up the geocaching detail page when there were a lot of friend logs
 - 0.9.0
