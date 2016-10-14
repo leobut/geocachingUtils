@@ -13,9 +13,9 @@ function runElevationFeature() {
 
 	jQuery.getJSON(elevationServiceUrl, function(data) {
 		chrome.storage.sync.get({
-    		elevation_measurement: 'meters' // in case nothing was defined yet, use meters
+    		elevationMeasurement: 'meters' // in case nothing was defined yet, use meters
   		},function(items) {
-  			var measurement = items.elevation_measurement,
+  			var measurement = items.elevationMeasurement,
   				textToAppend;
   			switch(measurement) {
   				case 'feet':

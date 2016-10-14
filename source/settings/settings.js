@@ -1,15 +1,15 @@
 
 function save_options() {
-  var elevationMeasurement = document.getElementById('elevation_measurement').value,
-      automaticallyDecryptHints = document.getElementById('automatically_decrypt_hints').value,
-      logEditorCountWords = document.getElementById('log_editor_count_words').value,
-      logEditorShowInsertionPopup = document.getElementById('log_editor_show_insertion_popup').value,
-      showElevation = document.getElementById('show_elevation').value,
-      showFriendLogs = document.getElementById('show_friend_logs').value;
+    var elevationMeasurement = document.getElementById('elevation_measurement').value,
+      automaticallyDecryptHints = (document.getElementById('automatically_decrypt_hints').checked) ? 'true' : 'false',
+      logEditorCountWords = (document.getElementById('log_editor_count_words').checked) ? 'true' : 'false',
+      logEditorShowInsertionPopup = (document.getElementById('log_editor_show_insertion_popup').checked) ? 'true' : 'false',
+      showElevation = (document.getElementById('show_elevation').checked) ? 'true' : 'false',
+      showFriendLogs = (document.getElementById('show_friend_logs').checked) ? 'true' : 'false';
 
 
   chrome.storage.sync.set({
-    elevation_measurement: elevationMeasurement,
+    elevationMeasurement: elevationMeasurement,
     automaticallyDecryptHints: automaticallyDecryptHints,
     logEditorCountWords: logEditorCountWords,
     logEditorShowInsertionPopup: logEditorShowInsertionPopup,
@@ -27,19 +27,19 @@ function save_options() {
 function restore_options() {
   chrome.storage.sync.get({
     // concrete values in here define the default if nothing was set yet by the user
-    elevation_measurement: 'meters',
+    elevationMeasurement: 'meters',
     automaticallyDecryptHints: 'true',
     logEditorCountWords: 'true',
     logEditorShowInsertionPopup: 'true',
     showElevation: 'true',
     showFriendLogs: 'true'
   }, function(items) {
-    document.getElementById('elevation_measurement').value = items.elevation_measurement;
-    document.getElementById('automatically_decrypt_hints').value = items.automaticallyDecryptHints;
-    document.getElementById('log_editor_count_words').value = items.logEditorCountWords;
-    document.getElementById('log_editor_show_insertion_popup').value = items.logEditorShowInsertionPopup;
-    document.getElementById('show_elevation').value = items.showElevation;
-    document.getElementById('show_friend_logs').value = items.showFriendLogs;
+    document.getElementById('elevation_measurement').value = items.elevationMeasurement;
+    if(items.automaticallyDecryptHints === 'true'){ document.getElementById('automatically_decrypt_hints').checked = true; }
+    if(items.logEditorCountWords === 'true'){ document.getElementById('log_editor_count_words').checked = true; }
+    if(items.logEditorShowInsertionPopup === 'true'){ document.getElementById('log_editor_show_insertion_popup').checked = true; }
+    if(items.showElevation === 'true'){ document.getElementById('show_elevation').checked = true; }
+    if(items.showFriendLogs === 'true'){ document.getElementById('show_friend_logs').checked = true; }
   });
 }
 
