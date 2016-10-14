@@ -1,8 +1,8 @@
 function runLogEditorWordCount(){
 	var common = LogEditorCommon.getInstance(),
-		textArea = $("div.mdd_editor_wrap textarea"),
-		popup = Common.getInstance().createGeocachingUtilsPopup("logEditorWordCountPopup"),
-		toolbarElement = $("<li id='geoachingUtilsWordCount'><img></li>"),
+		textArea = $('div.mdd_editor_wrap textarea'),
+		popup = Common.getInstance().createGeocachingUtilsPopup('logEditorWordCountPopup'),
+		toolbarElement = $('<li id="geoachingUtilsWordCount"><img></li>'),
 		availableTheAuthorBadges;
 
 	loadAvailableTheAuthorBadges();
@@ -10,7 +10,7 @@ function runLogEditorWordCount(){
 	common.addSeperatorToToolbar();
 	
 	toolbarElement.append(popup);
-	popup.getPopupContentContainer().append("<img>").append("<span>");
+	popup.getPopupContentContainer().append('<img>').append('<span>');
 	
 	toolbarElement.mouseenter(function (){
 		popup.show();
@@ -22,7 +22,7 @@ function runLogEditorWordCount(){
 	common.toolbar.append(toolbarElement);
 	defineAndDisplayImage(0);
 
-	textArea.on("input", function(){
+	textArea.on('input', function(){
 		var currentText = textArea.val(),
 			currentWordCount = countWords(currentText);
 		defineAndDisplayImage(currentWordCount);
@@ -41,85 +41,85 @@ function runLogEditorWordCount(){
 	}
 
 	function updateWordCountImage(badge, wordCount){
-		var imagePathPrefix = "img/logEditor/",
+		var imagePathPrefix = 'img/logEditor/',
 			imagePath = chrome.extension.getURL(imagePathPrefix + badge.image),
 			smallImagePath = chrome.extension.getURL(imagePathPrefix + badge.smallImage),
-			badgeTitle = (badge.isHighestBadge === true)?"This is the highest badge you can earn!":"Keep going, there are higher badges!"; 
+			badgeTitle = (badge.isHighestBadge === true)?'This is the highest badge you can earn!':'Keep going, there are higher badges!'; 
 
-		$("#geoachingUtilsWordCount img").attr("src", smallImagePath);
+		$('#geoachingUtilsWordCount img').attr('src', smallImagePath);
 
 
-		popup.find("img").attr("src", imagePath).attr("title", badgeTitle);
-		popup.find("span").text("Words: " + wordCount);
+		popup.find('img').attr('src', imagePath).attr('title', badgeTitle);
+		popup.find('span').text('Words: ' + wordCount);
 	}
 
 	// from http://stackoverflow.com/a/18679657/527718, but slightly improved
 	function countWords(s){
-		s = s.replace(/\n /, "\n"); // exclude newline with a start spacing
-		s = s.replace(/\n/g, " "); // replace newline with space
-	    s = s.replace(/(^\s*)|(\s*$)/gi, ""); // exclude  start and end white-space
-	    s = s.replace(/[ ]{2,}/gi, " "); // 2 or more space to 1
+		s = s.replace(/\n /, '\n'); // exclude newline with a start spacing
+		s = s.replace(/\n/g, ' '); // replace newline with space
+	    s = s.replace(/(^\s*)|(\s*$)/gi, ''); // exclude  start and end white-space
+	    s = s.replace(/[ ]{2,}/gi, ' '); // 2 or more space to 1
 
-	    if(s === ""){
+	    if(s === ''){
 	    	return 0;
 	    } else {
-		    return s.split(" ").length; 
+		    return s.split(' ').length; 
 		}
 	}
 
 	function loadAvailableTheAuthorBadges(){
 		availableTheAuthorBadges = [
 			{
-				image: "WritBg.png",
-				smallImage: "WritBg_small.png",
+				image: 'WritBg.png',
+				smallImage: 'WritBg_small.png',
 				requiredWordCount: 0,
 				isHighestBadge: false
 			},
 			{
-				image: "WritB.png",
-				smallImage: "WritB_small.png",
+				image: 'WritB.png',
+				smallImage: 'WritB_small.png',
 				requiredWordCount: 30,
 				isHighestBadge: false
 			},
 			{
-				image: "WritS.png",
-				smallImage: "WritS_small.png",
+				image: 'WritS.png',
+				smallImage: 'WritS_small.png',
 				requiredWordCount: 40,
 				isHighestBadge: false
 			},
 			{
-				image: "WritG.png",
-				smallImage: "WritG_small.png",
+				image: 'WritG.png',
+				smallImage: 'WritG_small.png',
 				requiredWordCount: 50,
 				isHighestBadge: false
 			},
 			{
-				image: "WritP.png",
-				smallImage: "WritP_small.png",
+				image: 'WritP.png',
+				smallImage: 'WritP_small.png',
 				requiredWordCount: 60,
 				isHighestBadge: false
 			},
 			{
-				image: "WritR.png",
-				smallImage: "WritR_small.png",
+				image: 'WritR.png',
+				smallImage: 'WritR_small.png',
 				requiredWordCount: 70,
 				isHighestBadge: false
 			},
 			{
-				image: "WritSa.png",
-				smallImage: "WritSa_small.png",
+				image: 'WritSa.png',
+				smallImage: 'WritSa_small.png',
 				requiredWordCount: 80,
 				isHighestBadge: false
 			},
 			{
-				image: "WritE.png",
-				smallImage: "WritE_small.png",
+				image: 'WritE.png',
+				smallImage: 'WritE_small.png',
 				requiredWordCount: 90,
 				isHighestBadge: false
 			},
 			{
-				image: "WritD.png",
-				smallImage: "WritD_small.png",
+				image: 'WritD.png',
+				smallImage: 'WritD_small.png',
 				requiredWordCount: 100,
 				isHighestBadge: true
 			}
