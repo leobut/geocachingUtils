@@ -10,7 +10,8 @@ function runLogEditorInsertionPopup(){
 	addGUIconToToolbar();
 
 	function addGUIconToToolbar(){
-		LogEditorCommon.getInstance().toolbar.append('<li id="geoachingUtilsFunctions"><img src="' + chrome.extension.getURL('img/appIcon/appIcon26.png') + '"><li/>');
+		LogEditorCommon.getInstance().toolbar.append('<li id="geoachingUtilsFunctions"><img src="' +
+			chrome.extension.getURL('img/appIcon/appIcon26.png') + '"><li/>');
 		toolbarElement = $('#geoachingUtilsFunctions');
 
 		hookInGUWindow();
@@ -47,7 +48,8 @@ function runLogEditorInsertionPopup(){
 
 	function addTagsToPopup(){
 		$.each(supportedTags, function(index, value){
-			var newListElement = $('<li data-snippet="' + value.snippet + '" title="' + value.description + '"><i>' + value.name + '</i></li>');
+			var newListElement = $('<li data-snippet="' + value.snippet + '" title="' + 
+				value.description + '"><i>' + value.name + '</i></li>');
 
 			popup.find('ul.tagList').append(newListElement);
 			newListElement.on('click', functionsPopupClickHandler);
@@ -67,7 +69,8 @@ function runLogEditorInsertionPopup(){
 	    if (myField.selectionStart || myField.selectionStart === '0') {
 	        var startPos = myField.selectionStart;
 	        var endPos = myField.selectionEnd;
-	        myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
+	        myField.value = myField.value.substring(0, startPos) + myValue + 
+	        	myField.value.substring(endPos, myField.value.length);
 	        myField.selectionStart = startPos + myValue.length;
 	        myField.selectionEnd = startPos + myValue.length;
 	    } else {
