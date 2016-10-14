@@ -7,22 +7,22 @@ var Common = (function () {
 			currentPageContainsAnEditor;
 
 		function findOutIfIAmOnAGeocacheDetailPage(){
-			currentPageIsGeocacheDetailPage = ($(".CacheDetailNavigation").length > 0);
+			currentPageIsGeocacheDetailPage = ($('.CacheDetailNavigation').length > 0);
 		}
 
 		function findEditorOnPage(){
-			currentPageContainsAnEditor = ($(".mdd_toolbar").length > 0);
+			currentPageContainsAnEditor = ($('.mdd_toolbar').length > 0);
 		}
 
 		function createGeocachingUtilsPopup(additionalClasses){
 			if(additionalClasses === undefined){
-				additionalClasses = "";
+				additionalClasses = '';
 			}
 			
-			var popup = $("<div style='position: absolute; width: 0; height: 0;'><div class='geocachingUtilsPopup " +
-			additionalClasses + "'/></div>");
+			var popup = $('<div style="position: absolute; width: 0; height: 0;"><div class="geocachingUtilsPopup ' +
+			additionalClasses + '"/></div>');
 			popup.getPopupContentContainer = function(){
-				return this.find("div.geocachingUtilsPopup");
+				return this.find('div.geocachingUtilsPopup');
 			};
 			popup.hide();
 			return popup;
