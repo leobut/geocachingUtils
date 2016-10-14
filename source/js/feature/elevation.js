@@ -18,16 +18,13 @@ function runElevationFeature() {
   			var measurement = items.elevation_measurement,
   				textToAppend;
   			switch(measurement) {
-  				case 'meters':
-  					var elevationInMeters = Math.round(data.results[0].elevation * 100) / 100;
-  					textToAppend = ' (' + elevationInMeters + 'm)';
-  					break;
   				case 'feet':
   					var	elevationInFeet = Math.round(data.results[0].elevation * 3.2808399 * 100) / 100; // 1m = 3.2808399 ft
   					textToAppend = ' (' + elevationInFeet + 'ft)';
   					break;
-  				default:
-  					textToAppend = ' (Error while converting elevation. Unknown unit: ' + measurement + ')';
+  				default: // also case for 'meters'
+  					var elevationInMeters = Math.round(data.results[0].elevation * 100) / 100;
+  					textToAppend = ' (' + elevationInMeters + 'm)';
   					break;
   			}
   			coordinateElement.text(currentText + textToAppend);

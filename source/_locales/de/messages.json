@@ -1,0 +1,29 @@
+ {
+ 	"extension_description": {
+	    "message": "Eine Sammlung von nützlichen Funktionen, die geocaching.com erweitern"
+  	},
+  	
+
+  	"settings_settings_saved": {
+	    "message": "Einstellungen gespeichert!"
+  	},
+
+
+  	"log_editor_word_count_words":{
+  		"message": "Wörter: "
+  	},
+  	"log_editor_word_count_highest_badge":{
+  		"message": "Das ist der höchste Badge!"
+  	},
+  	"log_editor_word_count_keep_going":{
+  		"message": "Weiter so, es gibt höhere Badges!"
+  	},
+
+
+  	"friend_log_list_error":{
+  		"message": "Fehler beim Laden der Freund-Logs"
+  	},
+  	"friend_log_list_no_friend_logs":{
+  		"message": "Keine Freund-Logs"
+  	}
+}

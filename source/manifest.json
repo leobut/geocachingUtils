@@ -1,12 +1,13 @@
 {
-  "description": "A collection of useful features that enhances geocaching.com",
   "name": "GeocachingUtils",
+  "description": "__MSG_extension_description__",
   "version": "0.9.3",
   "permissions": [
     "storage",
     "https://maps.googleapis.com/maps/api/elevation/*"
   ],
   "options_page": "settings/settings.html",
+  "default_locale": "en",
   "content_scripts": [
     {
       "matches": ["https://www.geocaching.com/*"],
