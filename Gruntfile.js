@@ -61,6 +61,11 @@ module.exports = function(grunt) {
         }]
       }
     },
+    'json-minify': {
+      build: {
+        files: 'build/**/*.json'
+      }
+    },
     clean: {
       build: ['build/'],
       release: ['GeocachingUtils_*.zip']
@@ -73,8 +78,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-csslint');
+  grunt.loadNpmTasks('grunt-json-minify');
 
   grunt.registerTask('cleanUp', ['clean'])
   grunt.registerTask('build', ['cleanUp', 'copy', 'eslint', 'csslint']);
-  grunt.registerTask('default', ['build', 'uglify', 'cssmin', 'compress']);
+  grunt.registerTask('default', ['build', 'uglify', 'cssmin', 'json-minify', 'compress']);
 };
