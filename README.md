@@ -27,7 +27,7 @@ Note: This is only needed if you are working on the extension and want to try so
 5. Run the commands you want:
 - `grunt cleanUp` to clean up your local development environment
 - `grunt build` to run `cleanUp`, jsHint and cssLint
-- `grunt` to run `build`, js uglification, css minification and create a package ready for chrome web store
+- `grunt` to run `build`, js uglification, css&json minification and create a package ready for chrome web store
 
 #Release History
 - 1.0.0 (in development)
