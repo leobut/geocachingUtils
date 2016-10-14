@@ -17,7 +17,7 @@ function save_options() {
     showFriendLogs: showFriendLogs
   }, function() {
     var status = document.getElementById('statusDisplay');
-    status.textContent = 'Settings saved!';
+    status.textContent = chrome.i18n.getMessage('settings_settings_saved');
     setTimeout(function() {
       status.textContent = '';
     }, 3000);

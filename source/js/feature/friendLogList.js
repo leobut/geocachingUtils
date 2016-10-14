@@ -22,7 +22,7 @@ function runFriendLogListFeature(){
 	    }).done(function(response) {
 	    	if (response.status !== 'success') {
 	    		imDoneLoading();
-	        	friendLogList.text('Error while loading friend logs');
+	        	friendLogList.text(chrome.i18n.getMessage('friend_log_list_error'));
 	        } else {
 	        	if(response.pageInfo.idx < response.pageInfo.totalPages){
 	        		// load more friend logs if there are pages left
@@ -37,7 +37,7 @@ function runFriendLogListFeature(){
 
 	function addDomElementsBasedOnResponse(data){
 		if(data.length === 0){
-			friendLogList.text('No friend logs');
+			friendLogList.text(chrome.i18n.getMessage('friend_log_list_no_friend_logs'));
 		} else {
 	        $.each(data, function (index, value){
 	        	

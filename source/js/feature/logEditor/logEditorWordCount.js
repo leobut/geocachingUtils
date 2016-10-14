@@ -44,13 +44,12 @@ function runLogEditorWordCount(){
 		var imagePathPrefix = 'img/logEditor/',
 			imagePath = chrome.extension.getURL(imagePathPrefix + badge.image),
 			smallImagePath = chrome.extension.getURL(imagePathPrefix + badge.smallImage),
-			badgeTitle = (badge.isHighestBadge === true)?'This is the highest badge you can earn!':'Keep going, there are higher badges!'; 
+			badgeTitle = (badge.isHighestBadge === true) ? chrome.i18n.getMessage('log_editor_word_count_highest_badge') : chrome.i18n.getMessage('log_editor_word_count_keep_going'); 
 
 		$('#geoachingUtilsWordCount img').attr('src', smallImagePath);
 
-
 		popup.find('img').attr('src', imagePath).attr('title', badgeTitle);
-		popup.find('span').text('Words: ' + wordCount);
+		popup.find('span').text(chrome.i18n.getMessage('log_editor_word_count_words') + wordCount);
 	}
 
 	// from http://stackoverflow.com/a/18679657/527718, but slightly improved
