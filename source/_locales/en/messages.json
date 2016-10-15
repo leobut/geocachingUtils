@@ -4,11 +4,6 @@
   	},
   	
 
-  	"settings_settings_saved": {
-	    "message": "Settings saved!"
-  	},
-
-
   	"log_editor_word_count_words":{
   		"message": "Words: "
   	},
@@ -25,5 +20,49 @@
   	},
   	"friend_log_list_no_friend_logs":{
   		"message": "No friend logs"
-  	}
+  	},
+
+
+    "settings_settings_saved": {
+      "message": "Settings saved!"
+    },
+    "settings_main_title":{
+      "message": "GeocachingUtils - Settings"
+    },
+    "settings_detail_page_title":{
+      "message": "Geocache detail page settings:"
+    },
+    "settings_detail_page_show_friend_logs":{
+      "message": "Show friend logs"
+    },
+    "settings_detail_page_decrypt_hints":{
+      "message": "Automatically decrypt hints"
+    },
+    "settings_detail_page_show_elevation":{
+      "message": "Show elevation next to the coordinates and displayed it in"
+    },
+    "settings_elevation_meters":{
+      "message": "meters"
+    },
+    "settings_elevation_feet":{
+      "message": "feet"
+    },
+    "settings_log_editor_main_title":{
+      "message": "Log editor settings:"
+    },
+    "settings_log_editor_count_words":{
+      "message": "Count the words while I create a new log and show the 'The Author' badge"
+    },
+    "settings_log_editor_count_words_note":{
+      "message": "Note: 'The Author' badge was provided by <a href='http://www.badgegen.com/' target='_blank'>BadgeGen</a>. BadgeGen does only count 'Found it!' logs on geocaches."
+    },
+    "settings_log_editor_show_insertion_popup":{
+      "message": "Add the smiley and tag insertion tool to the log editor"
+    },
+    "settings_save_button":{
+      "message": "Save"
+    },
+    "settings_footnote":{
+      "message": "Find this extension on"
+    }
 }

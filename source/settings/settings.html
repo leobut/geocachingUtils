@@ -8,38 +8,38 @@
 	</head>
 <body>
 	<div id='centeredContainer' class='round'>
-		<h1><img src='../img/appIcon/appIcon26.png'>GeocachingUtils - Settings<img src='../img/appIcon/appIcon26.png'></h1>
+		<h1><img src='../img/appIcon/appIcon26.png'><span id='settings_main_title'></span><img src='../img/appIcon/appIcon26.png'></h1>
 		<div class='round'>
-			<h2>Geocache detail page settings:</h2>
+			<h2 id='settings_detail_page_title'></h2>
 			<div>
-				 <input id='show_friend_logs' type='checkbox'> Show friend logs
+				 <input id='show_friend_logs' type='checkbox'> <span id='settings_detail_page_show_friend_logs'></span>
 			</div>
 			<div>
-				<input id='automatically_decrypt_hints' type='checkbox'> Automatically decrypt hints on geocache pages
+				<input id='automatically_decrypt_hints' type='checkbox'> <span id='settings_detail_page_decrypt_hints'></span>
 			</div>
 			<div>
-				 <input id='show_elevation' type='checkbox'> Show elevation next to the coordinates and  displayed it in 
+				 <input id='show_elevation' type='checkbox'> <span id='settings_detail_page_show_elevation'></span> 
 				<select id='elevation_measurement'>
-					<option value='feet'>Feet (ft)</option>
-					<option value='meters'>Meters (m)</option>
+					<option id='settings_elevation_feet' value='feet'></option>
+					<option id='settings_elevation_meters' value='meters'></option>
 				</select>
 			</div>
 		</div>
 		<div class='round'>
-			<h2>Log editor settings:</h2>
+			<h2 id='settings_log_editor_main_title'></h2>
 			<div>
-				<input id='log_editor_count_words' type='checkbox'> Count the words of my log entries and show the 'The Author' badge
-				<div class='note'>Note: 'The Author' badge was provided by <a href='http://www.badgegen.com/' target='_blank'>BadgeGen</a>. BadgeGen does only count 'Found it!' logs on geocaches. Nothing else.</div>
+				<input id='log_editor_count_words' type='checkbox'> <span id='settings_log_editor_count_words'></span>
+				<div id='settings_log_editor_count_words_note' class='note'></div>
 			</div>
 			<div>
-				<input id='log_editor_show_insertion_popup' type='checkbox'> Add the smiley and tag insertion tool to the log editor
+				<input id='log_editor_show_insertion_popup' type='checkbox'> <span id='settings_log_editor_show_insertion_popup'></span>
 			</div>
 		</div>
 		<div id='controlsContainer' class='round'>
 			<span id='statusDisplay'></span>
-			<button id='saveButton'>Save</button>
+			<button id='saveButton'></button>
 		</div>
-		<span id='githubHint'>Find this extension on <a href='https://github.com/ControlTheBit/geocachingUtils' target='_blank'><img src='../img/settings/github16.png'>GitHub</a></span>
+		<span id='githubHint'><span id='settings_footnote'></span> <a href='https://github.com/ControlTheBit/geocachingUtils' target='_blank'><img src='../img/settings/github16.png'>GitHub</a></span>
 	</div>
 
 	<script src='./settings.js'></script>
