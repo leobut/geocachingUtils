@@ -30,7 +30,7 @@
       "message": "GeocachingUtils - Settings"
     },
     "settings_detail_page_title":{
-      "message": "Geocache detail page settings:"
+      "message": "Geocache detail page:"
     },
     "settings_detail_page_show_friend_logs":{
       "message": "Show friend logs"
@@ -48,7 +48,7 @@
       "message": "feet"
     },
     "settings_log_editor_main_title":{
-      "message": "Log editor settings:"
+      "message": "Log editor:"
     },
     "settings_log_editor_count_words":{
       "message": "Count the words while I create a new log and show the 'The Author' badge"
