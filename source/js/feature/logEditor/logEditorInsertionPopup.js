@@ -17,11 +17,11 @@ function runLogEditorInsertionPopup(){
 		hookInGUWindow();
 
 		toolbarElement.mouseenter(function (){
-    		popup.show();
-    	});
-    	toolbarElement.mouseleave(function (){
-    		popup.hide();
-    	});
+			popup.show();
+		});
+		toolbarElement.mouseleave(function (){
+			popup.hide();
+		});
 	}
 
 	function hookInGUWindow(){
@@ -65,17 +65,17 @@ function runLogEditorInsertionPopup(){
 	}
 
 	// A bit modified function from http://stackoverflow.com/questions/11076975/insert-text-into-textarea-at-cursor-position-javascript
-	function insertAtCursor(myField, myValue) {
-	    if (myField.selectionStart || myField.selectionStart === '0') {
-	        var startPos = myField.selectionStart;
-	        var endPos = myField.selectionEnd;
-	        myField.value = myField.value.substring(0, startPos) + myValue + 
-	        	myField.value.substring(endPos, myField.value.length);
-	        myField.selectionStart = startPos + myValue.length;
-	        myField.selectionEnd = startPos + myValue.length;
-	    } else {
-	        myField.value += myValue;
-	    }
+	function insertAtCursor(myField, myValue){
+		if (myField.selectionStart || myField.selectionStart === '0'){
+			var startPos = myField.selectionStart;
+			var endPos = myField.selectionEnd;
+			myField.value = myField.value.substring(0, startPos) + myValue + 
+				myField.value.substring(endPos, myField.value.length);
+			myField.selectionStart = startPos + myValue.length;
+			myField.selectionEnd = startPos + myValue.length;
+		} else {
+			myField.value += myValue;
+		}
 	}
 
 	// Inject a script into the text area that clicks the ullist button of the editor twice.
@@ -105,7 +105,7 @@ function runLogEditorInsertionPopup(){
 		];
 	}
 
-	function loadSupportedSmileys() {
+	function loadSupportedSmileys(){
 		supportedSmileys = [
 			{
 				name: 'smile',

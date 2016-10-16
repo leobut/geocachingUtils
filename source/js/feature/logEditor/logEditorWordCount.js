@@ -56,13 +56,13 @@ function runLogEditorWordCount(){
 	function countWords(s){
 		s = s.replace(/\n /, '\n'); // exclude newline with a start spacing
 		s = s.replace(/\n/g, ' '); // replace newline with space
-	    s = s.replace(/(^\s*)|(\s*$)/gi, ''); // exclude  start and end white-space
-	    s = s.replace(/[ ]{2,}/gi, ' '); // 2 or more space to 1
+		s = s.replace(/(^\s*)|(\s*$)/gi, ''); // exclude  start and end white-space
+		s = s.replace(/[ ]{2,}/gi, ' '); // 2 or more space to 1
 
-	    if(s === ''){
-	    	return 0;
-	    } else {
-		    return s.split(' ').length; 
+		if(s === ''){
+			return 0;
+		} else {
+			return s.split(' ').length; 
 		}
 	}
 

@@ -3,8 +3,8 @@ if(Common.getInstance().currentPageIsGeocacheDetailPage === true){
 	chrome.storage.sync.get({
 		automaticallyDecryptHints: 'true',
 		showElevation: 'true',
-    	showFriendLogs: 'true'
-	},function(items) {
+		showFriendLogs: 'true'
+	},function(items){
 		if(items.automaticallyDecryptHints === 'true'){
 			setTimeout(runAutoDecryptHintFeature, 0);
 		}
@@ -20,8 +20,8 @@ if(Common.getInstance().currentPageIsGeocacheDetailPage === true){
 if(Common.getInstance().currentPageContainsAnEditor === true){
 	chrome.storage.sync.get({
 		logEditorCountWords: 'true',
-    	logEditorShowInsertionPopup: 'true'
-	},function(items) {
+		logEditorShowInsertionPopup: 'true'
+	},function(items){
 		if(items.logEditorShowInsertionPopup === 'true'){
 			setTimeout(runLogEditorInsertionPopup, 0);
 		}
