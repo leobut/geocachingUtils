@@ -1,4 +1,4 @@
-var LogEditorCommon = (function () {
+var LogEditorCommon = (function (){
 	var instance;
 
 	function init(){
@@ -16,7 +16,7 @@ var LogEditorCommon = (function () {
 	}
 
 	return {
-		getInstance: function() {
+		getInstance: function(){
 			if(!instance){
 				instance = init();
 			}

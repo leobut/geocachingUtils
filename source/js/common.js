@@ -1,8 +1,8 @@
 
-var Common = (function () {
+var Common = (function (){
 	var instance;
 
-	function init() {
+	function init(){
 		var currentPageIsGeocacheDetailPage,
 			currentPageContainsAnEditor;
 
@@ -39,7 +39,7 @@ var Common = (function () {
 	}
 
 	return {
-		getInstance: function() {
+		getInstance: function(){
 			if(!instance){
 				instance = init();
 			}
