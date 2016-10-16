@@ -1,5 +1,5 @@
-# ![](source/img/appIcon/appIcon48.png) Geocaching Utils ![](source/img/appIcon/appIcon48.png) 
-Geocaching Utils is an extension for google chrome that adds features to the  [geocaching.com](http://www.geocaching.com) website. You can download it for free from the chrome web store: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
+# ![](source/img/appIcon/appIcon48.png) GeocachingUtils ![](source/img/appIcon/appIcon48.png) 
+GeocachingUtils is an extension for google chrome that adds features to the  [geocaching.com](http://www.geocaching.com) website. You can download it for free from the chrome web store: [GeocachingUtils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 Feel free to contribute to the code or report bugs and feature requests.
 
@@ -12,7 +12,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 #Development [![Build Status](https://travis-ci.org/ControlTheBit/geocachingUtils.svg?branch=master)](https://travis-ci.org/ControlTheBit/geocachingUtils) [![devDependencies Status](https://david-dm.org/ControlTheBit/geocachingUtils/dev-status.svg)](https://david-dm.org/ControlTheBit/geocachingUtils?type=dev) [![Code Climate](https://codeclimate.com/github/ControlTheBit/geocachingUtils/badges/gpa.svg)](https://codeclimate.com/github/ControlTheBit/geocachingUtils)
 
 ##How to run this extension
-Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [Geocaching Utils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
+Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [GeocachingUtils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in chrome)
 2. Click the "Load unpacked extension..." button
