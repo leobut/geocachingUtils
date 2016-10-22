@@ -10,6 +10,7 @@ function runFriendLogListFeature(){
 	loadFriendLogs(1);
 	removeInjectedScriptFromDom();
 
+	// set page default to 1 as soon as uglify can handle es6
 	function loadFriendLogs(page){
 		var userToken = friendLogList.attr('data-userToken');
 		$.getJSON('/seek/geocache.logbook', {
@@ -74,8 +75,8 @@ function runFriendLogListFeature(){
 	}
 
 	function appendImagesToPopup(popup, images){
-		// this is basically the same html like it is on geocaching.com
 		$.each(images, function (index, image){
+			// this is basically the same html like it is on geocaching.com
 			var imageLink = '<table cellspacing="0" cellpadding="3" class="LogImagesTable">'+
 								'<tbody>'+
 									'<tr>'+
@@ -88,7 +89,6 @@ function runFriendLogListFeature(){
 									'</tr>'+
 								'</tbody>'+
 							'</table>';
-
 			popup.getPopupContentContainer().append(imageLink);
 		});
 	}
