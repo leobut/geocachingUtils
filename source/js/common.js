@@ -15,12 +15,13 @@ var Common = (function (){
 		}
 
 		function createGeocachingUtilsPopup(additionalClasses){
+			// remove this if statement and add the default value to the parameter as soon as uglify can handle es6
 			if(additionalClasses === undefined){
 				additionalClasses = '';
 			}
 			
 			var popup = $('<div style="position: absolute; width: 0; height: 0;"><div class="geocachingUtilsPopup ' +
-			additionalClasses + '"/></div>');
+				additionalClasses + '"/></div>');
 			popup.getPopupContentContainer = function(){
 				return this.find('div.geocachingUtilsPopup');
 			};
