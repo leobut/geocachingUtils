@@ -30,13 +30,11 @@ function runLogEditorWordCount(){
 
 	function defineAndDisplayImage(wordCount){
 		var badge;
-
 		$.each(availableTheAuthorBadges, function(index, value){
 			if(wordCount >= value.requiredWordCount){
 				badge = value;
 			}
 		});
-
 		updateWordCountImage(badge, wordCount);
 	}
 
