@@ -1,28 +1,25 @@
 function runElevationFeature(){	
 	// IMPORTANT: You need to enter your own Google API key here:
 	var apiKey = '',
-		coordinateElement,
-		currentText,
-		latLon,
-		elevationServiceUrl;
-
-	findCoordinatesInPage();
-	currentText = coordinateElement.text();
-	latLon = getDdFromDms(currentText);
-	elevationServiceUrl = 'https://maps.googleapis.com/maps/api/elevation/json?locations=' + latLon + '&key=' + apiKey;
+		coordinateElement = findCoordinatesInPage(),
+		currentText = coordinateElement.text(),
+		latLon = getDdFromDms(currentText),
+		elevationServiceUrl = 'https://maps.googleapis.com/maps/api/elevation/json?locations=' + latLon + '&key=' + apiKey;
 
 	jQuery.getJSON(elevationServiceUrl, function(data){
 		chrome.storage.sync.get({
-			elevationMeasurement: 'meters' // in case nothing was defined yet, use meters
+			elevationMeasurement: 'meters'
 		},function(items){
-			var measurement = items.elevationMeasurement,
+			var measurementUnit = items.elevationMeasurement,
 				textToAppend;
-			switch(measurement){
+			switch(measurementUnit){
 				case 'feet':
-					var	elevationInFeet = Math.round(data.results[0].elevation * 3.2808399 * 100) / 100; // 1m = 3.2808399 ft
+					// 1m = 3.2808399 ft
+					var	elevationInFeet = Math.round(data.results[0].elevation * 3.2808399 * 100) / 100;
 					textToAppend = ' (' + elevationInFeet + 'ft)';
 					break;
-				default: // also case for 'meters'
+				case 'meters':
+				default:
 					var elevationInMeters = Math.round(data.results[0].elevation * 100) / 100;
 					textToAppend = ' (' + elevationInMeters + 'm)';
 					break;
@@ -58,11 +55,13 @@ function runElevationFeature(){
 
 	function findCoordinatesInPage(){
 		var selectorForEditedCoordinates = 'a.edit-cache-coordinates > strong > span',
-			selectorForUntouchedCoordinates = '#uxLatLon';
+			selectorForUntouchedCoordinates = '#uxLatLon',
+			coordinateElementCandidate = $(selectorForUntouchedCoordinates);
 
-		coordinateElement = $(selectorForUntouchedCoordinates);
-		if(coordinateElement.length === 0){
-			coordinateElement = $(selectorForEditedCoordinates);
+		if(coordinateElementCandidate.length === 0){
+			coordinateElementCandidate = $(selectorForEditedCoordinates);
 		}
+
+		return coordinateElementCandidate;
 	}
 }
