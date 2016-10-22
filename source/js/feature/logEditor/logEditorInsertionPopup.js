@@ -78,8 +78,8 @@ function runLogEditorInsertionPopup(){
 		}
 	}
 
-	// Inject a script into the text area that clicks the ullist button of the editor twice.
-	// This is a workaround for the fact that you can"t easily trigger the markdown editor to refresh.
+	// Inject a script into the text area that clicks the ul button of the editor twice.
+	// This is a workaround for the fact that you can't trigger the markdown editor to refresh.
 	function dispatchKeyupEventOnTextArea(textArea){
 		var eventDispatcherScript = $('<script id="eventDispatcherScript">$("#mdd_ullist").click().click();$("#eventDispatcherScript").remove();</script>');
 		textArea.append(eventDispatcherScript);
