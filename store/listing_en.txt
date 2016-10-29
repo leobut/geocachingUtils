@@ -1,11 +1,11 @@
 Geocaching Utils is an open source extension that adds features to the geocaching.com website.
 
 Features:
-- Show elevation next to the cache coordinates (support for meters & feet)
+- Show elevation next to the cache coordinates
 - Show friend logs in the sidebar on the right. When you hover over an entry, the log text pops up
 - Log editor is improved to make using smileys and tags easier
 - Log editor can also count the words in your log text and predict the "The Author" badge that you will earn
-- Hints can be decrypted automatically without clicking on "Decrypt" (can be changed in the settings)
+- Hints can be decrypted automatically without clicking on "Decrypt"
 - Almost everything in this feature list can be configured and enabled/disabled in the settings of this extension.
 
 This extension is an open source project. Feel free to report bugs and contribute to the code here: https://github.com/ControlTheBit/geocachingUtils

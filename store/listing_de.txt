@@ -1,8 +1,12 @@
 Geocaching Utils ist eine Sammlung von nützlichen Funktionen, die geocaching.com erweitern
 
 Funktionen:
-
-//TODO
+- Zeige die Höhe (über Meer) eines Geocaches auf der Geocache Detailseite
+- Zeige Logs von Freunden auf Geocache Detailseiten. Wenn du über einen Eintrag fährst, siehst du den vollständigen Log-Text
+- Der Log-Editor bekommt Zusatzfunktionen um Smileys und Tags einfach einfügen zu können
+- Der Log-Editor kann dir nun ausserdem anzeigen, welchen "The Author" badge du mit dem neuen Log erhalten wirst. Praktisch wenn du an deiner Statistik für project-gc arbeitest
+- Hinweise zu Geocaches können automatisch entschlüsselt werden
+- Beinahe alles was du auf dieser Liste findest lässt sich in den Einstellungen dieser Extension an-/abschalten und konfigurieren
 
 Diese extension ist ein open source Projekt. Wünsche für neue Funktionen und Fehler kannst du hier eintragen: https://github.com/ControlTheBit/geocachingUtils
 
