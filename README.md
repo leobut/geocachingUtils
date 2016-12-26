@@ -32,7 +32,7 @@ Note: This is only needed if you are working on the extension and want to try so
 
 #Release History
 - 1.0.1 (in development)
-	- Fixed a bug in the friend log list
+	- Added support for rich text friend logs (Issue [#43](/../../issues/43))
 - 1.0.0
 	- Added German translation
 	- Various bugfixes
