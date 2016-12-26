@@ -31,6 +31,8 @@ Note: This is only needed if you are working on the extension and want to try so
 	- `grunt` to run `build`, js uglification, css&json minification and create a package ready for chrome web store
 
 #Release History
+- 1.0.1 (in development)
+	- Fixed a bug in the friend log list
 - 1.0.0
 	- Added German translation
 	- Various bugfixes
