@@ -141,6 +141,15 @@
 	padding-left: 0;
 }
 
-#friendLogList .logDetailPopup p {
-	margin: 1.5em;
+#friendLogList .logDetailPopup a {
+	padding-left: 0;
+}
+
+#friendLogList .logDetailPopup .markdown-output {
+	margin: 1em;
+}
+
+#friendLogList .logDetailPopup .markdown-output a:hover, #friendLogList .logDetailPopup .markdown-output a:focus {
+	border: none;
+	text-decoration: underline;
 }

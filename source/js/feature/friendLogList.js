@@ -51,7 +51,7 @@ function runFriendLogListFeature(){
 						value.AccountGuid + '">' + value.UserName + '</a></td></tr></table>'),
 					newFriendLogEntry;
 
-				popup.getPopupContentContainer().append('<div class="hoverBridge"/>' + value.LogText);
+				popup.getPopupContentContainer().append('<div class="hoverBridge"/><div class="LogContent markdown-output">' + value.LogText + '<div>');
 				popup.append('<div class="line"/>');
 
 				if(value.Images.length !== 0){
