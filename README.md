@@ -31,7 +31,7 @@ Note: This is only needed if you are working on the extension and want to try so
 	- `grunt` to run `build`, js uglification, css&json minification and create a package ready for chrome web store
 
 #Release History
-- 1.0.1 (in development)
+- 1.0.1
 	- Added support for rich text friend logs (Issue [#43](/../../issues/43))
 - 1.0.0
 	- Added German translation
