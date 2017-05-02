@@ -67,8 +67,7 @@ function runLogEditorInsertionPopup(){
 		if (myField.selectionStart || myField.selectionStart === '0'){
 			var startPos = myField.selectionStart;
 			var endPos = myField.selectionEnd;
-			myField.value = myField.value.substring(0, startPos) + myValue + 
-				myField.value.substring(endPos, myField.value.length);
+			myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
 			myField.selectionStart = startPos + myValue.length;
 			myField.selectionEnd = startPos + myValue.length;
 		} else {
