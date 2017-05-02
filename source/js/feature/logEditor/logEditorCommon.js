@@ -3,7 +3,7 @@ var LogEditorCommon = (function (){
 
 	function init(){
 		var toolbar = $('<ul class="logEditorToolbar">');
-		$('textarea.log-text').before(toolbar);
+		$('#logAttachments .file-upload').before(toolbar);
 
 		return {
 			toolbar: toolbar

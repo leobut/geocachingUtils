@@ -8,13 +8,18 @@
 
 /* LogEditorEnhancement */
 .logEditorToolbar {
-	padding-top: 40px;
+	padding-top: 0;
+	padding-right: 5px;
 	font-size: 10pt;
 }
 
 .logEditorToolbar li {
 	list-style: none;
 	display: inline-block;
+}
+
+.logEditorToolbar > li {
+	padding-right: 10px;
 }
 
 .logEditorWordCountPopup {
