@@ -10,11 +10,7 @@ module.exports = function(grunt){
 			options: {
 			archive: 'GeocachingUtils_<%= manifest.version %>.zip'
 			},
-			files: [
-					{
-						src: ['build/**']
-					}
-				]
+			files: [{src: ['build/**']}]
 			}
 		},
 		copy: {
@@ -33,10 +29,10 @@ module.exports = function(grunt){
 		},
 		csslint: {
 			strict: {
-			options: {
-				csslintrc: '.csslintrc'
-			},
-			src: ['build/**/*.css']
+				options: {
+					csslintrc: '.csslintrc'
+				},
+				src: ['build/**/*.css']
 			}
 		},
 		uglify: {
