@@ -11,7 +11,7 @@ var Common = (function (){
 		}
 
 		function findEditorOnPage(){
-			currentPageContainsAnEditor = ($('.mdd_toolbar').length > 0);
+			currentPageContainsAnEditor = ($('textarea.log-text').length > 0);
 		}
 
 		function createGeocachingUtilsPopup(additionalClasses){

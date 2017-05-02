@@ -6,12 +6,11 @@ function runLogEditorInsertionPopup(){
 
 	loadSupportedSmileys();
 	loadSupportedTags();
-	LogEditorCommon.getInstance().addSeperatorToToolbar();
 	addGUIconToToolbar();
 
 	function addGUIconToToolbar(){
 		LogEditorCommon.getInstance().toolbar.append('<li id="geoachingUtilsFunctions"><img src="' +
-			chrome.extension.getURL('img/appIcon/appIcon26.png') + '"><li/>');
+			chrome.extension.getURL('img/appIcon/appIcon26.png') + '">');
 		toolbarElement = $('#geoachingUtilsFunctions');
 
 		hookInGUWindow();
@@ -58,10 +57,9 @@ function runLogEditorInsertionPopup(){
 
 	function functionsPopupClickHandler(event){
 		var snippetToInsert = $(event.currentTarget).attr('data-snippet'),
-			textArea = $('.mdd_editor_wrap > textarea');
+			textArea = $('textarea.log-text');
 
 		insertAtCursor(textArea[0], snippetToInsert);
-		dispatchKeyupEventOnTextArea(textArea);
 	}
 
 	// A bit modified function from http://stackoverflow.com/questions/11076975/insert-text-into-textarea-at-cursor-position-javascript
@@ -76,13 +74,6 @@ function runLogEditorInsertionPopup(){
 		} else {
 			myField.value += myValue;
 		}
-	}
-
-	// Inject a script into the text area that clicks the ul button of the editor twice.
-	// This is a workaround for the fact that you can't trigger the markdown editor to refresh.
-	function dispatchKeyupEventOnTextArea(textArea){
-		var eventDispatcherScript = $('<script id="eventDispatcherScript">$("#mdd_ullist").click().click();$("#eventDispatcherScript").remove();</script>');
-		textArea.append(eventDispatcherScript);
 	}
 
 	function loadSupportedTags(){
@@ -109,102 +100,102 @@ function runLogEditorInsertionPopup(){
 		supportedSmileys = [
 			{
 				name: 'smile',
-				image: '../images/icons/icon_smile.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile.gif',
 				snippet: '[:)]'
 			},
 			{
 				name: 'big smile',
-				image: '../images/icons/icon_smile_big.gif',
+				image: 'https://www.geocaching.com//images/icons/icon_smile_big.gif',
 				snippet: '[:D]'
 			},
 			{
 				name: 'cool',
-				image: '../images/icons/icon_smile_cool.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_cool.gif',
 				snippet: '[8D]'
 			},
 			{
 				name: 'blush',
-				image: '../images/icons/icon_smile_blush.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_blush.gif',
 				snippet: '[:I]'
 			},
 			{
 				name: 'tongue',
-				image: '../images/icons/icon_smile_tongue.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_tongue.gif',
 				snippet: '[:P]'
 			},
 			{
 				name: 'evil',
-				image: '../images/icons/icon_smile_evil.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_evil.gif',
 				snippet: '[}:)]'
 			},
 			{
 				name: 'shocked',
-				image: '../images/icons/icon_smile_shock.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_shock.gif',
 				snippet: '[:O]'
 			},
 			{
 				name: 'wink',
-				image: '../images/icons/icon_smile_wink.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_wink.gif',
 				snippet: '[;)]'
 			},
 			{
 				name: 'clown',
-				image: '../images/icons/icon_smile_clown.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_clown.gif',
 				snippet: '[:o)]'
 			},
 			{
 				name: 'back eye',
-				image: '../images/icons/icon_smile_blackeye.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_blackeye.gif',
 				snippet: '[B)]'
 			},
 			{
 				name: 'eightball',
-				image: '../images/icons/icon_smile_8ball.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_8ball.gif',
 				snippet: '[8]'
 			},
 			{
 				name: 'frown',
-				image: '../images/icons/icon_smile_sad.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_sad.gif',
 				snippet: '[:(]'
 			},
 			{
 				name: 'shy',
-				image: '../images/icons/icon_smile_shy.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_shy.gif',
 				snippet: '[8)]'
 			},
 			{
 				name: 'angry',
-				image: '../images/icons/icon_smile_angry.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_angry.gif',
 				snippet: '[:(!]'
 			},
 			{
 				name: 'dead',
-				image: '../images/icons/icon_smile_dead.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_dead.gif',
 				snippet: '[xx(]'
 			},
 			{
 				name: 'sleepy',
-				image: '../images/icons/icon_smile_sleepy.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_sleepy.gif',
 				snippet: '[|)]'
 			},
 			{
 				name: 'kisses',
-				image: '../images/icons/icon_smile_kisses.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_kisses.gif',
 				snippet: '[:X]'
 			},
 			{
 				name: 'approve',
-				image: '../images/icons/icon_smile_approve.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_approve.gif',
 				snippet: '[^]'
 			},
 			{
 				name: 'disapprove',
-				image: '../images/icons/icon_smile_dissapprove.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_dissapprove.gif',
 				snippet: '[V]'
 			},
 			{
 				name: 'question',
-				image: '../images/icons/icon_smile_question.gif',
+				image: 'https://www.geocaching.com/images/icons/icon_smile_question.gif',
 				snippet: '[?]'
 			}
 		];
