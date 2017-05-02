@@ -1,4 +1,4 @@
-function runLogEditorWordCount(){
+this.runLogEditorWordCount = function(){
 	var common = LogEditorCommon.getInstance(),
 		textArea = $('textarea.log-text'),
 		popup = Common.getInstance().createGeocachingUtilsPopup('logEditorWordCountPopup'),
@@ -120,4 +120,4 @@ function runLogEditorWordCount(){
 			}
 		];
 	}
-}
+};

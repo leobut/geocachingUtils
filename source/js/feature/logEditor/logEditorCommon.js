@@ -1,4 +1,4 @@
-var LogEditorCommon = (function (){
+this.LogEditorCommon = (function (){
 	var instance;
 
 	function init(){

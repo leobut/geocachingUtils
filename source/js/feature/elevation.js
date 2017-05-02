@@ -1,4 +1,4 @@
-function runElevationFeature(){	
+this.runElevationFeature = function(){	
 	// IMPORTANT: You need to enter your own Google API key here:
 	var apiKey = '',
 		coordinateElement = findCoordinatesInPage(),
@@ -64,4 +64,4 @@ function runElevationFeature(){
 
 		return coordinateElementCandidate;
 	}
-}
+};

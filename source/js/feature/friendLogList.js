@@ -1,4 +1,4 @@
-function runFriendLogListFeature(){
+this.runFriendLogListFeature = function(){
 	var resultDisplay = $('div.CacheDetailNavigation'),
 		friendLogList = $('<ul id="friendLogList">');
 
@@ -110,4 +110,4 @@ function runFriendLogListFeature(){
 	function removeInjectedScriptFromDom(){
 		$('#friendLogListScript').remove();
 	}
-}
+};
