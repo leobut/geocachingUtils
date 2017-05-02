@@ -6,8 +6,6 @@ function runLogEditorWordCount(){
 		availableTheAuthorBadges;
 
 	loadAvailableTheAuthorBadges();
-
-	common.addSeperatorToToolbar();
 	
 	toolbarElement.append(popup);
 	popup.getPopupContentContainer().append('<img>').append('<span>');

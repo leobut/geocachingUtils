@@ -2,16 +2,11 @@ var LogEditorCommon = (function (){
 	var instance;
 
 	function init(){
-		var editor = $('.mdd_toolbar'),
-			toolbar = editor.find('ul');
-
-		function addSeperatorToToolbar(){
-			toolbar.append('<li><span class="mdd_sep"></span></li>');
-		}
+		var toolbar = $('<ul class="logEditorToolbar">');
+		$('textarea.log-text').before(toolbar);
 
 		return {
-			toolbar: toolbar,
-			addSeperatorToToolbar: addSeperatorToToolbar
+			toolbar: toolbar
 		};
 	}
 
