@@ -1,4 +1,4 @@
-function runLogEditorInsertionPopup(){
+this.runLogEditorInsertionPopup = function(){
 	var toolbarElement,
 		popup,
 		supportedSmileys,
@@ -199,4 +199,4 @@ function runLogEditorInsertionPopup(){
 			}
 		];
 	}
-}
+};

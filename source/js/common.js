@@ -1,5 +1,4 @@
-
-var Common = (function (){
+this.Common = (function (){
 	var instance;
 
 	function init(){
