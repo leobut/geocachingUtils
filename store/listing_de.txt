@@ -8,6 +8,6 @@ Funktionen:
 - Hinweise zu Geocaches können automatisch entschlüsselt werden
 - Beinahe alles was du auf dieser Liste findest lässt sich in den Einstellungen dieser Extension an-/abschalten und konfigurieren
 
-Diese extension ist ein open source Projekt. Wünsche für neue Funktionen und Fehler kannst du hier eintragen: https://github.com/ControlTheBit/geocachingUtils
+Diese Extension ist ein open source Projekt. Wünsche für neue Funktionen und Fehler kannst du hier eintragen: https://github.com/ControlTheBit/geocachingUtils
 
 Für mehr Informationen über Badges, schau dir project-gc.com und badgeGen.com an.
