@@ -24,15 +24,15 @@ Note: This is only needed if you are working on the extension and want to try so
 1. Checkout this project
 2. Have Node.js and NPM installed
 3. Open command line in the root folder of the project
-4. Run `npm install --save-dev` to install all dependecies (has to be done once)
+4. Run `npm i` to install all dependecies (has to be done once)
 5. Run the commands you want:
 	- `grunt cleanUp` to clean up your local development environment
 	- `grunt build` to run `cleanUp`, jsHint and cssLint
 	- `grunt` to run `build`, js uglification, css&json minification and create a package ready for chrome web store
 
 # Release History
-- 1.0.2 (in development)
-	- ?
+- 2.0.0 (in development)
+	- Adapt the log editor enhancement features to the new editor implementation by groundspeak (Issue [#45](/../../issues/45))
 - 1.0.1
 	- Added support for rich text friend logs (Issue [#43](/../../issues/43))
 - 1.0.0
