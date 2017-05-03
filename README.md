@@ -31,7 +31,7 @@ Note: This is only needed if you are working on the extension and want to try so
 	- `grunt` to run `build`, js uglification, css&json minification and create a package ready for chrome web store
 
 # Release History
-- 2.0.0 (in development)
+- 2.0.0
 	- Adapt the log editor enhancement features to the new editor implementation by groundspeak (Issue [#45](/../../issues/45))
 - 1.0.1
 	- Added support for rich text friend logs (Issue [#43](/../../issues/43))
