@@ -13,26 +13,22 @@ module.exports = function(grunt) {
             }
         },
         copy: {
-            build: {
-                expand: true,
-                cwd: 'source',
-                src: '**',
-                dest: 'build',
+            main: {
+                files: [
+                    { expand: true, cwd: 'source/_locales/', src: ['**'], dest: 'build/_locales/' },
+                    { expand: true, cwd: 'source/img/', src: ['**'], dest: 'build/img/' },
+                    { expand: true, cwd: 'source/js/', src: ['**'], dest: 'build/js/' },
+                    { expand: true, cwd: 'source/popup/', src: ['**'], dest: 'build/popup/' },
+                    { expand: true, cwd: 'source/settings/', src: ['*.js', '*.html'], dest: 'build/settings/' },
+                    { expand: true, flatten: true, src: ['source/manifest.json'], dest: 'build/' }
+                ]
             }
         },
         eslint: {
             options: {
                 configFile: '.eslintrc'
             },
-            target: ['build/**/*.js', '!**/*.min.js']
-        },
-        csslint: {
-            strict: {
-                options: {
-                    csslintrc: '.csslintrc'
-                },
-                src: ['build/**/*.css']
-            }
+            target: ['source/**/*.js', '!**/*.min.js']
         },
         uglify: {
             all: {
@@ -43,6 +39,24 @@ module.exports = function(grunt) {
                     dest: 'build/',
                     ext: '.js'
                 }]
+            }
+        },
+        'json-minify': {
+            build: {
+                files: 'build/**/*.json'
+            }
+        },
+        htmlmin: {
+            main: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true,
+                    collapseInlineTagWhitespace: true
+                },
+                files: {
+                    'build/popup/popup.html': 'build/popup/popup.html',
+                    'build/settings/settings.html': 'build/settings/settings.html'
+                }
             }
         },
         cssmin: {
@@ -56,22 +70,11 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        'json-minify': {
-            build: {
-                files: 'build/**/*.json'
-            }
-        },
-        htmlmin: {
+        sass: {
             dist: {
-                options: {
-                    removeComments: true,
-                    collapseWhitespace: true,
-                    collapseInlineTagWhitespace: true
-                },
                 files: {
-                    // 'destination': 'source'
-                    'build/popup/popup.html': 'build/popup/popup.html',
-                    'build/settings/settings.html': 'build/settings/settings.html'
+                    'build/css/style.css': 'source/css/style.scss',
+                    'build/settings/style.css': 'source/settings/style.scss'
                 }
             }
         },
@@ -86,11 +89,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-json-minify');
     grunt.loadNpmTasks('grunt-contrib-htmlmin')
 
-    grunt.registerTask('build', ['clean', 'copy', 'eslint', 'csslint']);
-    grunt.registerTask('minify', ['uglify', 'cssmin', 'htmlmin', 'json-minify', ]);
-    grunt.registerTask('default', ['build', 'minify', 'compress']);
+    grunt.registerTask('build', ['copy', 'sass']);
+    grunt.registerTask('quality', ['eslint']);
+    grunt.registerTask('minify', ['uglify', 'htmlmin', 'cssmin', 'json-minify']);
+    grunt.registerTask('default', ['clean', 'build', 'quality', 'minify', 'compress']);
 };

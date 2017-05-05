@@ -1,0 +1,90 @@
+//colors
+$color_kabul_approx: #594a42;
+$color_stark_white_approx: #e3ddc2;
+$color_bianca_approx: #fbfaf3;
+$color_chelsea_cucumber_approx: #77b55a;
+$color_vida_loca_approx: #4b8f29;
+$color_bilbao_approx: #3e7327;
+$white: #ffffff;
+$color_hippie_green_approx: #5b8a3c;
+//fonts
+$font_0: Noto Sans;
+$font_1: Arial;
+$font_2: Helvetica;
+$font_3: sans-serif;
+body {
+    color: $color_kabul_approx;
+    font-family: $font_0, $font_1, $font_2, $font_3;
+    font-size: 90%;
+}
+
+h1 {
+    margin: 0.2em 0;
+    text-align: center;
+}
+
+h2 {
+    margin: 0.2em 0;
+}
+
+.round {
+    border-radius: 3px;
+    >div {
+        padding-bottom: 10px;
+    }
+}
+
+.note {
+    font-size: 70%;
+}
+
+#centeredContainer {
+    background-color: $color_stark_white_approx;
+    margin: auto;
+    padding: 14px;
+    width: 600px;
+    >div {
+        background-color: $color_bianca_approx;
+        margin-top: 14px;
+        padding: 1em;
+    }
+}
+
+#controlsContainer {
+    text-align: right;
+    >span {
+        margin-right: 10px;
+    }
+}
+
+#saveButton {
+    background: linear-gradient(to bottom, $color_chelsea_cucumber_approx 5%, $color_chelsea_cucumber_approx 100%);
+    background-color: $color_chelsea_cucumber_approx;
+    border: 1px solid $color_vida_loca_approx;
+    border-radius: 3px;
+    box-shadow: 0 10px 14px -7px $color_bilbao_approx;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $font_1;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 16px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 $color_hippie_green_approx;
+    &:hover {
+        background: linear-gradient(to bottom, $color_chelsea_cucumber_approx 5%, $color_chelsea_cucumber_approx 100%);
+        background-color: $color_chelsea_cucumber_approx;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+#githubHint {
+    font-size: 70%;
+    img {
+        vertical-align: text-bottom;
+    }
+}
