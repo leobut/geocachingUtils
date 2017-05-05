@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>
-			GeocachingUtils
-		</title>
-		<link rel='stylesheet' type='text/css' href='style.css'>
-	</head>
+
+<head>
+    <title>
+        GeocachingUtils
+    </title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+
 <body>
-	<div id='centeredContainer' class='round'>
-		<h1><img src='../img/appIcon/appIcon26.png'><span id='settings_main_title'></span><img src='../img/appIcon/appIcon26.png'></h1>
-		<div class='round'>
-			<h2 id='settings_detail_page_title'></h2>
-			<div>
-				 <input id='show_friend_logs' type='checkbox'> <span id='settings_detail_page_show_friend_logs'></span>
-			</div>
-			<div>
-				<input id='automatically_decrypt_hints' type='checkbox'> <span id='settings_detail_page_decrypt_hints'></span>
-			</div>
-			<div>
-				 <input id='show_elevation' type='checkbox'> <span id='settings_detail_page_show_elevation'></span> 
-				<select id='elevation_measurement'>
+    <div id='centeredContainer' class='round'>
+        <h1><img src='../img/appIcon/appIcon26.png'><span id='settings_main_title'></span><img src='../img/appIcon/appIcon26.png'></h1>
+        <div class='round'>
+            <h2 id='settings_detail_page_title'></h2>
+            <div>
+                <input id='show_friend_logs' type='checkbox'> <span id='settings_detail_page_show_friend_logs'></span>
+            </div>
+            <div>
+                <input id='automatically_decrypt_hints' type='checkbox'> <span id='settings_detail_page_decrypt_hints'></span>
+            </div>
+            <div>
+                <input id='show_elevation' type='checkbox'> <span id='settings_detail_page_show_elevation'></span>
+                <select id='elevation_measurement'>
 					<option id='settings_elevation_feet' value='feet'></option>
 					<option id='settings_elevation_meters' value='meters'></option>
 				</select>
-			</div>
-		</div>
-		<div class='round'>
-			<h2 id='settings_log_editor_main_title'></h2>
-			<div>
-				<input id='log_editor_count_words' type='checkbox'> <span id='settings_log_editor_count_words'></span>
-				<div id='settings_log_editor_count_words_note' class='note'></div>
-			</div>
-			<div>
-				<input id='log_editor_show_insertion_popup' type='checkbox'> <span id='settings_log_editor_show_insertion_popup'></span>
-			</div>
-		</div>
-		<div id='controlsContainer' class='round'>
-			<span id='statusDisplay'></span>
-			<button id='saveButton'></button>
-		</div>
-		<span id='githubHint'><span id='settings_footnote'></span> <a href='https://github.com/ControlTheBit/geocachingUtils' target='_blank'><img src='../img/settings/github16.png'>GitHub</a></span>
-	</div>
+            </div>
+        </div>
+        <div class='round'>
+            <h2 id='settings_log_editor_main_title'></h2>
+            <div>
+                <input id='log_editor_count_words' type='checkbox'> <span id='settings_log_editor_count_words'></span>
+                <div id='settings_log_editor_count_words_note' class='note'></div>
+            </div>
+            <div>
+                <input id='log_editor_show_insertion_popup' type='checkbox'> <span id='settings_log_editor_show_insertion_popup'></span>
+            </div>
+        </div>
+        <div id='controlsContainer' class='round'>
+            <span id='statusDisplay'></span>
+            <button id='saveButton'></button>
+        </div>
+        <span id='githubHint'><span id='settings_footnote'></span>
+        <a href='https://github.com/ControlTheBit/geocachingUtils' target='_blank'><img src='../img/settings/github16.png'>GitHub</a>
+        </span>
+    </div>
 
-	<script src='./settings.js'></script>
+    <script src='./settings.js'></script>
 </body>
+
 </html>
