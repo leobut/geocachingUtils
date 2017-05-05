@@ -11,9 +11,11 @@ engines:
       config: .eslintrc
   fixme:
     enabled: true
+  scss-lint:
+    enabled: true
 ratings:
   paths:
-  - "**.css"
+  - "**.scss"
   - "**.js"
 exclude_paths:
 - source/js/lib/jquery-3.1.0.min.js
