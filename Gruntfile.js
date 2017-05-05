@@ -90,8 +90,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-json-minify');
     grunt.loadNpmTasks('grunt-contrib-htmlmin')
 
-    grunt.registerTask('cleanUp', ['clean'])
-    grunt.registerTask('build', ['cleanUp', 'copy', 'eslint', 'csslint']);
+    grunt.registerTask('build', ['clean', 'copy', 'eslint', 'csslint']);
     grunt.registerTask('minify', ['uglify', 'cssmin', 'htmlmin', 'json-minify', ]);
     grunt.registerTask('default', ['build', 'minify', 'compress']);
 };
