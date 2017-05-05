@@ -1,0 +1,155 @@
+$color_bianca_approx: #fbfaf3;
+$color_kabul_approx: #594a42;
+$color_stark_white_approx: #e3ddc2;
+.geocachingUtilsPopup {
+    background-color: $color_bianca_approx;
+    border: solid $color_kabul_approx 1px;
+    border-radius: 3px;
+    position: absolute;
+}
+
+.logEditorToolbar {
+    padding-top: 0;
+    padding-right: 5px;
+    font-size: 10pt;
+    z-index: 999;
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+    >li {
+        padding-right: 10px;
+    }
+}
+
+.logEditorWordCountPopup {
+    width: 130px;
+    img {
+        display: block;
+        margin: auto;
+        padding: 5px 0;
+        width: 100px;
+    }
+    span {
+        display: block;
+        padding: 5px 0;
+        text-align: center;
+    }
+}
+
+.logEditorInsertionPopup {
+    width: 184px;
+    .popupText {
+        padding-left: 5px;
+    }
+    > {
+        .smileyList>li {
+            height: 26px;
+            line-height: 26px;
+            padding: 4px;
+            text-align: center;
+            width: 26px;
+        }
+        .tagList>li {
+            height: 26px;
+            padding: 4px;
+            text-align: center;
+            width: 34px;
+        }
+    }
+    >ul>li {
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 3px;
+        &:hover {
+            background-color: $color_stark_white_approx;
+        }
+    }
+}
+
+#friendLogListSpinner {
+    width: 22px;
+}
+
+#friendLogList {
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    li {
+        border-radius: 3px;
+        height: 52px;
+        margin: 5px 0;
+        position: static;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover {
+            background-color: $color_stark_white_approx;
+        }
+        .friendAvatar {
+            border-radius: 3px;
+            float: left;
+            margin: 2px;
+            width: 48px;
+        }
+    }
+    >li {
+        >table td {
+            padding: 0;
+            img {
+                vertical-align: text-bottom;
+            }
+        }
+        .LogImagesTable td .tb_images span {
+            padding-left: 3px;
+        }
+    }
+    table {
+        margin-bottom: 1em;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+    .friendName {
+        padding-left: 0;
+    }
+    .logDetailPopup {
+        left: -700px;
+        width: 670px;
+        a {
+            padding-left: 0;
+        }
+        .markdown-output {
+            margin: 1em;
+            a {
+                &:hover {
+                    border: none;
+                    text-decoration: underline;
+                }
+                &:focus {
+                    border: none;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .tb_images.lnk {
+            padding-left: 0;
+        }
+    }
+    .hoverBridge {
+        background-color: transparent;
+        height: 100%;
+        left: 670px;
+        position: absolute;
+        width: 32px;
+    }
+    .line {
+        background-color: $color_kabul_approx;
+        height: 1px;
+        left: -29px;
+        position: absolute;
+        top: 20px;
+        width: 30px;
+    }
+}
