@@ -183,7 +183,7 @@ rules:
   semi: 2
   sort-vars: 0
   space-after-keywords: 0
-  space-before-blocks: [2, { "functions": "never", "keywords": "never", "classes": "always" }]
+  space-before-blocks: [2, { "functions": "always", "keywords": "always", "classes": "always" }]
   space-before-function-paren: 0
   space-before-keywords: 0
   space-in-parens: 0
