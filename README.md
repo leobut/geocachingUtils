@@ -5,25 +5,26 @@ Feel free to contribute to the code or report bugs and feature requests.
 
 # Development [![Build Status](https://travis-ci.org/ControlTheBit/geocachingUtils.svg?branch=master)](https://travis-ci.org/ControlTheBit/geocachingUtils) [![devDependencies Status](https://david-dm.org/ControlTheBit/geocachingUtils/dev-status.svg)](https://david-dm.org/ControlTheBit/geocachingUtils?type=dev) [![Code Climate](https://codeclimate.com/github/ControlTheBit/geocachingUtils/badges/gpa.svg)](https://codeclimate.com/github/ControlTheBit/geocachingUtils)
 
-## How to run this extension
-Note: This is only needed if you are working on the extension and want to try something on your local machine. If you just want to download and use the extension, get it from here: [GeocachingUtils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
+**Note:** If you just want to download and use the extension, get it from here: [GeocachingUtils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
-1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in Chrome)
-2. Click the "Load unpacked extension..." button
-3. Select the "source" folder of this project
-4. Navigate to geocaching.com and enjoy
+The stuff described in this chapter is only needed if you are working on the extension and want to try something on your local machine. 
 
 ## How to setup the project locally
 0. Have Node.js and npm installed
 1. Checkout this project
 2. Open command line in the root folder of the project
 3. Run `npm i` to install all dependecies (has to be done once)
-4. Run the grunt tasks you as often as you want:
-	- `grunt cleanUp` to clean up your local development environment
-	- `grunt build` to run `cleanUp`, jsHint and cssLint
-	- `grunt` to run `build`, js uglification, css&json minification and create a package ready for chrome web store
+4. Run the `grunt` in the command line (You can find all available grunt tasks in the Gruntfile)
+
+## How to run this extension
+1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in Chrome)
+2. Click the "Load unpacked extension..." button
+3. Select the "source" (or "build" if you want to test the built version) folder of this project
+4. Navigate to geocaching.com and enjoy
 
 # Release History
+- 2.0.1 (under development)
+	- Various smaller bugfixes in features and translations and changes under the hood
 - 2.0.0
 	- Adapt the log editor enhancement features to the new editor implementation by groundspeak (Issue [#45](/../../issues/45))
 - 1.0.1
