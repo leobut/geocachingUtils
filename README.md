@@ -19,7 +19,7 @@ The stuff described in this chapter is only needed if you are working on the ext
 ## How to run this extension
 1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in Chrome)
 2. Click the "Load unpacked extension..." button
-3. Select the "source" (or "build" if you want to test the built version) folder of this project
+3. Select the "build" (only there after you run grunt) folder of this project
 4. Navigate to geocaching.com and enjoy
 
 # Release History
