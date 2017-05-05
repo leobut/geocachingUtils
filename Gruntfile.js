@@ -30,6 +30,9 @@ module.exports = function(grunt) {
             },
             target: ['source/**/*.js', '!**/*.min.js']
         },
+        sasslint: {
+            target: ['source/**/*.scss']
+        },
         uglify: {
             all: {
                 files: [{
@@ -90,10 +93,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-json-minify');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin')
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-sass-lint');
 
     grunt.registerTask('build', ['copy', 'sass']);
-    grunt.registerTask('quality', ['eslint']);
+    grunt.registerTask('quality', ['eslint', 'sasslint']);
     grunt.registerTask('minify', ['uglify', 'htmlmin', 'cssmin', 'json-minify']);
     grunt.registerTask('default', ['clean', 'build', 'quality', 'minify', 'compress']);
 };

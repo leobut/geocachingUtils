@@ -1,20 +1,20 @@
 //colors
-$color_kabul_approx: #594a42;
-$color_stark_white_approx: #e3ddc2;
-$color_bianca_approx: #fbfaf3;
-$color_chelsea_cucumber_approx: #77b55a;
-$color_vida_loca_approx: #4b8f29;
-$color_bilbao_approx: #3e7327;
-$white: #ffffff;
-$color_hippie_green_approx: #5b8a3c;
+$color-kabul-approx: #594a42;
+$color-stark-white-approx: #e3ddc2;
+$color-bianca-approx: #fbfaf3;
+$color-chelsea-cucumber-approx: #77b55a;
+$color-vida-loca-approx: #4b8f29;
+$color-bilbao-approx: #3e7327;
+$white: #fff;
+$color-hippie-green-approx: #5b8a3c;
 //fonts
-$font_0: Noto Sans;
-$font_1: Arial;
-$font_2: Helvetica;
-$font_3: sans-serif;
+$noto-sans: Noto Sans;
+$arial: Arial;
+$helvetica: Helvetica;
+$sans-serif: sans-serif;
 body {
-    color: $color_kabul_approx;
-    font-family: $font_0, $font_1, $font_2, $font_3;
+    color: $color-kabul-approx;
+    font-family: $noto-sans, $arial, $helvetica, $sans-serif;
     font-size: 90%;
 }
 
@@ -39,12 +39,12 @@ h2 {
 }
 
 #centeredContainer {
-    background-color: $color_stark_white_approx;
+    background-color: $color-stark-white-approx;
     margin: auto;
     padding: 14px;
     width: 600px;
     >div {
-        background-color: $color_bianca_approx;
+        background-color: $color-bianca-approx;
         margin-top: 14px;
         padding: 1em;
     }
@@ -58,23 +58,23 @@ h2 {
 }
 
 #saveButton {
-    background: linear-gradient(to bottom, $color_chelsea_cucumber_approx 5%, $color_chelsea_cucumber_approx 100%);
-    background-color: $color_chelsea_cucumber_approx;
-    border: 1px solid $color_vida_loca_approx;
+    background: linear-gradient(to bottom, $color-chelsea-cucumber-approx 5%, $color-chelsea-cucumber-approx 100%);
+    background-color: $color-chelsea-cucumber-approx;
+    border: 1px solid $color-vida-loca-approx;
     border-radius: 3px;
-    box-shadow: 0 10px 14px -7px $color_bilbao_approx;
+    box-shadow: 0 10px 14px -7px $color-bilbao-approx;
     color: $white;
     cursor: pointer;
     display: inline-block;
-    font-family: $font_1;
+    font-family: $arial;
     font-size: 16px;
     font-weight: bold;
     padding: 6px 16px;
     text-decoration: none;
-    text-shadow: 0 1px 0 $color_hippie_green_approx;
+    text-shadow: 0 1px 0 $color-hippie-green-approx;
     &:hover {
-        background: linear-gradient(to bottom, $color_chelsea_cucumber_approx 5%, $color_chelsea_cucumber_approx 100%);
-        background-color: $color_chelsea_cucumber_approx;
+        background: linear-gradient(to bottom, $color-chelsea-cucumber-approx 5%, $color-chelsea-cucumber-approx 100%);
+        background-color: $color-chelsea-cucumber-approx;
     }
     &:active {
         position: relative;

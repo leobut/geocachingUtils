@@ -1,0 +1,32 @@
+rules:
+  # Consistency Rules
+  extends-before-mixins: 1
+  extends-before-declarations: 1
+  mixins-before-declarations: 1
+  # Require an empty line between blocks
+  empty-line-between-blocks: 0
+  no-empty-rulesets: 1
+  final-newline: 0
+  no-ids: 0
+  indentation: 0
+  leading-zero: 0
+  name-format: 0
+  nesting-depth: 0
+  placeholder-in-extend: 1
+  property-sort-order: 0
+  property-spelling: 0
+  shorthand: 0
+  one-declaration-per-line: 1
+  single-line-per-selector: 1
+  space-after-comma: 1
+  # Space surrounding colons
+  space-before-colon: 1
+  space-after-colon: 1
+  space-before-brace: 1
+  space-between-parens: 1
+  trailing-semicolon: 1
+  class-name-format:
+    - 1
+    -
+      convention: 'camelcase'
+      allow-leading-underscore: false
