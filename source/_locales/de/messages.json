@@ -1,68 +1,68 @@
 {
-	"extension_description": {
-		"message": "Eine Sammlung von nützlichen Funktionen, die geocaching.com erweitern"
-	},
-	
-
-	"log_editor_word_count_words":{
-		"message": "Wörter: "
-	},
-	"log_editor_word_count_highest_badge":{
-		"message": "Das ist der höchste Badge!"
-	},
-	"log_editor_word_count_keep_going":{
-		"message": "Weiter so, es gibt weitere Badges!"
-	},
+    "extension_description": {
+        "message": "Eine Sammlung von nützlichen Funktionen, die geocaching.com erweitern"
+    },
 
 
-	"friend_log_list_error":{
-		"message": "Fehler beim Laden der Freund-Logs"
-	},
-	"friend_log_list_no_friend_logs":{
-		"message": "Keine Logs von Freunden"
-	},
+    "log_editor_word_count_words": {
+        "message": "Wörter: "
+    },
+    "log_editor_word_count_highest_badge": {
+        "message": "Das ist der höchste Badge!"
+    },
+    "log_editor_word_count_keep_going": {
+        "message": "Weiter so, es gibt weitere Badges!"
+    },
 
 
-	"settings_settings_saved": {
-		"message": "Einstellungen gespeichert!"
-	},
-	"settings_main_title":{
-		"message": "GeocachingUtils - Einstellungen"
-	},
-	"settings_detail_page_title":{
-		"message": "Geocache Detailseite:"
-	},
-	"settings_detail_page_show_friend_logs":{
-		"message": "Logs von Freunden anzeigen"
-	},
-	"settings_detail_page_decrypt_hints":{
-		"message": "Hinweise automatisch entschlüsseln"
-	},
-	"settings_detail_page_show_elevation":{
-		"message": "Höhe neben den Hauptkoordinaten anzeigen; und zwar in"
-	},
-	"settings_elevation_meters":{
-		"message": "Meter"
-	},
-	"settings_elevation_feet":{
-		"message": "Fuss"
-	},
-	"settings_log_editor_main_title":{
-		"message": "Log-Editor:"
-	},
-	"settings_log_editor_count_words":{
-		"message": "Zähle die Wörter während der Log-Erstellung und zeige den 'The Author'-Badge"
-	},
-	"settings_log_editor_count_words_note":{
-		"message": "Hinweis: Der 'The Author'-Badge wird zur Verfügung gestellt von <a href='http://www.badgegen.com/' target='_blank'>BadgeGen</a>. BadgeGen zählt nur 'Found it'-Logs."
-	},
-	"settings_log_editor_show_insertion_popup":{
-		"message": "Füge das Smiley- und Tag-Popup zum Log-Editor hinzu"
-	},
-	"settings_save_button":{
-		"message": "Speichern"
-	},
-	"settings_footnote":{
-		"message": "Diese Extension ist auch zu finden auf"
-	}
+    "friend_log_list_error": {
+        "message": "Fehler beim Laden der Freund-Logs"
+    },
+    "friend_log_list_no_friend_logs": {
+        "message": "Keine Logs von Freunden"
+    },
+
+
+    "settings_settings_saved": {
+        "message": "Einstellungen gespeichert!"
+    },
+    "settings_main_title": {
+        "message": "GeocachingUtils - Einstellungen"
+    },
+    "settings_detail_page_title": {
+        "message": "Geocache Detailseite:"
+    },
+    "settings_detail_page_show_friend_logs": {
+        "message": "Logs von Freunden anzeigen"
+    },
+    "settings_detail_page_decrypt_hints": {
+        "message": "Hinweise automatisch entschlüsseln"
+    },
+    "settings_detail_page_show_elevation": {
+        "message": "Höhe neben den Hauptkoordinaten anzeigen; und zwar in "
+    },
+    "settings_elevation_meters": {
+        "message": "Meter"
+    },
+    "settings_elevation_feet": {
+        "message": "Fuss"
+    },
+    "settings_log_editor_main_title": {
+        "message": "Log-Editor:"
+    },
+    "settings_log_editor_count_words": {
+        "message": "Zähle die Wörter während der Log-Erstellung und zeige den 'The Author'-Badge"
+    },
+    "settings_log_editor_count_words_note": {
+        "message": "Hinweis: Der 'The Author'-Badge wird zur Verfügung gestellt von <a href='http://www.badgegen.com/' target='_blank'>BadgeGen</a>. BadgeGen zählt nur 'Found it'-Logs."
+    },
+    "settings_log_editor_show_insertion_popup": {
+        "message": "Füge das Smiley- und Tag-Popup zum Log-Editor hinzu"
+    },
+    "settings_save_button": {
+        "message": "Speichern"
+    },
+    "settings_footnote": {
+        "message": "Diese Extension ist auch zu finden auf"
+    }
 }
