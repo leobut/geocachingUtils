@@ -22,6 +22,9 @@
         "message": "No friend logs"
     },
 
+    "popup_settings_already_open": {
+        "message": "Settings are already open"
+    },
 
     "settings_settings_saved": {
         "message": "Settings saved!"
