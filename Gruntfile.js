@@ -16,10 +16,10 @@ module.exports = function(grunt) {
             main: {
                 files: [
                     { expand: true, cwd: 'source/_locales/', src: ['**'], dest: 'build/_locales/' },
-                    { expand: true, cwd: 'source/img/', src: ['**'], dest: 'build/img/' },
+                    { expand: true, cwd: 'source/img/', src: ['**', '!appIcon/*Raw.png'], dest: 'build/img/' },
                     { expand: true, cwd: 'source/js/', src: ['**'], dest: 'build/js/' },
                     { expand: true, cwd: 'source/popup/', src: ['**'], dest: 'build/popup/' },
-                    { expand: true, cwd: 'source/settings/', src: ['*.js', '*.html'], dest: 'build/settings/' },
+                    { expand: true, cwd: 'source/settings/', src: ['**', '!*.scss'], dest: 'build/settings/' },
                     { expand: true, flatten: true, src: ['source/manifest.json'], dest: 'build/' }
                 ]
             }
