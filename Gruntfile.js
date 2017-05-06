@@ -30,9 +30,9 @@ module.exports = function(grunt) {
             },
             target: ['source/**/*.js', '!**/*.min.js']
         },
-        sasslint: {
+        scsslint: {
             options: {
-                configFile: '.scss-lint.yml'
+                config: '.scss-lint.yml'
             },
             target: ['source/**/*.scss']
         },
@@ -97,10 +97,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-json-minify');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-sass-lint');
 
     grunt.registerTask('build', ['copy', 'sass']);
-    grunt.registerTask('quality', ['eslint', 'sasslint']);
+    grunt.registerTask('quality', ['eslint']);
     grunt.registerTask('minify', ['uglify', 'htmlmin', 'cssmin', 'json-minify']);
     grunt.registerTask('default', ['clean', 'build', 'quality', 'minify', 'compress']);
 };
