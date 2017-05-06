@@ -15,7 +15,7 @@ engines:
     enabled: true
 ratings:
   paths:
-  - "**.scss"
+  - "source/**/*.scss"
   - "**.js"
 exclude_paths:
 - source/js/lib/jquery-3.1.0.min.js
