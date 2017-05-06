@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         },
         eslint: {
             options: {
-                configFile: '.eslintrc'
+                configFile: '.eslintrc.yml'
             },
             target: ['source/**/*.js', '!**/*.min.js']
         },
