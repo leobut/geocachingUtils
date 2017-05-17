@@ -23,6 +23,8 @@ The stuff described in this chapter is only needed if you are working on the ext
 4. Navigate to geocaching.com and enjoy
 
 # Release History
+- 2.0.2
+	- Fixes elevation feature
 - 2.0.1
 	- Adapt the log editor enhancement features to the new editor implementation by groundspeak (Issue [#48](/../../issues/48))
 	- Various smaller bugfixes in features and translations and changes under the hood
