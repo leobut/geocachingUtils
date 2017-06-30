@@ -9,12 +9,12 @@
     "devDependencies": {
         "grunt": "1.0.1",
         "grunt-contrib-clean": "1.1.0",
-        "grunt-contrib-compress": "1.4.1",
+        "grunt-contrib-compress": "1.4.3",
         "grunt-contrib-copy": "1.0.0",
         "grunt-contrib-cssmin": "2.2.0",
         "grunt-contrib-htmlmin": "2.4.0",
-        "grunt-contrib-uglify": "3.0.0",
-        "grunt-eslint": "19.0.0",
+        "grunt-contrib-uglify": "3.0.1",
+        "grunt-eslint": "20.0.0",
         "grunt-json-minify": "1.1.0",
         "grunt-sass": "2.0.0",
         "load-grunt-tasks": "3.5.2"
