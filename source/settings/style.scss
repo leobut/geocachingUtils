@@ -16,26 +16,28 @@ body {
     color: $color-kabul-approx;
     font-family: $noto-sans, $arial, $helvetica, $sans-serif;
     font-size: 90%;
-}
-
-h1 {
-    margin: 0.2em 0;
-    text-align: center;
-}
-
-h2 {
-    margin: 0.2em 0;
-}
-
-.round {
-    border-radius: 3px;
-    >div {
-        padding-bottom: 10px;
+    h1 {
+        margin: 0.2em 0;
+        text-align: center;
+        >span {
+            vertical-align: text-bottom;
+        }
     }
-}
-
-.note {
-    font-size: 70%;
+    .round {
+        border-radius: 3px;
+        h2 {
+            margin: 0.2em 0;
+        }
+        >div {
+            padding-bottom: 10px;
+            >span {
+                vertical-align: middle;
+            }
+            .note {
+                font-size: 70%;
+            }
+        }
+    }
 }
 
 #centeredContainer {
