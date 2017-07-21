@@ -30,12 +30,6 @@ module.exports = function(grunt) {
             },
             target: ['source/**/*.js', '!**/*.min.js']
         },
-        scsslint: {
-            options: {
-                config: '.scss-lint.yml'
-            },
-            target: ['source/**/*.scss']
-        },
         uglify: {
             all: {
                 files: [{
