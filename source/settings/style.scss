@@ -1,20 +1,20 @@
 //colors
-$color-kabul-approx: #594a42;
-$color-stark-white-approx: #e3ddc2;
-$color-bianca-approx: #fbfaf3;
-$color-chelsea-cucumber-approx: #77b55a;
-$color-vida-loca-approx: #4b8f29;
-$color-bilbao-approx: #3e7327;
-$white: #fff;
-$color-hippie-green-approx: #5b8a3c;
+$color-brown: #594a42;
+$color-beige: #e3ddc2;
+$color-beige-light: #fbfaf3;
+$color-green: #4b8f29;
+$color-green-light: #77b55a;
+$color-green-dark: #3e7327;
+$color-green-dark-medium: #5b8a3c;
+$color-white: #fff;
 //fonts
-$noto-sans: Noto Sans;
-$arial: Arial;
-$helvetica: Helvetica;
-$sans-serif: sans-serif;
+$font-noto-sans: Noto Sans;
+$font-arial: Arial;
+$font-helvetica: Helvetica;
+$font-sans-serif: sans-serif;
 body {
-    color: $color-kabul-approx;
-    font-family: $noto-sans, $arial, $helvetica, $sans-serif;
+    color: $color-brown;
+    font-family: $font-noto-sans, $font-arial, $font-helvetica, $font-sans-serif;
     font-size: 90%;
     h1 {
         margin: 0.2em 0;
@@ -41,12 +41,12 @@ body {
 }
 
 #centeredContainer {
-    background-color: $color-stark-white-approx;
+    background-color: $color-beige;
     margin: auto;
     padding: 14px;
     width: 600px;
     >div {
-        background-color: $color-bianca-approx;
+        background-color: $color-beige-light;
         margin-top: 14px;
         padding: 1em;
     }
@@ -60,23 +60,23 @@ body {
 }
 
 #saveButton {
-    background: linear-gradient(to bottom, $color-chelsea-cucumber-approx 5%, $color-chelsea-cucumber-approx 100%);
-    background-color: $color-chelsea-cucumber-approx;
-    border: 1px solid $color-vida-loca-approx;
+    background: linear-gradient(to bottom, $color-green-light 5%, $color-green-light 100%);
+    background-color: $color-green-light;
+    border: 1px solid $color-green;
     border-radius: 3px;
-    box-shadow: 0 10px 14px -7px $color-bilbao-approx;
-    color: $white;
+    box-shadow: 0 10px 14px -7px $color-green-dark;
+    color: $color-white;
     cursor: pointer;
     display: inline-block;
-    font-family: $arial;
+    font-family: $font-arial;
     font-size: 16px;
     font-weight: bold;
     padding: 6px 16px;
     text-decoration: none;
-    text-shadow: 0 1px 0 $color-hippie-green-approx;
+    text-shadow: 0 1px 0 $color-green-dark-medium;
     &:hover {
-        background: linear-gradient(to bottom, $color-chelsea-cucumber-approx 5%, $color-chelsea-cucumber-approx 100%);
-        background-color: $color-chelsea-cucumber-approx;
+        background: linear-gradient(to bottom, $color-green-light 5%, $color-green-light 100%);
+        background-color: $color-green-light;
     }
     &:active {
         position: relative;
