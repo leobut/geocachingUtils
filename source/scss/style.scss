@@ -1,9 +1,9 @@
-$color-bianca-approx: #fbfaf3;
-$color-kabul-approx: #594a42;
-$color-stark-white-approx: #e3ddc2;
+$color-beige: #fbfaf3;
+$color-beige-dark: #e3ddc2;
+$color-brown: #594a42;
 .geocachingUtilsPopup {
-    background-color: $color-bianca-approx;
-    border: solid $color-kabul-approx 1px;
+    background-color: $color-beige;
+    border: solid $color-brown 1px;
     border-radius: 3px;
     position: absolute;
 }
@@ -61,7 +61,7 @@ $color-stark-white-approx: #e3ddc2;
         //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
         border-radius: 3px;
         &:hover {
-            background-color: $color-stark-white-approx;
+            background-color: $color-beige-dark;
         }
     }
 }
@@ -86,7 +86,7 @@ $color-stark-white-approx: #e3ddc2;
             margin-bottom: 0;
         }
         &:hover {
-            background-color: $color-stark-white-approx;
+            background-color: $color-beige-dark;
         }
         .friendAvatar {
             border-radius: 3px;
@@ -145,7 +145,7 @@ $color-stark-white-approx: #e3ddc2;
         width: 32px;
     }
     .line {
-        background-color: $color-kabul-approx;
+        background-color: $color-brown;
         height: 1px;
         left: -29px;
         position: absolute;
