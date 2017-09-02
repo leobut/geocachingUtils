@@ -1,0 +1,26 @@
+# Linter Options
+options:
+  merge-default-rules: false
+  max-warnings: 5
+# Rule Configuration
+rules:
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  placeholder-in-extend: 2
+  mixins-before-declarations:
+    - 2
+    -
+      exclude:
+        - breakpoint
+        - mq
+  no-warn: 1
+  no-debug: 1
+  no-important: 2
+  hex-notation:
+    - 1
+    -
+      style: lowercase
+  indentation:
+    - 2
+    -
+      size: 4
