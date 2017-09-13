@@ -23,43 +23,4 @@ The stuff described in this chapter is only needed if you are working on the ext
 4. Navigate to geocaching.com and enjoy
 
 # Release History
-- 2.0.2
-	- Fixes elevation feature
-- 2.0.1
-	- Adapt the log editor enhancement features to the new editor implementation by groundspeak (Issue [#48](/../../issues/48))
-	- Various smaller bugfixes in features and translations and changes under the hood
-- 2.0.0
-	- Adapt the log editor enhancement features to the new editor implementation by groundspeak (Issue [#45](/../../issues/45))
-- 1.0.1
-	- Added support for rich text friend logs (Issue [#43](/../../issues/43))
-- 1.0.0
-	- Added German translation
-	- Various bugfixes
-- 0.9.2
-	- Fixed a bug that messed up the geocaching detail page when there were a lot of friend logs
-- 0.9.0
-	- Log Editor:
-		- Count the words in your log text and predict the "The Author" badge you will earn. (Badge provided by [BadgeGen](http://www.badgegen.com/), Badges can be seen on e.g. [Project-GC](http://www.project-gc.com/))
-		- Enable / disable smiley and tag insertion tool in the settings
-		- Enable / disable word counting feature in the settings
-	- Geocache detail page:
-		- Enable / disable elevation feature in the settings
-		- Enable / disable friend log list feture in the settings
-- 0.8.0
-	- Click the extension icon to open the settings
-	- Redesigned the settings page
-- 0.7.1
-	- Automatically decrypt hints (can be disabled in the settings page)
-	- Added an icon to the log editor which allows one to choose smileys and tags (FTF, STF, TTF [project-gc.com style]) to be inserted into the log text
-- 0.6.0
-	- Friend names in the friend log list are now links to the friends profile
-	- New extension icon: ![](source/img/appIcon/appIcon16.png) 
-- 0.5.2
-	- Show log image links in the friend log popups
-- 0.5.1
-	- Design improvements
-- 0.5.0
-	- Added settings page to allow the user to set the unit for the elevation feature
-	- Added message if there are no friend logs for the current cache
-- 0.4.2
-	- Initial Release
+The release history and change notes can be found [here](../../releases).
