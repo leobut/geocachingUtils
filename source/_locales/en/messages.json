@@ -3,6 +3,9 @@
         "message": "A collection of useful features that enhances geocaching.com"
     },
 
+    "popup_settings_already_open": {
+        "message": "Settings are already open"
+    },
 
     "log_editor_word_count_words": {
         "message": "Words: "
@@ -22,9 +25,6 @@
         "message": "No friend logs"
     },
 
-    "popup_settings_already_open": {
-        "message": "Settings are already open"
-    },
 
     "settings_settings_saved": {
         "message": "Settings saved!"
