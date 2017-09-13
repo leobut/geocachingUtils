@@ -14,7 +14,7 @@
         "message": "Das ist der höchste Badge!"
     },
     "log_editor_word_count_keep_going": {
-        "message": "Weiter so, es gibt weitere Badges!"
+        "message": "Weiter so! Es gibt höhere Badges!"
     },
 
 
@@ -42,7 +42,7 @@
         "message": "Hinweise automatisch entschlüsseln"
     },
     "settings_detail_page_show_elevation": {
-        "message": "Höhe neben den Hauptkoordinaten anzeigen; und zwar in "
+        "message": "Höhe neben den Cache-Koordinaten anzeigen; und zwar in "
     },
     "settings_elevation_meters": {
         "message": "Meter"
