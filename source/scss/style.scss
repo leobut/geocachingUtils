@@ -1,6 +1,8 @@
 $color-beige: #fbfaf3;
 $color-beige-dark: #e3ddc2;
 $color-brown: #594a42;
+$color-geo-green: #02874d;
+$color-geo-brown: #777;
 .geocachingUtilsPopup {
     background-color: $color-beige;
     border: solid $color-brown 1px;
@@ -21,46 +23,47 @@ $color-brown: #594a42;
     }
 }
 
-.logEditorWordCountPopup {
-    width: 130px;
-    img {
-        display: block;
-        margin: auto;
-        padding: 5px 0;
-        width: 100px;
-    }
-    span {
-        display: block;
-        padding: 5px 0;
-        text-align: center;
-    }
-}
-
-.logEditorInsertionPopup {
-    width: 184px;
-    .popupText {
-        padding-left: 5px;
-    }
-    > {
-        .smileyList>li {
-            height: 26px;
-            line-height: 26px;
-            padding: 4px;
-            text-align: center;
-            width: 26px;
+.logEditorPopup {
+    border: 1px solid $color-geo-brown;
+    background-color: white;
+    border-radius: 0;
+    &.logEditorPopupWordCount {
+        width: 130px;
+        img {
+            display: block;
+            margin: auto;
+            padding: 5px 0;
+            width: 100px;
         }
-        .tagList>li {
-            height: 26px;
-            padding: 4px;
+        span {
+            display: block;
+            padding: 5px 0;
             text-align: center;
-            width: 34px;
         }
     }
-    >ul>li {
-        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-        border-radius: 3px;
-        &:hover {
-            background-color: $color-beige-dark;
+    &.logEditorPopupInsertion {
+        width: 262px;
+        .popupText {
+            padding-left: 5px;
+        }
+        > {
+            .smileyList>li {
+                height: 26px;
+                line-height: 26px;
+                padding: 4px;
+                text-align: center;
+                width: 26px;
+            }
+            .tagList>li {
+                height: 26px;
+                padding: 4px;
+                text-align: center;
+                width: 34px;
+            }
+        }
+        >ul>li:hover {
+            color: white;
+            background-color: $color-geo-green;
         }
     }
 }

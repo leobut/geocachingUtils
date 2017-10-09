@@ -24,7 +24,7 @@ this.runLogEditorInsertionPopup = function() {
     }
 
     function hookInGUWindow() {
-        popup = Common.getInstance().createGeocachingUtilsPopup('logEditorInsertionPopup');
+        popup = Common.getInstance().createGeocachingUtilsPopup('logEditorPopup logEditorPopupInsertion');
         popup.getPopupContentContainer().append('<span class="popupText">Smileys:</span><ul class="smileyList"></ul><span class="popupText">Tags:</span><ul class="tagList"></ul>');
 
         toolbarElement.append(popup);
