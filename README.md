@@ -1,4 +1,5 @@
-# ![](source/img/appIcon/appIcon48.png) GeocachingUtils ![](source/img/appIcon/appIcon48.png) 
+# ![](source/img/appIcon/appIcon48.png) GeocachingUtils ![](source/img/appIcon/appIcon48.png)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/users/aiddapoflafkbecobkoiakgagaijacaa.svg)](https://chrome.google.com/webstore/detail/geocachingutils/aiddapoflafkbecobkoiakgagaijacaa) [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/aiddapoflafkbecobkoiakgagaijacaa.svg)](https://chrome.google.com/webstore/detail/geocachingutils/aiddapoflafkbecobkoiakgagaijacaa) [![Chrome Web Store](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg)](https://chrome.google.com/webstore/detail/geocachingutils/aiddapoflafkbecobkoiakgagaijacaa)
 GeocachingUtils is an extension for google chrome that adds some really nice features to the  [geocaching.com](http://www.geocaching.com) website. You can download it for free from the chrome web store: [GeocachingUtils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 Feel free to contribute to the code or report bugs and feature requests.
