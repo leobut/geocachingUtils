@@ -1,7 +1,7 @@
 this.runLogEditorWordCount = function() {
     var common = LogEditorCommon.getInstance(),
         textArea = $('textarea.log-text'),
-        popup = Common.getInstance().createGeocachingUtilsPopup('logEditorWordCountPopup'),
+        popup = Common.getInstance().createGeocachingUtilsPopup('logEditorPopup logEditorPopupWordCount'),
         toolbarElement = $('<li id="geoachingUtilsWordCount"><img></li>'),
         availableTheAuthorBadges;
 
