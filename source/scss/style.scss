@@ -27,6 +27,7 @@ $color-geo-brown: #777;
     border: 1px solid $color-geo-brown;
     background-color: white;
     border-radius: 0;
+    cursor: default;
     z-index: 1;
     &.logEditorPopupWordCount {
         width: 130px;
