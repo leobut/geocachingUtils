@@ -3,6 +3,7 @@ $color-beige-dark: #e3ddc2;
 $color-brown: #594a42;
 $color-geo-green: #02874d;
 $color-geo-brown: #777;
+$color-geo-visited-link: #00447c;
 .geocachingUtilsPopup {
     background-color: $color-beige;
     border: solid $color-brown 1px;
@@ -117,6 +118,7 @@ $color-geo-brown: #777;
     }
     .friendName {
         padding-left: 0;
+        color: $color-geo-visited-link;
     }
     .logDetailPopup {
         left: -700px;
