@@ -13,7 +13,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 The stuff described in this chapter is only needed if you are working on the extension and want to try something on your local machine. 
 
 ## How to setup the project locally
-0. Have Node.js and npm installed
+0. Have Node.js (Version 6.x or higher) and npm installed
 1. Checkout this project
 2. Open command line in the root folder of the project
 3. Run `npm i` to install all dependecies (has to be done once)
