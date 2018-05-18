@@ -6,14 +6,14 @@ this.runLogEditorInsertionPopup = function() {
 
     loadSupportedSmileys();
     loadSupportedTags();
-    addGUIconToToolbar();
+    addGeocachingUtilsIconToToolbar();
 
-    function addGUIconToToolbar() {
+    function addGeocachingUtilsIconToToolbar() {
         LogEditorCommon.getInstance().toolbar.append('<li id="geoachingUtilsFunctions"><img src="' +
             chrome.extension.getURL('img/appIcon/appIcon26.png') + '">');
         toolbarElement = $('#geoachingUtilsFunctions');
 
-        hookInGUWindow();
+        hookInGeocachingUtilsWindow();
 
         toolbarElement.mouseenter(function() {
             popup.show();
@@ -23,7 +23,7 @@ this.runLogEditorInsertionPopup = function() {
         });
     }
 
-    function hookInGUWindow() {
+    function hookInGeocachingUtilsWindow() {
         popup = Common.getInstance().createGeocachingUtilsPopup('logEditorPopup logEditorPopupInsertion');
         popup.getPopupContentContainer().append('<span class="popupText">Smileys:</span><ul class="smileyList"></ul><span class="popupText">Tags:</span><ul class="tagList"></ul>');
 
@@ -63,15 +63,15 @@ this.runLogEditorInsertionPopup = function() {
     }
 
     // A bit modified function from http://stackoverflow.com/questions/11076975/insert-text-into-textarea-at-cursor-position-javascript
-    function insertAtCursor(myField, myValue) {
-        if(myField.selectionStart || myField.selectionStart === '0') {
-            var startPos = myField.selectionStart;
-            var endPos = myField.selectionEnd;
-            myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
-            myField.selectionStart = startPos + myValue.length;
-            myField.selectionEnd = startPos + myValue.length;
+    function insertAtCursor(targetTextArea, textToInsert) {
+        if (targetTextArea.selectionStart || targetTextArea.selectionStart === '0') {
+            var startPosition = targetTextArea.selectionStart;
+            var endPosition = targetTextArea.selectionEnd;
+            targetTextArea.value = targetTextArea.value.substring(0, startPosition) + textToInsert + targetTextArea.value.substring(endPosition, targetTextArea.value.length);
+            targetTextArea.selectionStart = startPosition + textToInsert.length;
+            targetTextArea.selectionEnd = startPosition + textToInsert.length;
         } else {
-            myField.value += myValue;
+            targetTextArea.value += textToInsert;
         }
     }
 
