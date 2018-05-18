@@ -12,7 +12,7 @@ $color-geo-visited-link: #00447c;
 }
 
 .logEditorToolbar {
-    padding-top: 0;
+    padding: 0;
     font-size: 10pt;
     z-index: 999;
     li {
@@ -50,18 +50,24 @@ $color-geo-visited-link: #00447c;
             padding-left: 5px;
         }
         > {
-            .smileyList>li {
-                height: 26px;
-                line-height: 26px;
-                padding: 4px;
-                text-align: center;
-                width: 26px;
+            .smileyList {
+                padding: 0;
+                >li {
+                    height: 26px;
+                    line-height: 26px;
+                    padding: 4px;
+                    text-align: center;
+                    width: 26px;
+                }
             }
-            .tagList>li {
-                height: 26px;
-                padding: 4px;
-                text-align: center;
-                width: 34px;
+            .tagList {
+                padding: 0;
+                >li {
+                    height: 26px;
+                    padding: 4px;
+                    text-align: center;
+                    width: 34px;
+                }
             }
         }
         >ul>li:hover {
