@@ -6,6 +6,10 @@ node_js:
   - "10"
 script:
   - grunt default --stack --debug
-cache:
-  directories:
-    - node_modules
+# The following section comes from this tutorial: https://github.com/greenkeeperio/greenkeeper-lockfile#npm
+before_install:
+- npm install -g npm
+- npm install -g greenkeeper-lockfile@1
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
+# End of tutorial section
