@@ -119,9 +119,11 @@ $color-geo-visited-link: #00447c;
         }
     }
     table {
-        margin-bottom: 1em;
         padding-left: 5px;
         padding-top: 5px;
+        tr {
+            height: 20px;
+        }
     }
     .friendName {
         padding-left: 0;
