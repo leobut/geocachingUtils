@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+    const sass = require('node-sass');
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
@@ -9,18 +10,49 @@ module.exports = function(grunt) {
                 options: {
                     archive: 'GeocachingUtils_<%= manifest.version %>.zip'
                 },
-                files: [{ src: ['build/**'] }]
+                files: [{
+                    src: ['build/**']
+                }]
             }
         },
         copy: {
             main: {
-                files: [
-                    { expand: true, cwd: 'source/_locales/', src: ['**'], dest: 'build/_locales/' },
-                    { expand: true, cwd: 'source/img/', src: ['**', '!appIcon/*Raw.png'], dest: 'build/img/' },
-                    { expand: true, cwd: 'source/js/', src: ['**'], dest: 'build/js/' },
-                    { expand: true, cwd: 'source/popup/', src: ['**'], dest: 'build/popup/' },
-                    { expand: true, cwd: 'source/settings/', src: ['**', '!*.scss'], dest: 'build/settings/' },
-                    { expand: true, flatten: true, src: ['source/manifest.json'], dest: 'build/' }
+                files: [{
+                        expand: true,
+                        cwd: 'source/_locales/',
+                        src: ['**'],
+                        dest: 'build/_locales/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'source/img/',
+                        src: ['**', '!appIcon/*Raw.png'],
+                        dest: 'build/img/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'source/js/',
+                        src: ['**'],
+                        dest: 'build/js/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'source/popup/',
+                        src: ['**'],
+                        dest: 'build/popup/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'source/settings/',
+                        src: ['**', '!*.scss'],
+                        dest: 'build/settings/'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['source/manifest.json'],
+                        dest: 'build/'
+                    }
                 ]
             }
         },
@@ -71,6 +103,9 @@ module.exports = function(grunt) {
             }
         },
         sass: {
+            options: {
+                implementation: sass
+            },
             dist: {
                 files: {
                     'build/css/style.css': 'source/scss/style.scss',
