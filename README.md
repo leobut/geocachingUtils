@@ -16,13 +16,13 @@ The stuff described in this chapter is only needed if you are working on the ext
 0. Have Node.js (Version 8.x or higher) and npm installed
 1. Checkout this project
 2. Open command line in the root folder of the project
-3. Run `npm i` to install all dependecies (has to be done once)
+3. Run `npm i` to install all dependencies (has to be done every time the package.json file changes)
 4. Run the `grunt` in the command line (You can find all available grunt tasks in the Gruntfile)
 
 ## How to run this extension
-1. Go to the extensions settings page in chrome (Make sure you have enabled the developer mode in Chrome)
+1. Go to the extensions settings page in Google Chrome (Make sure you have enabled the developer mode in the extension settings of Google Chrome)
 2. Click the "Load unpacked extension..." button
-3. Select the "build" (only there after you run grunt) folder of this project
+3. Select the "build" folder (it's only available after you ran the "grunt" command) of this project
 4. Navigate to geocaching.com and enjoy
 
 # Release History
