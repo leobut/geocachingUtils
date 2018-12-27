@@ -68,14 +68,10 @@ this.runLogEditorInsertionPopup = function() {
 
     function insertAtCursor(targetTextArea, textToInsert) {
         var startPosition = targetTextArea.selectionStart;
-        if (startPosition) {
-            var endPosition = targetTextArea.selectionEnd;
-            targetTextArea.value = targetTextArea.value.substring(0, startPosition) + textToInsert + targetTextArea.value.substring(endPosition, targetTextArea.value.length);
-            targetTextArea.selectionStart = startPosition + textToInsert.length;
-            targetTextArea.selectionEnd = startPosition + textToInsert.length;
-        } else {
-            targetTextArea.value += textToInsert;
-        }
+        var endPosition = targetTextArea.selectionEnd;
+        targetTextArea.value = targetTextArea.value.substring(0, startPosition) + textToInsert + targetTextArea.value.substring(endPosition, targetTextArea.value.length);
+        targetTextArea.selectionStart = startPosition + textToInsert.length;
+        targetTextArea.selectionEnd = startPosition + textToInsert.length;
     }
 
     function loadSupportedTags() {
