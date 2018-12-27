@@ -64,11 +64,11 @@ this.runLogEditorWordCount = function() {
 
     function loadAvailableTheAuthorBadges() {
         availableTheAuthorBadges = [{
-                image: 'WritBg.png',
-                smallImage: 'WritBg_small.png',
-                requiredWordCount: 0,
-                isHighestBadge: false
-            },
+            image: 'WritBg.png',
+            smallImage: 'WritBg_small.png',
+            requiredWordCount: 0,
+            isHighestBadge: false
+        },
             {
                 image: 'WritB.png',
                 smallImage: 'WritB_small.png',

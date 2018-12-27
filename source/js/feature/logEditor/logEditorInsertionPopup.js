@@ -76,10 +76,10 @@ this.runLogEditorInsertionPopup = function() {
 
     function loadSupportedTags() {
         supportedTags = [{
-                name: 'FTF',
-                description: 'First To Find',
-                snippet: '{FTF}'
-            },
+            name: 'FTF',
+            description: 'First To Find',
+            snippet: '{FTF}'
+        },
             {
                 name: 'STF',
                 description: 'Second To Find',
@@ -95,10 +95,10 @@ this.runLogEditorInsertionPopup = function() {
 
     function loadSupportedSmileys() {
         supportedSmileys = [{
-                name: 'smile',
-                image: 'https://www.geocaching.com/images/icons/icon_smile.gif',
-                snippet: '[:)]'
-            },
+            name: 'smile',
+            image: 'https://www.geocaching.com/images/icons/icon_smile.gif',
+            snippet: '[:)]'
+        },
             {
                 name: 'big smile',
                 image: 'https://www.geocaching.com//images/icons/icon_smile_big.gif',
