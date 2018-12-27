@@ -13,10 +13,10 @@ Feel free to contribute to the code or report bugs and feature requests.
 The stuff described in this chapter is only needed if you are working on the extension and want to try something on your local machine. 
 
 ## How to setup the project locally
-0. Have Node.js (Version 8.x or higher) and npm installed
+0. Install Node.js LTS (including npm)
 1. Checkout this project
 2. Open command line in the root folder of the project
-3. Run `npm i` to install all dependencies (has to be done every time the package.json file changes)
+3. Run `npm i` to install all dependencies
 4. Run the `grunt` in the command line (You can find all available grunt tasks in the Gruntfile)
 
 ## How to run this extension
