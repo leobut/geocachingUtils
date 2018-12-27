@@ -1,7 +1,6 @@
 language: node_js
 node_js:
-  - "8"
-  - "10"
+  - "node"
 script:
   - grunt default --stack --debug
 # The following section comes from this tutorial: https://github.com/greenkeeperio/greenkeeper-lockfile#npm
