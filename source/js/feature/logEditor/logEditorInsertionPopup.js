@@ -59,13 +59,16 @@ this.runLogEditorInsertionPopup = function() {
         var snippetToInsert = $(event.currentTarget).attr('data-snippet'),
             textArea = $('textarea.log-text');
 
+        event.preventDefault();
+        event.stopPropagation();
+
         insertAtCursor(textArea[0], snippetToInsert);
+        textArea.focus();
     }
 
-    // A bit modified function from http://stackoverflow.com/questions/11076975/insert-text-into-textarea-at-cursor-position-javascript
     function insertAtCursor(targetTextArea, textToInsert) {
-        if (targetTextArea.selectionStart || targetTextArea.selectionStart === '0') {
-            var startPosition = targetTextArea.selectionStart;
+        var startPosition = targetTextArea.selectionStart;
+        if (startPosition) {
             var endPosition = targetTextArea.selectionEnd;
             targetTextArea.value = targetTextArea.value.substring(0, startPosition) + textToInsert + targetTextArea.value.substring(endPosition, targetTextArea.value.length);
             targetTextArea.selectionStart = startPosition + textToInsert.length;
