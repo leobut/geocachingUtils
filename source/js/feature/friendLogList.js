@@ -75,9 +75,9 @@ this.runFriendLogListFeature = function() {
     }
 
     function appendImagesToPopup(popup, images) {
-        let imagesTable = $("<ul>").addClass("log-images-table");
-        $.each(images, (index, image) => {
-            let imageLink = '<li>' +
+        var imagesTable = $('<ul>').addClass('log-images-table');
+        $.each(images, function(index, image) {
+            var imageLink = '<li>' +
                 '<a target="_blank" href="https://img.geocaching.com/cache/log/large/' + image.FileName + '">' +
                 '<img title="Photo" alt="Photo" src="/images/icons/16/photo.png">' +
                 '<span>' + image.Name + '</span>' +
