@@ -21,6 +21,6 @@ rules:
     -
       style: lowercase
   indentation:
-    - 2
+    - 4
     -
       size: 4
