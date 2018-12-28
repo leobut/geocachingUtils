@@ -1,13 +1,15 @@
-$color-beige: #fbfaf3;
-$color-beige-dark: #e3ddc2;
+$color-beige: #f9f7f5;
+$color-beige-medium-dark: #d7d7d7;
+$color-beige-dark: #f0edeb;
 $color-brown: #594a42;
 $color-geo-green: #02874d;
 $color-geo-brown: #777;
-$color-geo-visited-link: #00447c;
+$color-geo-link-blue: #3d76c5;
+
 .geocachingUtilsPopup {
   background-color: $color-beige;
   border: solid $color-brown 1px;
-  border-radius: 3px;
+  border-radius: 4px;
   position: absolute;
 }
 
@@ -85,7 +87,7 @@ $color-geo-visited-link: #00447c;
   max-height: 300px;
   overflow-x: hidden;
   overflow-y: auto;
-  li {
+  > li {
     border-radius: 3px;
     height: 52px;
     margin: 5px 0;
@@ -106,37 +108,24 @@ $color-geo-visited-link: #00447c;
       width: 48px;
       height: 48px;
     }
-  }
-  > li {
-    > table td {
+
+    .logDetailTable td {
       padding: 0;
       img {
         vertical-align: text-bottom;
       }
+
+      .friendName {
+        padding-left: 0;
+        color: $color-geo-link-blue;
+      }
     }
-    .LogImagesTable td .tb_images span {
-      padding-left: 3px;
-    }
-  }
-  table {
-    padding-left: 5px;
-    padding-top: 5px;
-    tr {
-      height: 20px;
-    }
-  }
-  .friendName {
-    padding-left: 0;
-    color: $color-geo-visited-link;
   }
   .logDetailPopup {
     left: -700px;
     width: 670px;
-    a {
-      padding-left: 0;
-    }
     .markdown-output {
-      margin: 1em;
+      margin: 16px 16px 0 16px;
       a {
         &:hover {
           border: 0;
@@ -148,8 +137,31 @@ $color-geo-visited-link: #00447c;
         }
       }
     }
-    .tb_images.lnk {
-      padding-left: 0;
+    .log-images-table {
+      margin: 5px;
+      background: $color-beige-dark;
+      border: 1px dashed $color-beige-medium-dark;
+      padding: 2px;
+      border-radius: 4px;
+      li {
+        margin: 4px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          padding-left: 5px;
+          img {
+            padding-right: 8px;
+            height: 16px;
+            width: 16px;
+          }
+          span {
+            vertical-align: top;
+          }
+        }
+      }
     }
   }
   .hoverBridge {
@@ -160,11 +172,11 @@ $color-geo-visited-link: #00447c;
     width: 32px;
   }
   .line {
-    background-color: $color-brown;
-    height: 1px;
-    left: -29px;
     position: absolute;
-    top: 20px;
+    top: 25px;
+    left: -29px;
+    height: 0px;
     width: 30px;
+    border-top: dashed 1px;
   }
 }
