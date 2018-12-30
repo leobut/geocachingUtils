@@ -41,15 +41,6 @@
     "settings_detail_page_decrypt_hints": {
         "message": "Automatically decrypt hints"
     },
-    "settings_detail_page_show_elevation": {
-        "message": "Show elevation next to the coordinates and displayed it in "
-    },
-    "settings_elevation_meters": {
-        "message": "meters"
-    },
-    "settings_elevation_feet": {
-        "message": "feet"
-    },
     "settings_log_editor_main_title": {
         "message": "Log editor:"
     },

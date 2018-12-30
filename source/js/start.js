@@ -1,14 +1,10 @@
 if(Common.getInstance().currentPageIsGeocacheDetailPage === true) {
     chrome.storage.sync.get({
         automaticallyDecryptHints: 'true',
-        showElevation: 'true',
         showFriendLogs: 'true'
     }, function(items) {
         if(items.automaticallyDecryptHints === 'true') {
             setTimeout(runAutoDecryptHintFeature, 0);
-        }
-        if(items.showElevation === 'true') {
-            setTimeout(runElevationFeature, 0);
         }
         if(items.showFriendLogs === 'true') {
             setTimeout(runFriendLogListFeature, 0);
