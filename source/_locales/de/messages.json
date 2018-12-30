@@ -41,15 +41,6 @@
     "settings_detail_page_decrypt_hints": {
         "message": "Hinweise automatisch entschlüsseln"
     },
-    "settings_detail_page_show_elevation": {
-        "message": "Höhe neben den Cache-Koordinaten anzeigen; und zwar in "
-    },
-    "settings_elevation_meters": {
-        "message": "Meter"
-    },
-    "settings_elevation_feet": {
-        "message": "Fuss"
-    },
     "settings_log_editor_main_title": {
         "message": "Log-Editor:"
     },
