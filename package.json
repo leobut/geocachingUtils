@@ -16,9 +16,9 @@
         "grunt-contrib-uglify": "4.0.0",
         "grunt-eslint": "21.0.0",
         "grunt-json-minify": "1.1.0",
-        "grunt-sass": "^3.0.1",
+        "grunt-sass": "3.0.2",
         "grunt-sass-lint": "0.2.4",
         "load-grunt-tasks": "4.0.0",
-        "node-sass": "^4.9.2"
+        "node-sass": "4.11.0"
     }
 }
