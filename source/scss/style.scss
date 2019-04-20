@@ -19,10 +19,12 @@ $border-radius: 4px;
   padding: 0;
   font-size: 10pt;
   z-index: 999;
+
   li {
     list-style: none;
     display: inline-block;
   }
+
   > li {
     padding-right: 10px;
   }
@@ -34,28 +36,35 @@ $border-radius: 4px;
   border-radius: $border-radius;
   cursor: default;
   z-index: 1;
+
   &.logEditorPopupWordCount {
     width: 130px;
+
     img {
       display: block;
       margin: auto;
       padding: 5px 0;
       width: 100px;
     }
+
     span {
       display: block;
       padding: 5px 0;
       text-align: center;
     }
   }
+
   &.logEditorPopupInsertion {
     width: 262px;
+
     .popupText {
       padding-left: 5px;
     }
+
     > {
       .smileyList {
         padding: 0;
+
         > li {
           height: 26px;
           line-height: 26px;
@@ -64,8 +73,10 @@ $border-radius: 4px;
           width: 26px;
         }
       }
+
       .tagList {
         padding: 0;
+
         > li {
           height: 26px;
           padding: 4px;
@@ -74,6 +85,7 @@ $border-radius: 4px;
         }
       }
     }
+
     > ul > li:hover {
       color: white;
       background-color: $color-geo-green;
@@ -90,20 +102,25 @@ $border-radius: 4px;
   max-height: 300px;
   overflow-x: hidden;
   overflow-y: auto;
+
   > li {
     border-radius: $border-radius;
     height: 52px;
     margin: 5px 0;
     position: static;
+
     &:first-child {
       margin-top: 0;
     }
+
     &:last-child {
       margin-bottom: 0;
     }
+
     &:hover {
       background-color: $color-beige-dark;
     }
+
     .friendAvatar {
       border-radius: $border-radius;
       float: left;
@@ -112,40 +129,51 @@ $border-radius: 4px;
       height: 48px;
     }
 
-    .logDetailTable td {
-      padding: 0;
-      img {
-        vertical-align: text-bottom;
-      }
+    .logDetailTable {
+      padding-left: 3px;
 
-      .friendName {
-        padding-left: 0;
-        color: $color-geo-link-blue;
+      td {
+        padding: 0;
+
+        img {
+          vertical-align: text-bottom;
+        }
+
+        .friendName {
+          padding-left: 0;
+          color: $color-geo-link-blue;
+        }
       }
     }
   }
+
   .logDetailPopup {
     left: -700px;
     width: 670px;
+
     .markdown-output {
       margin: 16px 16px 0 16px;
+
       a {
         &:hover {
           border: 0;
           text-decoration: underline;
         }
+
         &:focus {
           border: 0;
           text-decoration: underline;
         }
       }
     }
+
     .log-images-table {
       margin: 5px;
       background: $color-beige-dark;
       border: 1px dashed $color-beige-medium-dark;
       padding: 2px;
       border-radius: $border-radius;
+
       li {
         margin: 4px;
 
@@ -155,11 +183,13 @@ $border-radius: 4px;
 
         a {
           padding-left: 5px;
+
           img {
             padding-right: 8px;
             height: 16px;
             width: 16px;
           }
+
           span {
             vertical-align: top;
           }
@@ -167,6 +197,7 @@ $border-radius: 4px;
       }
     }
   }
+
   .hoverBridge {
     background-color: transparent;
     height: 100%;
@@ -174,6 +205,7 @@ $border-radius: 4px;
     position: absolute;
     width: 32px;
   }
+
   .line {
     position: absolute;
     top: 25px;
