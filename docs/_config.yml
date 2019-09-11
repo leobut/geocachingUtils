@@ -1,1 +1,4 @@
-theme: jekyll-theme-minimal
+theme: jekyll-theme-modernist
+title: Geocaching Utils
+description: ...a free extension for Google Chrome that improves the geocaching.com website.
+show_downloads: false
