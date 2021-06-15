@@ -13,80 +13,92 @@ $font-arial: Arial;
 $font-helvetica: Helvetica;
 $font-sans-serif: sans-serif;
 body {
-    color: $color-brown;
-    font-family: $font-noto-sans, $font-arial, $font-helvetica, $font-sans-serif;
-    font-size: 90%;
-    h1 {
-        margin: 0.2em 0;
-        text-align: center;
-        >span {
-            vertical-align: text-bottom;
-        }
+  color: $color-brown;
+  font-family: $font-noto-sans, $font-arial, $font-helvetica, $font-sans-serif;
+  font-size: 90%;
+
+  h1 {
+    margin: 0.2em 0;
+    text-align: center;
+
+    > span {
+      vertical-align: text-bottom;
     }
-    .round {
-        border-radius: 3px;
-        h2 {
-            margin: 0.2em 0;
-        }
-        >div {
-            padding-bottom: 10px;
-            >span {
-                vertical-align: middle;
-            }
-            .note {
-                font-size: 70%;
-            }
-        }
+  }
+
+  .round {
+    border-radius: 3px;
+
+    h2 {
+      margin: 0.2em 0;
     }
+
+    > div {
+      padding-bottom: 10px;
+
+      > span {
+        vertical-align: middle;
+      }
+
+      .note {
+        font-size: 70%;
+      }
+    }
+  }
 }
 
 #centeredContainer {
-    background-color: $color-beige;
-    margin: auto;
-    padding: 14px;
-    width: 600px;
-    >div {
-        background-color: $color-beige-light;
-        margin-top: 14px;
-        padding: 1em;
-    }
+  background-color: $color-beige;
+  margin: auto;
+  padding: 14px;
+  width: 600px;
+
+  > div {
+    background-color: $color-beige-light;
+    margin-top: 14px;
+    padding: 1em;
+  }
 }
 
 #controlsContainer {
-    text-align: right;
-    >span {
-        margin-right: 10px;
-    }
+  text-align: right;
+
+  > span {
+    margin-right: 10px;
+  }
 }
 
 #saveButton {
+  background: linear-gradient(to bottom, $color-green-light 5%, $color-green-light 100%);
+  background-color: $color-green-light;
+  border: 1px solid $color-green;
+  border-radius: 3px;
+  box-shadow: 0 10px 14px -7px $color-green-dark;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-arial;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 16px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 $color-green-dark-medium;
+
+  &:hover {
     background: linear-gradient(to bottom, $color-green-light 5%, $color-green-light 100%);
     background-color: $color-green-light;
-    border: 1px solid $color-green;
-    border-radius: 3px;
-    box-shadow: 0 10px 14px -7px $color-green-dark;
-    color: $color-white;
-    cursor: pointer;
-    display: inline-block;
-    font-family: $font-arial;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 6px 16px;
-    text-decoration: none;
-    text-shadow: 0 1px 0 $color-green-dark-medium;
-    &:hover {
-        background: linear-gradient(to bottom, $color-green-light 5%, $color-green-light 100%);
-        background-color: $color-green-light;
-    }
-    &:active {
-        position: relative;
-        top: 1px;
-    }
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
 }
 
 #githubHint {
-    font-size: 70%;
-    img {
-        vertical-align: text-bottom;
-    }
+  font-size: 70%;
+
+  img {
+    vertical-align: text-bottom;
+  }
 }

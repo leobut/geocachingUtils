@@ -1,4 +1,4 @@
-this.runLogEditorInsertionPopup = function() {
+this.runLogEditorInsertionPopup = function () {
     var toolbarElement,
         popup,
         supportedSmileys,
@@ -15,10 +15,10 @@ this.runLogEditorInsertionPopup = function() {
 
         hookInGeocachingUtilsWindow();
 
-        toolbarElement.mouseenter(function() {
+        toolbarElement.mouseenter(function () {
             popup.show();
         });
-        toolbarElement.mouseleave(function() {
+        toolbarElement.mouseleave(function () {
             popup.hide();
         });
     }
@@ -34,7 +34,7 @@ this.runLogEditorInsertionPopup = function() {
     }
 
     function addSmileysToPopup() {
-        $.each(supportedSmileys, function(index, value) {
+        $.each(supportedSmileys, function (index, value) {
             var smileyImage = $('<img src="' + value.image + '">'),
                 newListElement = $('<li data-snippet="' + value.snippet + '" title="' + value.name + '">');
 
@@ -46,7 +46,7 @@ this.runLogEditorInsertionPopup = function() {
     }
 
     function addTagsToPopup() {
-        $.each(supportedTags, function(index, value) {
+        $.each(supportedTags, function (index, value) {
             var newListElement = $('<li data-snippet="' + value.snippet + '" title="' +
                 value.description + '"><i>' + value.name + '</i></li>');
 
