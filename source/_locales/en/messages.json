@@ -48,7 +48,7 @@
         "message": "Count the words while I create a new log and show the 'The Author' badge"
     },
     "settings_log_editor_count_words_note": {
-        "message": "Note: 'The Author' badge was provided by <a href='http://www.badgegen.com/' target='_blank'>BadgeGen</a>. BadgeGen does only count 'Found it!' logs on geocaches."
+        "message": "Note: 'The Author' badge was provided by <a href='https://project-gc.com/' target='_blank'>Project-GC</a>."
     },
     "settings_log_editor_show_insertion_popup": {
         "message": "Add the smiley and tag insertion tool to the log editor"
