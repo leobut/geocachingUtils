@@ -1,4 +1,4 @@
-this.runLogEditorWordCount = function() {
+this.runLogEditorWordCount = function () {
     var common = LogEditorCommon.getInstance(),
         textArea = $('textarea.log-text'),
         popup = Common.getInstance().createGeocachingUtilsPopup('logEditorPopup logEditorPopupWordCount'),
@@ -10,17 +10,17 @@ this.runLogEditorWordCount = function() {
     toolbarElement.append(popup);
     popup.getPopupContentContainer().append('<img>').append('<span>');
 
-    toolbarElement.mouseenter(function() {
+    toolbarElement.mouseenter(function () {
         popup.show();
     });
-    toolbarElement.mouseleave(function() {
+    toolbarElement.mouseleave(function () {
         popup.hide();
     });
 
     common.toolbar.append(toolbarElement);
     defineAndDisplayImage(0);
 
-    textArea.on('input', function() {
+    textArea.on('input', function () {
         var currentText = textArea.val(),
             currentWordCount = countWords(currentText);
         defineAndDisplayImage(currentWordCount);
@@ -28,8 +28,8 @@ this.runLogEditorWordCount = function() {
 
     function defineAndDisplayImage(wordCount) {
         var badge;
-        $.each(availableTheAuthorBadges, function(index, value) {
-            if(wordCount >= value.requiredWordCount) {
+        $.each(availableTheAuthorBadges, function (index, value) {
+            if (wordCount >= value.requiredWordCount) {
                 badge = value;
             }
         });
@@ -55,7 +55,7 @@ this.runLogEditorWordCount = function() {
         s = s.replace(/(^\s*)|(\s*$)/gi, ''); // exclude  start and end white-space
         s = s.replace(/[ ]{2,}/gi, ' '); // 2 or more space to 1
 
-        if(s === '') {
+        if (s === '') {
             return 0;
         } else {
             return s.split(' ').length;

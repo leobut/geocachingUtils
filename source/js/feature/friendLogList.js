@@ -1,9 +1,8 @@
-this.runFriendLogListFeature = function() {
+this.runFriendLogListFeature = function () {
     var resultDisplay = $('div.CacheDetailNavigation'),
         friendLogList = $('<ul id="friendLogList">');
 
-    friendLogList.append('<img id="friendLogListSpinner" src="' +
-        chrome.extension.getURL('img/friendLogList/spinner.gif') + '">');
+    friendLogList.append('<img id="friendLogListSpinner" src="' + chrome.extension.getURL('img/friendLogList/spinner.gif') + '">');
     resultDisplay.append(friendLogList);
 
     injectCodeToReadUserToken();
@@ -20,12 +19,12 @@ this.runFriendLogListFeature = function() {
             sp: false,
             sf: true,
             decrypt: false
-        }).done(function(response) {
-            if(response.status !== 'success') {
+        }).done(function (response) {
+            if (response.status !== 'success') {
                 imDoneLoading();
                 friendLogList.text(chrome.i18n.getMessage('friend_log_list_error'));
             } else {
-                if(response.pageInfo.idx < response.pageInfo.totalPages) {
+                if (response.pageInfo.idx < response.pageInfo.totalPages) {
                     // load more friend logs if there are pages left
                     loadFriendLogs(++page);
                 } else {
@@ -37,10 +36,10 @@ this.runFriendLogListFeature = function() {
     }
 
     function addDomElementsBasedOnResponse(data) {
-        if(data.length === 0) {
+        if (data.length === 0) {
             friendLogList.text(chrome.i18n.getMessage('friend_log_list_no_friend_logs'));
         } else {
-            $.each(data, function(index, value) {
+            $.each(data, function (index, value) {
 
                 var popup = Common.getInstance().createGeocachingUtilsPopup('logDetailPopup'),
                     avatar = (value.AvatarImage === '') ? '/images/default_avatar.png' : 'https://img.geocaching.com/user/avatar/' + value.AvatarImage,
@@ -54,18 +53,18 @@ this.runFriendLogListFeature = function() {
                 popup.getPopupContentContainer().append('<div class="hoverBridge"/><div class="LogContent markdown-output">' + value.LogText + '<div>');
                 popup.append('<div class="line"/>');
 
-                if(value.Images.length !== 0) {
+                if (value.Images.length !== 0) {
                     appendImagesToPopup(popup, value.Images);
                 }
 
                 newFriendLogEntry = $('<li>').append(popup).append(userImage).append(logDetailTable);
-                newFriendLogEntry.mouseenter(function() {
+                newFriendLogEntry.mouseenter(function () {
                     popup.css({
                         top: newFriendLogEntry.position().top
                     });
                     popup.show();
                 });
-                newFriendLogEntry.mouseleave(function() {
+                newFriendLogEntry.mouseleave(function () {
                     popup.hide();
                 });
 
@@ -76,7 +75,7 @@ this.runFriendLogListFeature = function() {
 
     function appendImagesToPopup(popup, images) {
         var imagesTable = $('<ul>').addClass('log-images-table');
-        $.each(images, function(index, image) {
+        $.each(images, function (index, image) {
             var imageLink = '<li>' +
                 '<a target="_blank" href="https://img.geocaching.com/cache/log/large/' + image.FileName + '">' +
                 '<img title="Photo" alt="Photo" src="/images/icons/16/photo.png">' +
