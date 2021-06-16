@@ -1,7 +1,7 @@
 {
   "name": "GeocachingUtils",
   "description": "__MSG_extension_description__",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "permissions": [
     "storage"
   ],
