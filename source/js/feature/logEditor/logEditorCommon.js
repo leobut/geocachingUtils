@@ -1,21 +1,21 @@
-this.LogEditorCommon = (function () {
-    var instance;
+LogEditorCommon = (function () {
+  let instance;
 
-    function init() {
-        var toolbar = $('<ul class="logEditorToolbar">');
-        $('#logContent').append(toolbar);
-
-        return {
-            toolbar: toolbar
-        };
-    }
+  function init() {
+    const toolbar = $('<ul class="logEditorToolbar">');
+    $('#logContent').append(toolbar);
 
     return {
-        getInstance: function () {
-            if (!instance) {
-                instance = init();
-            }
-            return instance;
-        }
+      toolbar: toolbar
     };
+  }
+
+  return {
+    getInstance: function () {
+      if(!instance) {
+        instance = init();
+      }
+      return instance;
+    }
+  };
 }());
