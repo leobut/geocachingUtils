@@ -12,7 +12,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 1. Checkout this project
 2. Open command line in the root folder of the project
 3. Run `npm i` to install all dependencies
-4. Run the `grunt` in the command line (You can find all available grunt tasks in the Gruntfile)
+4. Run the `grunt` in the command line (You can find all available grunt tasks at the very end of Gruntfile.js)
 
 ## How to run this extension
 1. Go to the extensions settings page in Google Chrome (Make sure you have enabled the developer mode in the extension settings of Google Chrome)
