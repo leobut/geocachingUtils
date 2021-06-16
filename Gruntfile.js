@@ -135,8 +135,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-sass-lint');
 
-    grunt.registerTask('build', ['copy', 'sass']);
+    grunt.registerTask('build', ['clean', 'copy', 'sass']);
     grunt.registerTask('quality', ['eslint', 'sasslint']);
     grunt.registerTask('minify', ['uglify', 'htmlmin', 'cssmin', 'json-minify']);
-    grunt.registerTask('default', ['clean', 'build', 'quality', 'minify', 'compress']);
+    grunt.registerTask('default', ['build', 'quality', 'minify', 'compress']);
 };
