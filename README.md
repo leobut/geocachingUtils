@@ -5,7 +5,7 @@ GeocachingUtils is an extension for google chrome that adds some really nice fea
 Feel free to contribute to the code or report bugs and feature requests.
 
 # Development
-[![Build Status](https://travis-ci.org/ControlTheBit/geocachingUtils.svg?branch=master)](https://travis-ci.org/ControlTheBit/geocachingUtils) [![devDependencies Status](https://david-dm.org/ControlTheBit/geocachingUtils/dev-status.svg)](https://david-dm.org/ControlTheBit/geocachingUtils?type=dev) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cf87c3274b224e20b4be789ae76037f5)](https://www.codacy.com/app/ControlTheBit/geocachingUtils?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ControlTheBit/geocachingUtils&amp;utm_campaign=Badge_Grade) ![Known Vulnerabilities](https://snyk.io/test/github/ControlTheBit/geocachingUtils/badge.svg)
+[![Node.js CI](https://github.com/ControlTheBit/geocachingUtils/actions/workflows/node.js.yml/badge.svg)](https://github.com/ControlTheBit/geocachingUtils/actions/workflows/node.js.yml) ![Known Vulnerabilities](https://snyk.io/test/github/ControlTheBit/geocachingUtils/badge.svg)
 
 ## How to setup the project locally
 0. Install Node.js LTS (including npm)
