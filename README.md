@@ -1,6 +1,6 @@
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/users/aiddapoflafkbecobkoiakgagaijacaa.svg)](https://chrome.google.com/webstore/detail/geocachingutils/aiddapoflafkbecobkoiakgagaijacaa) [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/aiddapoflafkbecobkoiakgagaijacaa.svg)](https://chrome.google.com/webstore/detail/geocachingutils/aiddapoflafkbecobkoiakgagaijacaa)
 
-GeocachingUtils is an extension for google chrome that adds some really nice features to the  [geocaching.com](http://www.geocaching.com) website. You can download it for free from the chrome web store: [GeocachingUtils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
+GeocachingUtils is an extension for Google Chrome that adds some really nice features to the  [geocaching.com](http://www.geocaching.com) website. You can download it for free from the Chrome Web Store: [GeocachingUtils](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
 
 Feel free to contribute to the code or report bugs and feature requests.
 
@@ -15,7 +15,8 @@ Feel free to contribute to the code or report bugs and feature requests.
 4. Run the `grunt` in the command line (You can find all available grunt tasks at the very end of Gruntfile.js)
 
 ## How to run this extension
-1. Go to the extensions settings page in Google Chrome (Make sure you have enabled the developer mode in the extension settings of Google Chrome)
+0. If you just want to use the extension, download it from here and skip all the other steps: [GeocachingUtils in Chrome Web Store](https://chrome.google.com/webstore/detail/geocaching-utils/aiddapoflafkbecobkoiakgagaijacaa)
+1. After you have run the `grunt` command, go to the extensions settings page in Google Chrome (Make sure you have enabled the developer mode in the extension settings of Google Chrome)
 2. Click the "Load unpacked extension..." button
 3. Select the "build" folder (it's only available after you ran the "grunt build" command) of this project
 4. Navigate to geocaching.com and enjoy
