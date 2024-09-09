@@ -7,24 +7,12 @@
         "message": "Settings are already open"
     },
 
-    "log_editor_word_count_words": {
-        "message": "Words: "
-    },
-    "log_editor_word_count_highest_badge": {
-        "message": "This is the highest badge you can earn!"
-    },
-    "log_editor_word_count_keep_going": {
-        "message": "Keep going, there are higher badges!"
-    },
-
-
     "friend_log_list_error": {
         "message": "Error while loading friend logs"
     },
     "friend_log_list_no_friend_logs": {
         "message": "No friend logs"
     },
-
 
     "settings_settings_saved": {
         "message": "Settings saved!"
@@ -40,18 +28,6 @@
     },
     "settings_detail_page_decrypt_hints": {
         "message": "Automatically decrypt hints"
-    },
-    "settings_log_editor_main_title": {
-        "message": "Log editor:"
-    },
-    "settings_log_editor_count_words": {
-        "message": "Count the words while I create a new log and show the 'The Author' badge"
-    },
-    "settings_log_editor_count_words_note": {
-        "message": "Note: 'The Author' badge was provided by <a href='https://project-gc.com/' target='_blank'>Project-GC</a>."
-    },
-    "settings_log_editor_show_insertion_popup": {
-        "message": "Add the smiley and tag insertion tool to the log editor"
     },
     "settings_save_button": {
         "message": "Save"

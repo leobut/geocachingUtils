@@ -1,17 +1,39 @@
-this.runFriendLogListFeature = function () {
-    var resultDisplay = $('div.CacheDetailNavigation'),
+const runFriendLogListFeature = function () {
+    const resultDisplay = $('div.CacheDetailNavigation'),
         friendLogList = $('<ul id="friendLogList">');
 
-    friendLogList.append('<img id="friendLogListSpinner" src="' + chrome.extension.getURL('img/friendLogList/spinner.gif') + '">');
+    friendLogList.append('<img id="friendLogListSpinner" src="' + chrome.runtime.getURL('img/friendLogList/spinner.gif') + '">');
     resultDisplay.append(friendLogList);
 
-    injectCodeToReadUserToken();
-    loadFriendLogs(1);
-    removeInjectedScriptFromDom();
+    let tokenLoadingAttempts = 0;
+    setTimeout(loadUserToken, 100);
 
-    // set page default to 1 as soon as uglify can handle es6
-    function loadFriendLogs(page) {
-        var userToken = friendLogList.attr('data-userToken');
+    function loadUserToken() {
+        tokenLoadingAttempts++;
+        let tokenHolder = $('#gc-utils-token-helper');
+        const userToken = tokenHolder.attr('data-gc-utils-token');
+
+        if (userToken !== undefined) {
+            tokenHolder.remove();
+            loadFriendLogs(1, userToken);
+        } else {
+            if (tokenLoadingAttempts === 20) {
+                tokenHolder.remove();
+                // we waited 2 seconds, something must be wrong. Let the function handle the error.
+                loadFriendLogs(1, undefined);
+            } else {
+                setTimeout(loadUserToken, 100);
+            }
+        }
+    }
+
+    function loadFriendLogs(page, userToken) {
+        if (userToken === undefined) {
+            loadingDone();
+            friendLogList.text(chrome.i18n.getMessage('friend_log_list_error'));
+            return;
+        }
+
         $.getJSON('/seek/geocache.logbook', {
             tkn: userToken,
             idx: page,
@@ -21,14 +43,14 @@ this.runFriendLogListFeature = function () {
             decrypt: false
         }).done(function (response) {
             if (response.status !== 'success') {
-                imDoneLoading();
+                loadingDone();
                 friendLogList.text(chrome.i18n.getMessage('friend_log_list_error'));
             } else {
                 if (response.pageInfo.idx < response.pageInfo.totalPages) {
                     // load more friend logs if there are pages left
-                    loadFriendLogs(++page);
+                    loadFriendLogs(++page, userToken);
                 } else {
-                    imDoneLoading();
+                    loadingDone();
                     addDomElementsBasedOnResponse(response.data);
                 }
             }
@@ -38,39 +60,41 @@ this.runFriendLogListFeature = function () {
     function addDomElementsBasedOnResponse(data) {
         if (data.length === 0) {
             friendLogList.text(chrome.i18n.getMessage('friend_log_list_no_friend_logs'));
-        } else {
-            $.each(data, function (index, value) {
-
-                var popup = Common.getInstance().createGeocachingUtilsPopup('logDetailPopup'),
-                    avatar = (value.AvatarImage === '') ? '/images/default_avatar.png' : 'https://img.geocaching.com/user/avatar/' + value.AvatarImage,
-                    userImage = $('<img class="friendAvatar" src="' + avatar + '">'),
-                    logDetailTable = $('<table class="logDetailTable"><tr><td><img src="/images/logtypes/' + value.LogTypeImage +
-                        '"> ' + value.Visited +
-                        '</td></tr><tr><td><a class="friendName" href="https://www.geocaching.com/profile/?guid=' +
-                        value.AccountGuid + '">' + value.UserName + '</a></td></tr></table>'),
-                    newFriendLogEntry;
-
-                popup.getPopupContentContainer().append('<div class="hoverBridge"/><div class="LogContent markdown-output">' + value.LogText + '<div>');
-                popup.append('<div class="line"/>');
-
-                if (value.Images.length !== 0) {
-                    appendImagesToPopup(popup, value.Images);
-                }
-
-                newFriendLogEntry = $('<li>').append(popup).append(userImage).append(logDetailTable);
-                newFriendLogEntry.mouseenter(function () {
-                    popup.css({
-                        top: newFriendLogEntry.position().top
-                    });
-                    popup.show();
-                });
-                newFriendLogEntry.mouseleave(function () {
-                    popup.hide();
-                });
-
-                friendLogList.append(newFriendLogEntry);
-            });
+            return;
         }
+
+        $.each(data, (index, value) => {
+            let popup = Utils.getInstance().createGeocachingUtilsPopup('logDetailPopup');
+            popup.getPopupContentContainer().append('<div class="hoverBridge"/>').append('<div class="LogContent markdown-output">' + value.LogText + '<div>');
+            popup.append('<div class="line"/>');
+
+            if (value.Images.length !== 0) {
+                appendImagesToPopup(popup, value.Images);
+            }
+
+            let avatar = (value.AvatarImage === '') ? '/images/default_avatar.png' : 'https://img.geocaching.com/user/avatar/' + value.AvatarImage;
+            let userImage = $('<img class="friendAvatar" src="' + avatar + '">');
+            let logDetailTable = $('<table class="logDetailTable">' +
+                '<tr>' +
+                '<td><img src="/images/logtypes/' + value.LogTypeImage + '"> ' + value.Visited + '</td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td><a class="friendName" href="https://www.geocaching.com/profile/?guid=' + value.AccountGuid + '">' + value.UserName + '</a></td>' +
+                '</tr>' +
+                '</table>');
+            let newFriendLogEntry = $('<li>').append(popup).append(userImage).append(logDetailTable);
+            newFriendLogEntry.mouseenter(function () {
+                popup.css({
+                    top: newFriendLogEntry.position().top
+                });
+                popup.show();
+            });
+            newFriendLogEntry.mouseleave(function () {
+                popup.hide();
+            });
+
+            friendLogList.append(newFriendLogEntry);
+        });
     }
 
     function appendImagesToPopup(popup, images) {
@@ -86,21 +110,7 @@ this.runFriendLogListFeature = function () {
         popup.getPopupContentContainer().append(imagesTable);
     }
 
-    function imDoneLoading() {
+    function loadingDone() {
         $('#friendLogListSpinner').remove();
-    }
-
-    /*
-     * Insert a piece of code into the page that adds the userToken to the DOM of the friend list.
-     * If it is not in the DOM, but e.g. in data(), the exchange of data das not work --> it must be in the DOM.
-     * userToken is needed to load the friend logs and is not accessible otherwise within this script.
-     */
-    function injectCodeToReadUserToken() {
-        var scriptElement = $('<script id="friendLogListScript">$("#friendLogList").attr("data-userToken", userToken);</script>');
-        $('html').append(scriptElement);
-    }
-
-    function removeInjectedScriptFromDom() {
-        $('#friendLogListScript').remove();
     }
 };

@@ -1,27 +1,26 @@
-if(Common.getInstance().currentPageIsGeocacheDetailPage === true) {
-  chrome.storage.sync.get({
-    automaticallyDecryptHints: 'true',
-    showFriendLogs: 'true'
-  }, function (items) {
-    if(items.automaticallyDecryptHints === 'true') {
-      setTimeout(runAutoDecryptHintFeature, 0);
+async function start() {
+    const settings = await chrome.storage.sync.get({
+        automaticallyDecryptHints: 'true',
+        showFriendLogs: 'true'
+    });
+
+    if (Utils.getInstance().currentPageIsGeocacheDetailPage === true) {
+        if (settings.automaticallyDecryptHints === 'true') {
+            const scriptElement = document.createElement('script');
+            scriptElement.id = 'gc-utils-decrypt-hint-script';
+            scriptElement.src = chrome.runtime.getURL('js/feature/inject/autoDecryptHint.js');
+            document.body.appendChild(scriptElement);
+        }
+
+        if (settings.showFriendLogs === 'true') {
+            const scriptElement = document.createElement('script');
+            scriptElement.id = 'gc-utils-token-helper-script';
+            scriptElement.src = chrome.runtime.getURL('js/feature/inject/fetchUserToken.js');
+            document.body.appendChild(scriptElement);
+
+            runFriendLogListFeature();
+        }
     }
-    if(items.showFriendLogs === 'true') {
-      setTimeout(runFriendLogListFeature, 0);
-    }
-  });
 }
 
-if(Common.getInstance().currentPageContainsAnEditor === true) {
-  chrome.storage.sync.get({
-    logEditorCountWords: 'true',
-    logEditorShowInsertionPopup: 'true'
-  }, function (items) {
-    if(items.logEditorShowInsertionPopup === 'true') {
-      setTimeout(runLogEditorInsertionPopup, 0);
-    }
-    if(items.logEditorCountWords === 'true') {
-      setTimeout(runLogEditorWordCount, 0);
-    }
-  });
-}
+start();
