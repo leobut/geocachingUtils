@@ -1,4 +1,4 @@
-async function start() {
+const start = async () => {
     const settings = await chrome.storage.sync.get({
         automaticallyDecryptHints: 'true',
         showFriendLogs: 'true'
