@@ -1,2 +1,2 @@
-$("#ctl00_ContentBody_lnkDH").click();
+$('#ctl00_ContentBody_lnkDH').click();
 $('#gc-utils-decrypt-hint-script').remove();
