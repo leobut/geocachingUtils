@@ -8,13 +8,12 @@ $color-green-dark: #3e7327;
 $color-green-dark-medium: #5b8a3c;
 $color-white: #fff;
 //fonts
-$font-noto-sans: Noto Sans;
 $font-arial: Arial;
 $font-helvetica: Helvetica;
 $font-sans-serif: sans-serif;
 body {
   color: $color-brown;
-  font-family: $font-noto-sans, $font-arial, $font-helvetica, $font-sans-serif;
+  font-family: $font-arial, $font-helvetica, $font-sans-serif;
   font-size: 90%;
 
   h1 {
