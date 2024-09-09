@@ -1,10 +1,10 @@
 {
     "name": "geocaching_utils",
     "license": "MPL-2.0",
-    "homepage": "https://github.com/ControlTheBit/geocachingUtils",
+    "homepage": "https://github.com/leobut/geocachingUtils",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ControlTheBit/geocachingUtils.git"
+        "url": "https://github.com/leobut/geocachingUtils.git"
     },
     "devDependencies": {
         "grunt": "1.5.3",
