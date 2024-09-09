@@ -8,96 +8,11 @@ $color-geo-link-blue: #3d76c5;
 
 $border-radius: 4px;
 
-.logEditorToolbar {
-  #geoachingUtilsWordCountMiniBadge {
-    width: 26px;
-  }
-}
-
 .geocachingUtilsPopup {
   background-color: $color-beige;
   border: solid $color-brown 1px;
   border-radius: $border-radius;
   position: absolute;
-}
-
-.logEditorToolbar {
-  padding: 0;
-  font-size: 10pt;
-  z-index: 999;
-
-  li {
-    list-style: none;
-    display: inline-block;
-  }
-
-  > li {
-    padding-right: 10px;
-  }
-}
-
-.logEditorPopup {
-  border: 1px solid $color-geo-brown;
-  background-color: white;
-  border-radius: $border-radius;
-  cursor: default;
-  z-index: 1;
-
-  &.logEditorPopupWordCount {
-    width: 130px;
-
-    img {
-      display: block;
-      margin: auto;
-      padding: 5px 0;
-      width: 100px;
-    }
-
-    span {
-      display: block;
-      padding: 5px 0;
-      text-align: center;
-    }
-  }
-
-  &.logEditorPopupInsertion {
-    width: 262px;
-
-    .popupText {
-      padding-left: 5px;
-    }
-
-    > {
-      .smileyList {
-        padding: 0;
-
-        > li {
-          height: 26px;
-          line-height: 26px;
-          padding: 4px;
-          text-align: center;
-          width: 26px;
-        }
-      }
-
-      .tagList {
-        padding: 0;
-
-        > li {
-          height: 26px;
-          padding: 4px;
-          text-align: center;
-          width: 34px;
-        }
-      }
-    }
-
-    > ul > li:hover {
-      color: white;
-      background-color: $color-geo-green;
-      border-radius: $border-radius;
-    }
-  }
 }
 
 #friendLogListSpinner {
