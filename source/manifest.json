@@ -1,11 +1,10 @@
 {
   "name": "GeocachingUtils",
   "description": "__MSG_extension_description__",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "manifest_version": 3,
   "permissions": [
-    "storage",
-    "activeTab"
+    "storage"
   ],
   "options_page": "settings/settings.html",
   "default_locale": "en",
