@@ -1,6 +1,7 @@
 const start = async () => {
     const settings = await chrome.storage.sync.get({
         automaticallyDecryptHints: 'true',
+        logEditorCountWords: 'true',
         showFriendLogs: 'true'
     });
 
@@ -19,6 +20,12 @@ const start = async () => {
             document.body.appendChild(scriptElement);
 
             runFriendLogListFeature();
+        }
+    }
+
+    if (Utils.getInstance().currentPageContainsAnEditor === true) {
+        if (settings.logEditorCountWords === 'true') {
+            console.log("has editor")
         }
     }
 }
