@@ -3,6 +3,7 @@ const Utils = (function () {
 
     function init() {
         let currentPageIsGeocacheDetailPage = $('.CacheDetailNavigation').length > 0;
+        let currentPageContainsAnEditor = ($('div.editor-wrapper').length > 0);
 
         function createGeocachingUtilsPopup(additionalClasses) {
             // remove this if statement and add the default value to the parameter as soon as uglify can handle es6
@@ -22,6 +23,7 @@ const Utils = (function () {
 
         return {
             currentPageIsGeocacheDetailPage: currentPageIsGeocacheDetailPage,
+            currentPageContainsAnEditor: currentPageContainsAnEditor,
             createGeocachingUtilsPopup: createGeocachingUtilsPopup
         };
     }

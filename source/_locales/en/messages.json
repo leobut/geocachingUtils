@@ -14,6 +14,10 @@
         "message": "No friend logs"
     },
 
+    "log_editor_word_count_words": {
+        "message": "Words: "
+    },
+
     "settings_settings_saved": {
         "message": "Settings saved!"
     },
@@ -28,6 +32,15 @@
     },
     "settings_detail_page_decrypt_hints": {
         "message": "Automatically decrypt hints"
+    },
+    "settings_log_editor_main_title": {
+        "message": "Log editor:"
+    },
+    "settings_log_editor_count_words": {
+        "message": "Count the words while I create a new log and show the 'The Author' badge"
+    },
+    "settings_log_editor_count_words_note": {
+        "message": "Note: 'The Author' badge was provided by <a href='https://project-gc.com/' target='_blank'>Project-GC</a>."
     },
     "settings_save_button": {
         "message": "Save"
