@@ -46,7 +46,6 @@ function loadLabels() {
     loadTextAndInsertInElementByKey('settings_detail_page_decrypt_hints');
     loadTextAndInsertInElementByKey('settings_log_editor_main_title');
     loadTextAndInsertInElementByKey('settings_log_editor_count_words');
-    loadTextAndInsertInElementByKey('settings_log_editor_count_words_note');
     loadTextAndInsertInElementByKey('settings_footnote');
 
     document.getElementById('saveButton').innerText = chrome.i18n.getMessage('settings_save_button');

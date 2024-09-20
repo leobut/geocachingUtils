@@ -15,7 +15,7 @@
     },
 
     "log_editor_word_count_words": {
-        "message": "Wörter: "
+        "message": " Wörter"
     },
 
     "settings_settings_saved": {
@@ -37,10 +37,7 @@
         "message": "Log-Editor:"
     },
     "settings_log_editor_count_words": {
-        "message": "Zähle die Wörter während der Log-Erstellung und zeige den 'The Author'-Badge"
-    },
-    "settings_log_editor_count_words_note": {
-        "message": "Hinweis: Der 'The Author'-Badge wird zur Verfügung gestellt von <a href='https://project-gc.com/' target='_blank'>Project-GC</a>."
+        "message": "Zeige Anzahl der Wörter im Log-Editor"
     },
     "settings_save_button": {
         "message": "Speichern"
