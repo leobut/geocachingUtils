@@ -5,6 +5,11 @@ const start = async () => {
         showFriendLogs: 'true'
     });
 
+    const scriptElement = document.createElement('script');
+    scriptElement.id = 'gc-utils-jquery';
+    scriptElement.src = chrome.runtime.getURL('js/lib/jquery-3.7.1.min.js');
+    document.body.appendChild(scriptElement);
+
     if (Utils.getInstance().currentPageIsGeocacheDetailPage === true) {
         if (settings.automaticallyDecryptHints === 'true') {
             const scriptElement = document.createElement('script');
@@ -25,7 +30,11 @@ const start = async () => {
 
     if (Utils.getInstance().currentPageContainsAnEditor === true) {
         if (settings.logEditorCountWords === 'true') {
-            console.log("has editor")
+            const scriptElement = document.createElement('script');
+            scriptElement.id = 'gc-utils-editor-count-words';
+            scriptElement.src = chrome.runtime.getURL('js/feature/inject/editorCountWords.js');
+            scriptElement.setAttribute("data-gc-translation-words", chrome.i18n.getMessage("log_editor_word_count_words"))
+            document.body.appendChild(scriptElement);
         }
     }
 }

@@ -37,7 +37,9 @@
     {
       "resources": [
         "js/feature/inject/autoDecryptHint.js",
-        "js/feature/inject/fetchUserToken.js"
+        "js/feature/inject/fetchUserToken.js",
+        "js/feature/inject/editorCountWords.js",
+        "js/lib/jquery-3.7.1.min.js"
       ],
       "matches": [
         "https://geocaching.com/*",
