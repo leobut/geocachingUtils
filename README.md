@@ -7,7 +7,7 @@ Feel free to contribute to the code or report bugs and feature requests.
 # Development
 [![Node.js CI](https://github.com/ControlTheBit/geocachingUtils/actions/workflows/node.js.yml/badge.svg)](https://github.com/ControlTheBit/geocachingUtils/actions/workflows/node.js.yml) ![Known Vulnerabilities](https://snyk.io/test/github/ControlTheBit/geocachingUtils/badge.svg)
 
-## How to setup the project locally
+## How to set up the project locally
 0. Install Node.js LTS (including npm)
 1. Checkout this project
 2. Open command line in the root folder of the project
