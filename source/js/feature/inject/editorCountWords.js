@@ -1,5 +1,3 @@
-console.log("hello")
-
 let wordsDisplay, translation = {words: ""}
 
 const initWordCount = () => {
