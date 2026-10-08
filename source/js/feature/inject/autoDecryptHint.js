@@ -1,2 +1,5 @@
-$('#ctl00_ContentBody_lnkDH').click();
-$('#gc-utils-decrypt-hint-script').remove();
+const decryptHintLink = document.getElementById('lnkDH');
+if (decryptHintLink !== null && window.hintInitiallyDecrypted !== true) {
+    decryptHintLink.click();
+}
+document.getElementById('gc-utils-decrypt-hint-script').remove();
