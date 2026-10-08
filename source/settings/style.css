@@ -1,0 +1,97 @@
+:root {
+  --color-brown: #594a42;
+  --color-beige: #e3ddc2;
+  --color-beige-light: #fbfaf3;
+  --color-green: #4b8f29;
+  --color-green-light: #77b55a;
+  --color-green-dark: #3e7327;
+  --color-green-dark-medium: #5b8a3c;
+  --color-white: #fff;
+}
+
+body {
+  color: var(--color-brown);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 90%;
+}
+
+body h1 {
+  margin: 0.2em 0;
+  text-align: center;
+}
+
+body h1 > span {
+  vertical-align: text-bottom;
+}
+
+body .round {
+  border-radius: 3px;
+}
+
+body .round h2 {
+  margin: 0.2em 0;
+}
+
+body .round > div {
+  padding-bottom: 10px;
+}
+
+body .round > div > span {
+  vertical-align: middle;
+}
+
+#centeredContainer {
+  background-color: var(--color-beige);
+  margin: auto;
+  padding: 14px;
+  width: 600px;
+}
+
+#centeredContainer > div {
+  background-color: var(--color-beige-light);
+  margin-top: 14px;
+  padding: 1em;
+}
+
+#controlsContainer {
+  text-align: right;
+}
+
+#controlsContainer > span {
+  margin-right: 10px;
+}
+
+#saveButton {
+  background: linear-gradient(to bottom, var(--color-green-light) 5%, var(--color-green-light) 100%);
+  background-color: var(--color-green-light);
+  border: 1px solid var(--color-green);
+  border-radius: 3px;
+  box-shadow: 0 10px 14px -7px var(--color-green-dark);
+  color: var(--color-white);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 16px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 var(--color-green-dark-medium);
+}
+
+#saveButton:hover {
+  background: linear-gradient(to bottom, var(--color-green-light) 5%, var(--color-green-light) 100%);
+  background-color: var(--color-green-light);
+}
+
+#saveButton:active {
+  position: relative;
+  top: 1px;
+}
+
+#githubHint {
+  font-size: 70%;
+}
+
+#githubHint img {
+  vertical-align: text-bottom;
+}

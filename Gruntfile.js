@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-    const sass = require('node-sass');
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
@@ -25,6 +24,12 @@ module.exports = function(grunt) {
                     },
                     {
                         expand: true,
+                        cwd: 'source/css/',
+                        src: ['**'],
+                        dest: 'build/css/'
+                    },
+                    {
+                        expand: true,
                         cwd: 'source/img/',
                         src: ['**', '!appIcon/*Raw.png'],
                         dest: 'build/img/'
@@ -44,7 +49,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: 'source/settings/',
-                        src: ['**', '!*.scss'],
+                        src: ['**'],
                         dest: 'build/settings/'
                     },
                     {
@@ -96,24 +101,6 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        sass: {
-            options: {
-                implementation: sass
-            },
-            dist: {
-                files: {
-                    'build/css/style.css': 'source/scss/style.scss',
-                    'build/settings/style.css': 'source/settings/style.scss'
-                }
-            }
-        },
-        sasslint: {
-            options: {
-                configFile: '.sass-lint.yml',
-            },
-            target: ['source/**/*.scss'],
-            formatter: "compact"
-        },
         clean: {
             build: ['build/'],
             release: ['GeocachingUtils_*.zip']
@@ -127,10 +114,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-json-minify');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-sass-lint');
 
-    grunt.registerTask('build', ['clean', 'copy', 'sass']);
-    grunt.registerTask('quality', ['sasslint']);
+    grunt.registerTask('build', ['clean', 'copy']);
     grunt.registerTask('minify', ['uglify', 'htmlmin', 'cssmin', 'json-minify']);
-    grunt.registerTask('default', ['build', 'quality', 'minify', 'compress']);
+    grunt.registerTask('default', ['build', 'minify', 'compress']);
 };

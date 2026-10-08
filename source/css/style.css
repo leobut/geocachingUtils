@@ -1,0 +1,132 @@
+/* injected into geocaching.com, so variables are prefixed to avoid clashes with the site's own */
+:root {
+  --gcu-color-beige: #f9f7f5;
+  --gcu-color-beige-medium-dark: #d7d7d7;
+  --gcu-color-beige-dark: #f0edeb;
+  --gcu-color-brown: #594a42;
+  --gcu-color-geo-link-blue: #3d76c5;
+  --gcu-border-radius: 4px;
+}
+
+.geocachingUtilsPopup {
+  background-color: var(--gcu-color-beige);
+  border: solid var(--gcu-color-brown) 1px;
+  border-radius: var(--gcu-border-radius);
+  position: absolute;
+}
+
+#friendLogListSpinner {
+  width: 22px;
+}
+
+#friendLogList {
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#friendLogList > li {
+  border-radius: var(--gcu-border-radius);
+  height: 52px;
+  margin: 5px 0;
+  position: static;
+}
+
+#friendLogList > li:first-child {
+  margin-top: 0;
+}
+
+#friendLogList > li:last-child {
+  margin-bottom: 0;
+}
+
+#friendLogList > li:hover {
+  background-color: var(--gcu-color-beige-dark);
+}
+
+#friendLogList > li .friendAvatar {
+  border-radius: var(--gcu-border-radius);
+  float: left;
+  margin: 2px;
+  width: 48px;
+  height: 48px;
+}
+
+#friendLogList > li .logDetailTable {
+  padding-left: 3px;
+}
+
+#friendLogList > li .logDetailTable td {
+  padding: 0;
+}
+
+#friendLogList > li .logDetailTable td img {
+  vertical-align: text-bottom;
+}
+
+#friendLogList > li .logDetailTable td .friendName {
+  padding-left: 0;
+  color: var(--gcu-color-geo-link-blue);
+}
+
+#friendLogList .logDetailPopup {
+  left: -700px;
+  width: 670px;
+}
+
+#friendLogList .logDetailPopup .markdown-output {
+  margin: 16px 16px 0 16px;
+}
+
+#friendLogList .logDetailPopup .markdown-output a:hover,
+#friendLogList .logDetailPopup .markdown-output a:focus {
+  border: 0;
+  text-decoration: underline;
+}
+
+#friendLogList .logDetailPopup .log-images-table {
+  margin: 0 15px 15px 15px;
+  background: var(--gcu-color-beige-dark);
+  border: 1px dashed var(--gcu-color-beige-medium-dark);
+  padding: 2px;
+  border-radius: var(--gcu-border-radius);
+}
+
+#friendLogList .logDetailPopup .log-images-table li {
+  margin: 4px;
+}
+
+#friendLogList .logDetailPopup .log-images-table li:last-child {
+  margin-bottom: 0;
+}
+
+#friendLogList .logDetailPopup .log-images-table li a {
+  padding-left: 5px;
+}
+
+#friendLogList .logDetailPopup .log-images-table li a img {
+  padding-right: 8px;
+  height: 16px;
+  width: 16px;
+}
+
+#friendLogList .logDetailPopup .log-images-table li a span {
+  vertical-align: top;
+}
+
+#friendLogList .hoverBridge {
+  background-color: transparent;
+  height: 100%;
+  left: 670px;
+  position: absolute;
+  width: 32px;
+}
+
+#friendLogList .line {
+  position: absolute;
+  top: 25px;
+  left: -29px;
+  height: 0;
+  width: 30px;
+  border-top: dashed 1px;
+}
