@@ -1,0 +1,11 @@
+# Normalize line endings to LF in the repo and in every working tree,
+# regardless of the local core.autocrlf setting (Windows vs. dev container).
+* text=auto eol=lf
+
+# Binary files: never touch line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
